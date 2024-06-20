@@ -1,0 +1,26 @@
+AuthUserFile /u/cos126/sites/.htpasswd
+AuthType Basic
+AuthName "My restricted Area"
+Require valid-user
+#  Default page is syllabus.html
+DirectoryIndex syllabus.html index.html
+
+# Redirects all .java files to the syntax highlighter
+# Use HelloWorld.java?highlight=off to access the unhighlighted code
+RewriteEngine on
+RewriteCond %{QUERY_STRING} !highlight=off
+# HTTP_ACCEPT is blank when requesting the .java file to save to local disk
+RewriteCond %{HTTP_ACCEPT} !=""
+
+# Pull out the URI since it's otherwise hidden, then chop the last part off
+RewriteRule \.java$ %{REQUEST_URI}/todo
+RewriteRule ^(.*)/cos126/(.*\.java)/todo$ $1/cos126/syntax-highlight.php?file=$2 [L]
+
+# Prevent caching so you don't have to refresh any pages
+<filesMatch "\.(html|htm||php)$">
+FileETag None
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</filesMatch>
