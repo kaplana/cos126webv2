@@ -4,21 +4,29 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Tour
-    url: tour
+  - name: Syllabus
+    url: syllabus
     weight: 10
-  - name: News
-    url: post
+  - name: Schedule
+    url: schedule
+    weight: 15
+  - identifier: assignments
+    name: Assignments
+    url: assignments
     weight: 20
+  - identifier: project
+    name: Project
+    url: project
+    weight: 22
+  - name: Help
+    url: help
+    weight: 45
+  - name: Resources
+    url: resources
+    weight: 50
+  - name: Exams
+    url: exams
+    weight: 55
   - name: People
     url: people
-    weight: 30
-  - name: Events
-    url: event
-    weight: 40
-  - name: Publications
-    url: publication
-    weight: 50
-  - name: Contact
-    url: contact
     weight: 60

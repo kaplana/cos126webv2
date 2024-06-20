@@ -1,0 +1,39 @@
+Programming Assignment 9:  TSP
+
+/**********************************************************************
+ *  Describe whatever help (if any) that you received. Don't include 
+ *  readings, lectures, and precepts, but do include any help from people 
+ *  (including course staff, lab TAs, classmates, and friends) and 
+ *  attribute them by name, including the dates they helped you.
+ *  For example:
+ *  Grace Hopper (Faculty), 9/16/22
+ *  John von Neumann (Lab TA), 9/16/22
+ *  
+ **********************************************************************/
+Names and dates: 
+
+/**********************************************************************
+ *  Please type the Student Acknowledgment of Original Work from
+ *  Rights, Rules, Responsibilities:
+ *    This assignment/project represents my own work in accordance with
+ *    University regulations.
+ *  Each partner must include their name preceded by /s/, for example:
+ *
+ *  This assignment/project represents my own work in accordance with
+ *  University regulations. /s/ Ada Lovelace
+ * 
+ *  This assignment/project represents my own work in accordance with
+ *  University regulations. /s/ Alan Turing
+ *  
+ *  
+ **********************************************************************/
+Student(s) Acknowledgment of Original Work:
+
+
+/**********************************************************************
+ *  For partner assignments - if you worked with a partner, did you
+ *  and your partner adhere to the rules for partnering as outlined on
+ *  the course syllabus?  Choose "NA" if you did not work with a partner.
+ *  
+ **********************************************************************/
+YES/NO/NA

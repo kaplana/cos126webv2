@@ -1,0 +1,33 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ .Site.BaseURL }}/assignments/classifier/demo/mathutils.js"></script>
+        <script type="text/javascript" src="{{ .Site.BaseURL }}/assignments/classifier/demo/mnist_digit_labels.js"></script>
+        <script type="text/javascript" src="{{ .Site.BaseURL }}/assignments/classifier/demo/webcnn.js"></script>
+        <script type="text/javascript" src="{{ .Site.BaseURL }}/assignments/classifier/demo/digitdemo.js"></script>
+        <link href="{{ .Site.BaseURL }}/assignments/classifier/demo/digit.css" rel="stylesheet"/>
+
+	
+<div id="recognizer">
+    <div class="inlineDiv">
+        <div id="drawingCanvasDiv"><canvas id="drawCanvas" width="150" height="150"></canvas></div>
+        <button class="silverButton" onclick="buttonClick(2)" id="clearButton">Reset</button>
+    </div>
+&nbsp;
+    <div class="inlineDiv">
+        <div id="guessNumberDiv"></div>
+        <div><span id="confidence"></span></div>
+    </div>
+</div>
+
+
+
+
+
+<br>
+<br>
+<div>
+<small>
+Derived from https://github.com/DenseInL2/webcnn</small>
+</div>
+<br>
+<br>

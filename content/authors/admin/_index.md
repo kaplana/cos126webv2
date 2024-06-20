@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Nelson BighettiABC
 
 # Full Name (for SEO)
 first_name: Nelson
-last_name: Bighetti
+last_name: BighettiDEF
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position
 role: Professor of Artificial Intelligence

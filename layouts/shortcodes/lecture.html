@@ -1,0 +1,8 @@
+{{ $title :=  (.Get 0) }}
+{{ $file :=  (.Get 1) }}
+{{ $ffile := delimit (slice "/static" $file) "/" }}
+   <i>Lecture:</i> <a href="{{ .Site.BaseURL }}{{ .Get 1 }}">{{ .Get 0 }}</a>
+<!--{{ if (fileExists $ffile) }}
+   <i>Lecture:</i> <a href="{{ .Site.BaseURL }}{{ .Get 1 }}">{{ .Get 0 }}</a>
+   {{ end }}
+   -->
