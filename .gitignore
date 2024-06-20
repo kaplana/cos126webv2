@@ -5,3 +5,17 @@
 /resources/
 public/
 assets/jsconfig.json
+*~
+.DS_Store*
+public
+public.tar
+hamming.db
+tsp.db
+cos126web/static/static/leaderboard/hamming.html
+cos126web/static/static/leaderboard/tsp.html
+`.lift/
+!**/static/assignments/hello/files/.idea/
+!**/static/assignments/hello/files/.lift/
+cos126web/static/static/project/intellij/*/*.zip
+cos126web/static/static/assignments/*/*.zip
+.hugo_build.lock
