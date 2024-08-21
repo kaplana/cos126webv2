@@ -17,7 +17,7 @@ comments: false
 | Section         | Days/Time                        | Room              | Instructor             |
 | --------------- | ---------------------------------| ----------------- | ---------------------- |
 |Lecture          |  Mon/Wed, 1:30pm–2:50pm          | McCosh 50         | Kevin Wayne |
-|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend         | |   
+|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend         | Alan Kaplan |   
 |Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend         | |
 |Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108     | |
 |Precept P01A     |  Mon/Wed, 3:30pm-4:20pm          | Friend 110     | |
