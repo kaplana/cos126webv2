@@ -19,23 +19,22 @@ comments: false
 |Lecture          |  Mon/Wed, 1:30pm–2:50pm          | McCosh 50         | Kevin Wayne |
 |Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend         | |   
 |Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend         | |
-|Precept P10B     |  Mon/Wed, 3:00pm-4:20pm          | Friend         | |
-|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend         | |
-|Precept P11      |  Mon/Wed, 4:30pm-5:50pm          | Friend         | |
-|Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend         | |
-|Precept P13      |  Tue/Thu, 8:30am–9:50am          | Friend         | |
-|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend         | |
-|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend         | |
-|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend         | |
-|Precept P03B     |  Tue/Thu, 10:00am-10:50am        | Friend         | |
-|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend         | |
-|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend         | |
-|Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend         | |
-|Precept P14A     |  Tue/Thu, 11:00am-12:20pm        | Friend         | |
-|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend         | |
-|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend         | |
-|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend         | |
-|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend         | |
+|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108     | |
+|Precept P01A     |  Mon/Wed, 3:30pm-4:20pm          | Friend 110     | |
+|Precept P11      |  Mon/Wed, 4:30pm-5:50pm          | Friend 109     | |
+|Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend 108     | |
+|Precept P13      |  Tue/Thu, 8:30am–9:50am          | Friend 005     | Nicholas Alexander Sudarsky |
+|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 108     | |
+|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend 108     | |
+|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 110     | |
+|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 108     | |
+|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 110     | |
+|Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend 009     | |
+|Precept P14A     |  Tue/Thu, 11:00am-12:20pm        | Friend 111     | |
+|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 108     | |
+|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 110     | |
+|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108     | |
+|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 110     | |
 
 
 {{< /details >}}

@@ -59,17 +59,13 @@ Attendance regrade requests must be made within three days after attendance grad
 ### Final Grades
 Your final grade will be calculated based on a weighted sum of all the assignments, final project and exams. The final letter grade cutoffs will be determined at the end of the semester based on overall class performance, but not curved to any specific distribution.  Staff discretion **may** be applied to adjust borderline cases - for example, answering student questions on Ed Discussion can be used to bump borderline grades. 
 
-
-
-| Grade Contributions     | Weight |
-|-------------------------|--------|
-| Programming Assignments | 40%    |
-| Final Project           | 10%    |
-| Lecture Attendance      | 2.5%   |
-| Precept Attendance      | 2.5%   |
-| Written Exam 1          | 15%    |
-| Written Exam 2          | 15%    |
-| Programming Exam        | 15%    |
+| Grade Contributions     | Weight                     |
+|:------------------------|:---------------------------|
+| Programming Assignments | 37.5%                      |
+| Final Project           | 7.5%                       |
+| Lecture Attendance      | 2.5%                       |
+| Precept Attendance      | 2.5%                       |
+| Written Exams:<br>two written exams, one programming exam | 50% |
 
 
 While final letter grade cutoffs will be determined at the end of the semester, a 93.0% will guarantee an A, 90.0% for an A–, 87.0% for a B+, 83.0% for a B, 80.0% for a B-, 77.0% for a C+, 73.0% for a C, 70.0% for a C-, or 60.0% for a D. You risk course failure if you earn below 60.0% of the available points.
