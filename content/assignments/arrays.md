@@ -12,7 +12,7 @@ share: false
 profile: false
 comments: false
 ---
-<!--{{<construction>}}-->
+{{<construction>}}
 
 
 {{< project "arrays" >}} |  {{< submit "Arrays" >}}

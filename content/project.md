@@ -17,7 +17,7 @@ comments: false
 
 {{< project "atomic" >}} |  {{< submit "Atomic" >}}
 
-<!--{{<construction>}}-->
+{{<construction>}}
 
 ### **TigerFile Submission Requirements - 20 submission limit**
 

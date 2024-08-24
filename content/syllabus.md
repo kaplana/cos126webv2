@@ -32,7 +32,7 @@ This course includes lectures, precepts, programming assignments, a final projec
 
 - ***Precept Absences.*** The first four absences are automatically waived. This is intended to account for  illnesses, religious observances, and varsity athletic competitions. Please do not request a waiver unless you will be exceeding this limit. To request a precept attendance waiver, contact the Course Administrator.
 
-If you cannot attend your scheduled precept, you can visit another precept and this will count as attendance – but please let your regular preceptor know about it, as well as the preceptor of the one you visit. If you miss a precept entirely, it’s still a good idea to contact your preceptor to let them know what’s up.  Arriving significantly late to a precept or leaving signficantly early does not count as attendance (unless given permission from the instructor).
+If you cannot attend your scheduled precept, you can visit another precept and this will count as attendance – but please let your regular preceptor know about it, as well as the preceptor of the one you visit. If you miss a precept entirely, it’s still a good idea to contact your preceptor to let them know what’s up.  Arriving significantly late to a precept or leaving signficantly early does not count as attendance (unless given permission from the instructor).   
 
 **Programming Assignments.** There are ten (10) programming assignments, all equally weighted. 
 
@@ -87,7 +87,11 @@ This course permits (and encourages) many forms of collaboration, including with
 
 **Concepts.** Understand the difference between _concepts_ and actual _code_.  You may discuss general concepts, e.g., what is the syntax of a `for` loop, or explain how to input a sequence of numeric values.  But you may not discuss specific code-related solutions to programming assignments.
 
-**Collaboration with an AI chatbot.** You may not use AI composition software (such as ChatGPT or GitHub Copilot) to create or debug programming assignment code.
+**Collaboration with an AI chatbot.** You may not use AI composition software (such as ChatGPT, Copilot, Gemini, Meta AI, etc.) to create or debug programming assignment code.  You may use these tools to discuss _concepts_ (see above) related to lecture, reading and/or precept.   However, you may not use these tools to help you understand or assist in completing programming assignments.
+
+If you are uncertain about how or when to use AI tools, please consult with the course staff prior to their use.
+
+Caveat emptor! While modern AI technology can produce impressive results, there are occasions when these results may be incorrect, incomplete, inconsistent, especially  with respect to COS 126 topics. Exercise caution and verify information  as needed.
 
 **Your solutions.** You must individually compose all of your solutions. The term solutions refers to any of the products created when completing a programming assignment, such as source code (including comments) and the `readme.txt` file. It includes both finished and unfinished products, regardless of correctness or completeness.
 
@@ -114,7 +118,7 @@ All the rules above continue to apply after assignments are graded and after the
 - They should give thought-provoking suggestions rather than dictating what to change.
 - While helping you, they must not look at any other solutions, including their own.
 
-**Collaboration acknowledgment.** You must acknowledge all collaboration in the `acknowledgments.txt` file for that week's assignment.  Please include the names (and dates) of lab TAs, preceptors, students, etc. who provided assistance.   You must also indicate if you helped another student.
+**Collaboration acknowledgment.** You must acknowledge all collaboration in the `acknowledgments.txt` file for that week's assignment.  Please include the names (and dates) of lab TAs, preceptors, students, and/or any other resources who provided assistance.   You must also indicate if you helped another student on an assignment.
 
 
 

@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-<!--{{<construction>}}-->
+{{<construction>}}
 
 {{< project "loops" >}} |  {{< submit "Loops" >}}
 

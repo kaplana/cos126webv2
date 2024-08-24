@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-<!--{{< alert >}}-->
+{{< alert >}}
 
 {{< project "hamming" >}} |  {{< submit "Hamming" >}}
 ### **Goals**
