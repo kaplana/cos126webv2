@@ -6,7 +6,7 @@ title:  Nicholas Alexander Sudarsky
 superuser: false
 
 # Role/position
-role: AI
+role: Graduate Student
 
 office_hours:
 

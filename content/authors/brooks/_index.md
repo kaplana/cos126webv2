@@ -6,7 +6,7 @@ title:  Creston Brooks
 superuser: false
 
 # Role/position
-role: AI
+role: Graduate Student
 
 office_hours:
 

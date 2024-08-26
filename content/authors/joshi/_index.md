@@ -6,7 +6,7 @@ title:  Abhishek Joshi
 superuser: false
 
 # Role/position
-role: AI
+role: Graduate Student
 
 office_hours:
 
