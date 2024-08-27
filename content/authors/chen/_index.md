@@ -1,6 +1,6 @@
 ---
 # Display name
-title:  Jane Castleman
+title:  Yanjin Chen
 
 # Is this the primary user of the site?
 superuser: false
@@ -24,7 +24,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:Jane Castleman <janeec@princeton.edu>'
+  link: 'mailto:Yanjin Chen <yc0901@cs.princeton.edu>'
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)

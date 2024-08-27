@@ -87,7 +87,7 @@ This course permits (and encourages) many forms of collaboration, including with
 
 **Concepts.** Understand the difference between _concepts_ and actual _code_.  You may discuss general concepts, e.g., what is the syntax of a `for` loop, or explain how to input a sequence of numeric values.  But you may not discuss specific code-related solutions to programming assignments.
 
-**Collaboration with an AI chatbot.** You may not use AI composition software (such as ChatGPT, Copilot, Gemini, Meta AI, etc.) to create or debug programming assignment code.  You may use these tools to discuss _concepts_ (see above) related to lecture, reading and/or precept.   However, you may not use these tools to help you understand or assist in completing programming assignments.
+**Collaboration with an AI chatbot.** You may not use AI composition software (such as ChatGPT, Copilot, Jetbrains AI Assistant, Gemini, Meta AI, etc.) to create or debug programming assignment code.  You may use these tools to discuss _concepts_ (see above) related to lecture, reading and/or precept.   However, you may not use these tools to help you understand or assist in completing programming assignments.
 
 If you are uncertain about how or when to use AI tools, please consult with the course staff prior to their use.
 
