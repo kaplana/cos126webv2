@@ -2,7 +2,7 @@
 title: Schedule
 subtitle: 
 
-summary: "Planned Fall schedule of lectures, class meetings, exams, precepts and assignments."
+summary: "Planned schedule of lectures, class meetings, exams, precepts and assignments."
 
 type: page
 
@@ -26,13 +26,13 @@ comments: false
 |Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 108        | |
 |Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend 108        | |
 |Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 110        | |
-|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 108        | Ruth Fong |
+|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 108        | |
 |Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 110     | |
 |Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend 009     | |
 |Precept P14A     |  Tue/Thu, 11:00am-12:20pm        | Friend 111     | |
 |Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 108     | |
 |Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 110     | |
-|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108     | |
+|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108     | Ruth Fong |
 |Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 110     | |
 
 
@@ -50,8 +50,8 @@ comments: false
 | 0    | Wed, Sep 4  |{{< lecture "Introduction to COS 126" "static/lectures/00IntroCOS126.pdf" >}}<br> {{< lecture "Hello World" "static/lectures/11HelloWorld.pdf" >}}<br> _Reading:_ 1.1 |  |
 |      | Wed, Sep 4 &<br>Thu, Sep 5| [Precept Hello World Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p00-hello-world/p00-hello-world.zip) | |
 |      | Sun, Sep 8                  |                                    | [_Assignment:_ Hello due]({{< ref "/assignments/hello" >}})         |
-|      | Mon, Sep 9                 | {{< lecture "Data Types" "static/lectures/12DataTypes.pdf" >}}<br> _Reading:_ 1.2              |   |
-|      | Mon, Sep 9 &<br>Tue, Sep 10 | [Precept Data Types Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p01-data-types/p01-data-types.zip )               | |
+|      | Mon, Sep 9                 | {{< lecture "Data Types & Conditionals" "static/lectures/13Conditionals.pdf" >}}<br> _Reading:_ 1.2 and 1.3              |   |
+|      | Mon, Sep 9 &<br>Tue, Sep 10 | [Precept Data Types & Conditionals Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p01-data-types/p01-data-types.zip )               | |
 |      |                             |                                    |                                                       |
 |      | Wed, Sep 11                  |{{< lecture "Loops" "static/lectures/13Loops.pdf" >}} <br> _Reading:_ 1.3  |   |
 |      | Wed, Sep 11 &<br>Thu, Sep 12  | [Precept Loops Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p03-loops/p03-loops.zip )                     | |

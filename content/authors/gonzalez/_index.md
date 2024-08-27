@@ -1,6 +1,6 @@
 ---
 # Display name
-title:  Max Gonzalez
+title:  Max Gonzalez-Saez
 
 # Is this the primary user of the site?
 superuser: false
@@ -24,7 +24,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:Max Gonzalez <max.gonzalez@princeton.edu>'
+  link: 'mailto:Max Gonzalez-Saez <max.gonzalez@princeton.edu>'
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)

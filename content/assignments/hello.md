@@ -1,7 +1,7 @@
 ---
 title: 0. Hello, World 
 subtitle: 
-summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}}
+summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}}<br>{{<notreleased>}}
 weight: 1
 type: "page"
   
@@ -40,8 +40,9 @@ The purpose of this assignment is to introduce you to programming in Java and fa
 	- `HelloWorld.java`
 	- `Greeting.java`
 	- `SayHelloWorld.java`
-	- `Ordered.java`
-	- `RGBtoCMYK.java`
+	- `SumThree.java`
+<!--SPRING	- `Ordered.java` -->
+<!--SPRING	- `RGBtoCMYK.java`-->
    Recall, in IntelliJ, you create a new Java class with *LIFT → New Java Class*.
    
 - Complete the `readme.txt` and `acknowledgment.txt` files.
@@ -64,7 +65,7 @@ This exercise will give you experience identifying compile-time, run-time and lo
 ASCII Art is a technique that uses sequences of characters printed on successive lines to depict a graphic on non-graphical display.  The program `DrawCat.java` - included in your project folder -  uses ASCII Art to draw a cat. It takes two characters on the command-line - the first for the cat's eyes and the second for its mouth.  Using these command-line arguments, `DrawCat` should draw a cat, as shown below:
 
 ```java
-> java DrawCat @ +
+java DrawCat @ +
           ^_^   
     ____( @ @)
   /~____  =+= /
@@ -81,26 +82,28 @@ Background: This [website](https://asciiart.website) contains many interesting A
 Write a program `Greeting.java` that takes a greeting and two names as command-line arguments and prints the greeting as shown below (with the names for the first greeting in the same order as the command-line arguments and the names for the second greeting in reverse order).
 
 ```plaintext 
-> java Greeting Hi Sonia Samuel
+java Greeting Hi Sonia Samuel
 ```
 ```
 Hi Sonia and Samuel.
 Hi Samuel and Sonia.
 ```
 ```plaintext 
-> java Greeting Ciao Kellia Yacoub
+java Greeting Ciao Kellia Yacoub
 ```
 ```
 Ciao Kellia and Yacoub.
 Ciao Yacoub and Kellia.
 ```
 ```
-> java Greeting γεια Alexandria Homer
+java Greeting γεια Alexandria Homer
+```
+```
 γεια Alexandria and Homer.
 γεια Homer and Alexandria.
 ```
 ```plaintext
-> java Greeting "Nǐ hǎo" Ahmed Hagop
+java Greeting "Nǐ hǎo" Ahmed Hagop
 ```
 ```
 Nǐ hǎo Ahmed and Hagop.
@@ -120,28 +123,28 @@ These versions provide access to our course libraries, including `StdAudio`, whi
 The `people`, `google` and `siri` subdirectories in the project directory contains a large number of WAV files of _Hello World_ spoken in different voices and languages, both real (from various individuals) and synthetic (from [Google Translate](https://translate.google.com) and [Apple Siri](https://www.apple.com/siri)). Below are some sample executions:
 
 ```plaintext 
-> javac-introcs SayHelloWorld.java
+javac-introcs SayHelloWorld.java
 ```
 
 ```plaintext
-> java-introcs SayHelloWorld people/KevinWayne.wav
+java-introcs SayHelloWorld people/KevinWayne.wav
 ```
 {{< audio src="hello/people/KevinWayne" type="audio/wav" preload="auto" >}}
 
 
 ```plaintext
-> java-introcs SayHelloWorld people/AloeBlacc.wav
+java-introcs SayHelloWorld people/AloeBlacc.wav
 ```
 {{< audio src="hello/people/AloeBlacc" type="audio/wav" preload="auto" >}}
 
 ```plaintext
-> java-introcs SayHelloWorld google/Spanish.wav
+java-introcs SayHelloWorld google/Spanish.wav
 ```
 {{< audio src="hello/google/Spanish" type="audio/wav" preload="auto" >}}
 
 
 ```plaintext
-> java-introcs SayHelloWorld siri/Kyoko.wav
+java-introcs SayHelloWorld siri/Kyoko.wav
 ```
 {{< audio src="hello/siri/Kyoko" type="audio/wav" preload="auto" >}}
 
@@ -154,6 +157,7 @@ Also, record yourself speaking *Hello, World*, convert it to a WAV file named `M
    - iPhone:  *Voice Memo app  →  Record*. Then, copy the recording to your laptop and convert the M4A file to a WAV file via [Zamzar](https://zamzar.com)
    - Android: Use an app that allows you record audio.  Then, copy the audio file to your laptop and convert to a WAV via [Zamzar](https://zamzar.com)
 
+<!-- SPRING
 ### **Ordered**
 
 This exercise demonstrates the use of the `int` and `boolean` data types. Write a program `Ordered.java` that takes three integer command-line arguments, \\(x\\), \\(y\\), and \\(z\\). Define a `boolean` variable whose value is `true` if the three values are either in strictly ascending order \\((x < y < z)\\) or in strictly descending order \\((x > y > z)\\), and `false` otherwise. Then, print this `boolean` value.  Do not use a conditional statement or a loop statement (such as an `if`, `while`, or `for` statement) in your solution. 
@@ -161,13 +165,13 @@ This exercise demonstrates the use of the `int` and `boolean` data types. Write 
 Examples:
 
 ```plaintext 
-> java-introcs Ordered 10 17 49
+java-introcs Ordered 10 17 49
 true
 
-> java-introcs Ordered 49 17 10
+java-introcs Ordered 49 17 10
 true
 
-> java-introcs Ordered 10 49 17
+java-introcs Ordered 10 49 17
 false
 ```
 ### **RGBtoCMYK**
@@ -192,7 +196,7 @@ Examples:
 
 ```plaintext 
 # indigo                                                        # Princeton orange
-> java-introcs RGBtoCMYK 75 0 130                               > java-introcs RGBtoCMYK 255 143 0
+java-introcs RGBtoCMYK 75 0 130                               java-introcs RGBtoCMYK 255 143 0
 red     = 75                                                    red     = 255
 green   = 0                                                     green   = 143
 blue    = 130                                                   blue    = 0
@@ -205,7 +209,25 @@ black   = 0.4901960784313726                                    black   = 0.0
 *Restriction:* You may not use `if` statements on this assignment, but you may assume that the command-line arguments are not all simultaneously zero.
 
 > Hint. Recall that `Math.max(x, y)` returns the maximum of `x` and `y`.
+-->
 
+### **SumThree**
+
+Write a program `SumThree.java` that takes three integer command-line arguments and prints the three integers and their sum in the form of an equation. 
+
+```plaintext
+java-introcs SumThree 2 5 8
+```
+```
+2 + 5 + 8 = 15
+```
+
+```plaintext
+java-introcs SumThree -2 5 -8
+```
+```
+-2 + 5 + -8 = -5
+```
 
 ### **readme.txt**
 
@@ -243,13 +265,12 @@ Complete and submit the `acknowledgments.txt` file when you have completed the a
 ### **Grading**
 | Files                | Points   |
 | ---------------      | ---------|
-| HelloWorld.java      |   7      |
-| Greeting.java        |   7      |
-| SayHelloWorld.java   |   7      |
-| Ordered.java         |   7      |
-| RGBtoCMYK.java       |   7      |
+| HelloWorld.java      |   8      |
+| Greeting.java        |   8      |
+| SayHelloWorld.java   |   8      |
+| SumThree.java        |   8      |
 | readme.txt           |   4      |
-| Survey               |   1      |
+| Survey               |   4      |
 | Total                |  40      |
 
 You must repeat the Collaboration Policy Quiz until you answer **all** questions correctly; otherwise, you will not receive credit for any programming assignment.

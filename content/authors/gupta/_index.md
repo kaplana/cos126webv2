@@ -1,6 +1,6 @@
 ---
 # Display name
-title:  Max Gupta
+title:  Max David Gupta
 
 # Is this the primary user of the site?
 superuser: false
@@ -24,7 +24,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:Max Gupta <mg7411@princeton.edu>'
+  link: 'mailto:Max David Gupta <mg7411@princeton.edu>'
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)

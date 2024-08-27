@@ -100,25 +100,25 @@ Each random walk starts at the origin \\((0, 0)\\). At each time step, the walke
 Here are sample executions of the corrected `RandomWalkers`, with the expected output.
 
 ```bash
-> java-introcs RandomWalkers 100 10000
+java-introcs RandomWalkers 100 10000
 mean squared distance = 101.446
-```
 
-> java-introcs RandomWalkers 100 10000
+java-introcs RandomWalkers 100 10000
 mean squared distance = 99.1674
 
-> java-introcs RandomWalkers 200 1000  
+java-introcs RandomWalkers 200 1000  
 mean squared distance = 195.75
 
-> java-introcs RandomWalkers 200 1000  
+java-introcs RandomWalkers 200 1000  
 mean squared distance = 198.21
 
-> java-introcs RandomWalkers 1600 100000      
+java-introcs RandomWalkers 1600 100000      
 mean squared distance = 1600.13064
 
-> java-introcs RandomWalkers 1600 100000      
+java-introcs RandomWalkers 1600 100000      
 mean squared distance = 1603.72
 ```
+
 Fix all errors in the provided file `RandomWalkers.java`.  Your solution should have no errors or warnings, including from Checkstyle.
 
 
@@ -167,7 +167,7 @@ Also, take a photo of a building, archway, gate, or other structure on campus an
 
 You can access the `StdPicture` library [here](https://introcs.cs.princeton.edu/java/11cheatsheet/index.html#StdPicture).
 
-> FAQ: Q. How do I round a `double x` to the nearest integer? A. `(int) Math.round(x)`.
+> FAQ: How do I round a `double x` to the nearest integer? Use `(int) Math.round(x)`.
 
 
 <!--Background: NTSC (National Television System Committee) is a US standardization body that was established in 1940 to standardize analog television broadcasting. NTSC was eventually replaced by the Advanced Television Systems Committee, which maintains the digital television broadcasting standards.-->
