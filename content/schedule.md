@@ -75,7 +75,7 @@ comments: false
 |      | Wed, Oct 2 &<br>Thu, Oct 3  |    {{< precept "p09-performance" "Performance" >}}                   | |
 |      | Sun, Oct 6                  |                                    | [_Assignment:_ Recursive Graphics due]()         |
 |      |                             |                                   | |
-| 5    | Mon, Oct 7                  |_Lecture:_ Exam Review             | |
+| 5    | Mon, Oct 7                  |_Lecture:_ TBD                     | |
 |      | Mon, Oct 7 &<br>Tue, Oct 8  | Precept: Exam Review              | |
 |      | Wed, Oct 9                  |_Written Exam 1_                   | |
 |      | Wed, Oct 9 &<br>Thu, Oct 10 | Precept: None                     | |

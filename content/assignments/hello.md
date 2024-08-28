@@ -249,14 +249,14 @@ Submitting the `acknowledgments.txt` file indicates that you have stopped workin
 
 ### **Submission**
 
-Submit `HelloWorld.java`, `Greeting.java`, `SayHelloWorld.java`, `Ordered.java`, `RGBtoCMYK.java`, and a completed `readme.txt`  to {{< tigerfile "Hello" >}}  Please do not include your name, netid and/or email address in your  `.java` and `readme.txt` files.</p>
+Submit `HelloWorld.java`, `Greeting.java`, `SayHelloWorld.java`, `SumThree.java`, and a completed `readme.txt`  to {{< tigerfile "Hello" >}}  Please do not include your name, netid and/or email address in your  `.java` and `readme.txt` files.</p>
 
 
 Login using your OIT NetID (if necessary) and upload the specified files. Finally, click the *Check Submitted Files* button:
 
 ![TigerFile]({{< resource url="static/assignments/hello/images/tigerfile-check-submitted-files.png" >}})
 
-This will compile and execute your programs, alerting you to potential problems before we grade your work. Fix any problems and resubmit. **You may submit one file at a time or several files at a time. You may submit as many times as you like!**
+This will compile and execute your programs, alerting you to potential problems before we grade your work. Fix any problems and resubmit. You may submit one file at a time or several files at a time. However, you may only click the *Check Submitted Files* button a total of twenty (20) times.
 
 Also, complete and submit both the Collaboration Policy Quiz on  [Canvas](https://canvas.princeton.edu) and the [Entry Survey]({{< param surveyurl >}})
 
@@ -273,7 +273,7 @@ Complete and submit the `acknowledgments.txt` file when you have completed the a
 | Survey               |   4      |
 | Total                |  40      |
 
-You must repeat the Collaboration Policy Quiz until you answer **all** questions correctly; otherwise, you will not receive credit for any programming assignment.
+You must repeat the _Collaboration Policy Quiz_ until you answer **all** questions correctly; otherwise, you will not receive credit for any programming assignment.
 
 Submissions without any comments will receive style deductions.
 Code that is not properly formatted will also receive style deductions. (Hint - in IntelliJ, use Code → Reformat Code.)
