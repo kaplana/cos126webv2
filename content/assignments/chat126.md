@@ -233,11 +233,8 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
 
 #### Implementing `MarkovLM.java`
 
-
 1. Review precept exercises, especially `FrequencyTable`,  as well as [`IntegerSort.java`](https://introcs.cs.princeton.edu/42sort/IntegerSort.java.html).
-
-
- 2. Create one or more instance variables to support the two `freq()` methods. _One_ strategy is to maintain two symbol tables—one for the one-argument `freq()` method and one for the two-argument `freq()` method.
+2. Create one or more instance variables to support the two `freq()` methods. _One_ strategy is to maintain two symbol tables—one for the one-argument `freq()` method and one for the two-argument `freq()` method.
     - For each \\(k\\)-gram (a string), the first symbol table tells you how many times it appears in the text (an integer).
     - For each \\(k\\)-gram (a string), the second symbol table tells you how many times each ASCII character succeeds the \\(k\\)-gram in the text (an array of 128 integers).
     > Character (i.e., `char` values) can be used as an index into an array.  In Java, characters are 16-bit (unsigned) integers; they are promoted to ints in any context that expects one. For example, `array['c']` is equivalent to `array[99]` because the ASCII code for `'c'` is 99. 

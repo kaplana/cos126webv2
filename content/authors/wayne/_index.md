@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Kevin Wayne
+title: Prof. Kevin Wayne
 
 # Disable
 draft: false

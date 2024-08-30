@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Alan Kaplan
+title: Prof. Alan Kaplan
 
 # Is this the primary user of the site?
 superuser: false

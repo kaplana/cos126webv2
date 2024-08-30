@@ -23,26 +23,26 @@ R. Sedgewick and K. Wayne, Computer Science: An Interdisciplinary Approach, Addi
 ### Course Organization
 This course includes lectures, precepts, programming assignments, a final project, two written exams, and one programming exam:
 
-**Lectures.** You are expected to attend each lecture before precept so that you are well-prepared.  Lecture attendance counts for 2.5% of your overall grade. 
+**Lectures.** You are expected to attend and participate in lecture. Lecture participation accounts for 2.5% of the course grade.
 
 - ***Lecture Absences.*** The first four absences are automatically waived. This is intended to account for  illnesses, religious observances, and varsity athletic competitions, along with technical issues with your iClicker app. Please do not request a waiver unless you will be exceeding this limit. To request a lecture attendance waiver, contact the Course Administrator.
 
 
-**Precepts.**  Precepts  meet twice per week (either Monday/Wednesday or Tuesday/Thursday). Working within a small group, your preceptor will review key learning objectives for the week's lectures and precept exercises. The precept will involve question and answer, group discussion, etc.   Each precept involves working with a partner on interactive exercises and problem sets.   Precept attendance counts for 2.5% of your overall grade.
+**Precepts.**  Precepts  meet twice per week (either Monday/Wednesday or Tuesday/Thursday). Working within a small group, your preceptor will review key learning objectives for the week's lectures and precept exercises. The precept will involve question and answer, group discussion, etc.   Each precept involves working with a partner on interactive exercises and problem sets.   Precept participation counts for 2.5% of your overall grade.
 
 - ***Precept Absences.*** The first four absences are automatically waived. This is intended to account for  illnesses, religious observances, and varsity athletic competitions. Please do not request a waiver unless you will be exceeding this limit. To request a precept attendance waiver, contact the Course Administrator.
 
-If you cannot attend your scheduled precept, you can visit another precept and this will count as attendance – but please let your regular preceptor know about it, as well as the preceptor of the one you visit. If you miss a precept entirely, it’s still a good idea to contact your preceptor to let them know what’s up.  Arriving significantly late to a precept or leaving signficantly early does not count as attendance (unless given permission from the instructor).   
+If you cannot attend your scheduled precept, you can visit another precept and this will count as attendance – but please let your regular preceptor know about it, as well as the preceptor of the one you visit. If you miss a precept entirely, it’s still a good idea to contact your preceptor to let them know what’s up.  Arriving significantly late to a precept or leaving significantly early does not count as attendance (unless given permission from the instructor).   
 
 **Programming Assignments.** There are ten (10) programming assignments, all equally weighted. 
 
-- ***The `acknowledgments.txt` File.***  All assignments must include a file named `acknowledgments.txt`, which includes your acknowledgement of original work (as specified in [Rights, Rules, Responsibilities](https://rrr.princeton.edu)), any citations, names and dates of those who provided help, etc. Submitting the  `acknowledgments.txt` indicates that you have stopped working on your assignment and your submitted work is ready to be graded.  Your assignment solution will only be graded if the  `acknowledgments.txt` is submitted.
+- ***The `acknowledgments.txt` File.***  All assignments must include a file named `acknowledgments.txt`, which includes your acknowledgment of original work (as specified in [Rights, Rules, Responsibilities](https://rrr.princeton.edu)), any citations, names and dates of those who provided help, etc. Submitting the  `acknowledgments.txt` indicates that you have stopped working on your assignment and your submitted work is ready to be graded.  Your assignment solution will only be graded if the  `acknowledgments.txt` is submitted.
 
 - ***Late Work.*** Assignments are due at 11:59pm ET on Sunday evenings. If any part of an assignment is submitted late, the entire assignment will be marked late. We consider your assignment submitted as soon as you submit the `acknowledgments.txt` file.
 
 - ***Penalties for late submissions.***  Late assignments are assessed a penalty equal to 10% of the possible points on the assignment per day (or partial day) late. The penalties for your first four late days are waived automatically. This is intended to account for illnesses, religious observances, and travel. To request an extension beyond that, post in the appropriate Ed Discussion forum.  Please do not contact course staff if you need to utilize one (or more) of your automatically waived late days.
 
-- ***Additional Late Days.***   Additional late penalties will be waived only in the case of a medical or personal emergency, as documented by your residential college Dean or Assistant Dean for Studies, who must provide a recommendation to the course administrator. Notes from McCosh cannot be accepted for late work.  We will make a decision on any waivers or accomodations based on this recommendation.
+- ***Additional Late Days.***   Additional late penalties will be waived only in the case of a medical or personal emergency, as documented by your residential college Dean or Assistant Dean for Studies, who must provide a recommendation to the course administrator.  We will make a decision on any waivers or accommodations based on this recommendation. Notes from McCosh cannot be accepted for late work. 
 
 - ***Late Days and Partners.***   If you are working with a partner, any late penalties apply to the group. The number of free late days a group can use is the minimum of the number of free late days each member has remaining. 
 
@@ -57,14 +57,14 @@ There are two written exams and one programming exam during the semester.  There
 Attendance regrade requests must be made within three days after attendance grades are published.
 
 ### Final Grades
-Your final grade will be calculated based on a weighted sum of all the assignments, final project and exams. The final letter grade cutoffs will be determined at the end of the semester based on overall class performance, but not curved to any specific distribution.  Staff discretion **may** be applied to adjust borderline cases - for example, answering student questions on Ed Discussion can be used to bump borderline grades. 
+Your final grade will be calculated based on a weighted sum of all the assignments, final project, exams and participation. The final letter grade cutoffs will be determined at the end of the semester based on overall class performance, but not curved to any specific distribution.  Staff discretion **may** be applied to adjust borderline cases - for example, answering student questions on Ed Discussion can be used to bump borderline grades. 
 
 | Grade Contributions     | Weight                     |
 |:------------------------|:---------------------------|
 | Programming Assignments | 37.5%                      |
 | Final Project           | 7.5%                       |
-| Lecture Attendance      | 2.5%                       |
-| Precept Attendance      | 2.5%                       |
+| Lecture Participation   | 2.5%                       |
+| Precept Participation   | 2.5%                       |
 | Written Exams:<br>two written exams, one programming exam | 50% |
 
 

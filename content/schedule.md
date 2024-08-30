@@ -19,8 +19,8 @@ comments: false
 |Lecture          |  Mon/Wed, 1:30pm–2:50pm          | McCosh 50         | Kevin Wayne |
 |Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        | |   
 |Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        | |
-|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108        | Alan Kaplan |
-|Precept P11      |  Mon/Wed, 4:30pm-5:50pm          | Friend 109        | Alan Kaplan |
+|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108        | |
+|Precept P11      |  Mon/Wed, 4:30pm-5:50pm          | Friend 109        | |
 |Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend 108        | |
 |Precept P13      |  Tue/Thu, 8:30am–9:50am          | Friend 005        | Nicholas Alexander Sudarsky |
 |Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 108        | |
@@ -32,7 +32,7 @@ comments: false
 |Precept P14A     |  Tue/Thu, 11:00am-12:20pm        | Friend 111     | |
 |Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 108     | |
 |Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 110     | |
-|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108     | Ruth Fong |
+|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108     | |
 |Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 110     | |
 
 
@@ -48,10 +48,11 @@ comments: false
 | Week | Date        | Topic | Handouts \| Demos \| Assignments |
 | ---- | -------     | ---|---|
 | 0    | Wed, Sep 4  |{{< lecture "Introduction to COS 126" "static/lectures/00IntroCOS126.pdf" >}}<br> {{< lecture "Hello World" "static/lectures/11HelloWorld.pdf" >}}<br> _Reading:_ 1.1 |  |
-|      | Wed, Sep 4 &<br>Thu, Sep 5| [Precept Hello World Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p00-hello-world/p00-hello-world.zip) | |
+|      | Wed, Sep 4 &<br>Thu, Sep 5| [Precept Hello World Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p01-hello-world/p01-hello-world.zip) | |
 |      | Sun, Sep 8                  |                                    | [_Assignment:_ Hello due]({{< ref "/assignments/hello" >}})         |
-|      | Mon, Sep 9                 | {{< lecture "Data Types & Conditionals" "static/lectures/13Conditionals.pdf" >}}<br> _Reading:_ 1.2 and 1.3              |   |
-|      | Mon, Sep 9 &<br>Tue, Sep 10 | [Precept Data Types & Conditionals Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p01-data-types/p01-data-types.zip )               | |
+|<hr>|
+| 1    | Mon, Sep 9                 | {{< lecture "Data Types & Conditionals" "static/lectures/13Conditionals.pdf" >}}<br> _Reading:_ 1.2 and 1.3              |   |
+|     | Mon, Sep 9 &<br>Tue, Sep 10 | [Precept Data Types & Conditionals Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p02-data-types-conditionals/p02-data-types-conditionals.zip )               | |
 |      |                             |                                    |                                                       |
 |      | Wed, Sep 11                  |{{< lecture "Loops" "static/lectures/13Loops.pdf" >}} <br> _Reading:_ 1.3  |   |
 |      | Wed, Sep 11 &<br>Thu, Sep 12  | [Precept Loops Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p03-loops/p03-loops.zip )                     | |

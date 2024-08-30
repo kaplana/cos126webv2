@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Ruth Fong
+title: Prof. Ruth Fong
 
 # Is this the primary user of the site?
 superuser: false
