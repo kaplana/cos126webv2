@@ -17,23 +17,23 @@ comments: false
 | Section         | Days/Time                        | Room              | Instructor             |
 | --------------- | ---------------------------------| ----------------- | ---------------------- |
 |Lecture          |  Mon/Wed, 1:30pm–2:50pm          | McCosh 50         | Kevin Wayne |
-|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        | |   
-|Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        | |
-|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108        | |
-|Precept P11      |  Mon/Wed, 4:30pm-5:50pm          | Friend 109        | |
-|Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend 108        | |
+|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        | Max Gonzalez-Saez |   
+|Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        | Nobline Yoo |
+|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108        | Alan Kaplan |
+|Precept P11      |  Mon/Wed, 4:30pm-5:50pm          | Friend 109        | Alan Kaplan |
+|Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend 108        | Yanjin Chen |
 |Precept P13      |  Tue/Thu, 8:30am–9:50am          | Friend 005        | Nicholas Alexander Sudarsky |
-|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 108        | |
-|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend 108        | |
-|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 110        | |
-|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 108        | |
-|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 110     | |
-|Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend 009     | |
-|Precept P14A     |  Tue/Thu, 11:00am-12:20pm        | Friend 111     | |
-|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 108     | |
-|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 110     | |
-|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108     | |
-|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 110     | |
+|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 108        | Kylie Zhang |
+|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend 108        | Theresa Lim |
+|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 110        | Tanvi Namjoshi |
+|Precept P03B     |  Tue/Thu, 10:00am-10:50am        | Friend 016        | Colin Wang  |
+|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 108        | Max David Gupta |
+|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 110        | Owen Zhang |
+|Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend 009        | Creston Brooks |
+|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 108        | Kathryn Wantlin  |
+|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 110        | Abhishek Joshi |
+|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108        | Ruth Fong |
+|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 110        | Beza Desta|
 
 
 {{< /details >}}
@@ -47,29 +47,26 @@ comments: false
 
 | Week | Date        | Topic | Handouts \| Demos \| Assignments |
 | ---- | -------     | ---|---|
-| 0    | Wed, Sep 4  |{{< lecture "Introduction to COS 126" "static/lectures/00IntroCOS126.pdf" >}}<br> {{< lecture "Hello World" "static/lectures/11HelloWorld.pdf" >}}<br> _Reading:_ 1.1 |  |
+| 0    | Wed, Sep 4  |{{< lecture "Introduction to COS 126" "static/lectures/00IntroCOS126.pdf" >}}<br> {{< lecture "Intro to Java" "static/lectures/11IntroJava.pdf" >}}<br> _Reading:_ 1.1 and 1.2|  |
 |      | Wed, Sep 4 &<br>Thu, Sep 5| [Precept Hello World Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p01-hello-world/p01-hello-world.zip) | |
 |      | Sun, Sep 8                  |                                    | [_Assignment:_ Hello due]({{< ref "/assignments/hello" >}})         |
-|<hr>|
-| 1    | Mon, Sep 9                 | {{< lecture "Data Types & Conditionals" "static/lectures/13Conditionals.pdf" >}}<br> _Reading:_ 1.2 and 1.3              |   |
-|     | Mon, Sep 9 &<br>Tue, Sep 10 | [Precept Data Types & Conditionals Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p02-data-types-conditionals/p02-data-types-conditionals.zip )               | |
+| 1    | Mon, Sep 9                 | {{< lecture "Conditionals" "static/lectures/13Conditionals.pdf" >}}<br> _Reading:_ 1.3              |   |
+|     | Mon, Sep 9 &<br>Tue, Sep 10 | [Conditionals Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p02-data-types-conditionals/p02-data-types-conditionals.zip )               | |
 |      |                             |                                    |                                                       |
 |      | Wed, Sep 11                  |{{< lecture "Loops" "static/lectures/13Loops.pdf" >}} <br> _Reading:_ 1.3  |   |
 |      | Wed, Sep 11 &<br>Thu, Sep 12  | [Precept Loops Project Zip](https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/precepts/p03-loops/p03-loops.zip )                     | |
-|      | Sun, Sep 15                 |                                    | [_Assignment:_ Conditionals & Loops due]()         |
-|      |                             |                                    |                                                       |
+|      | Sun, Sep 15                 |                                    | [_Assignment:_ Conditionals & Loops due]({{< ref "/assignments/loops" >}})         |
 | 2    | Mon, Sep 16                 |{{< lecture "Arrays" "static/lectures/14Arrays.pdf" >}}<br> _Reading:_ 1.4 | {{< lecturedemo "Shuffle Demo" "static/lectures/demos/14DemoShuffle" >}}  |
 |      | Mon, Sep 16 &<br>Tue, Sep 17|{{< precept "p04-arrays" "Arrays" >}}              | |
 |      | Wed, Sep 18                 |{{< lecture "Input & Output" "static/lectures/15InputOutput.pdf" >}}<br> _Reading:_ 1.5  |   |
 |      | Wed, Sep 18 &<br>Thu, Sep 18| {{< precept "p05-io" "Input & Output" >}}        | |
-|      | Sun, Sep 22                 |                                    | [_Assignment:_ Arrays & IO due]()         |
-|      |                             |                                    |                                                       |
+|      | Sun, Sep 22                 |                                    | [_Assignment:_ Arrays & IO due]({{< ref "/assignments/arrays" >}})         |
 | 3    | Mon, Sep 23                 |{{< lecture "Functions" "static/lectures/21Functions.pdf" >}}<br> _Reading:_ 2.1 |  {{< lecturedemo "Function-Call Demo" "static/lectures/demos/21DemoFunctionCall" >}}   |
 |      | Mon, Sep 23 &<br>Tue, Sep 24| {{< precept "p06-functions" "Functions" >}}       | |
 |      | Wed, Sep 24                 |{{< lecture "Libraries & Clients" "static/lectures/22Libraries.pdf" >}}<br> _Reading:_ 2.2  |   |
 |      | Wed, Sep 24 &<br>Thu, Sep 25| {{< precept "p07-libraries" "Libraries & Clients" >}}      | |
 |      | Sun, Sep 29                 |                                    | [_Assignment:_ Functions due]()         |
-|      |                             |                                    |                                                       |
+|<hr>|
 | 4    | Mon, Sep 30                 |{{< lecture "Recursion" "static/lectures/23Recursion.pdf" >}}<br> _Reading:_ 2.3 |  {{< lecturedemo "Factorial Demo" "static/lectures/demos/23DemoFactorial" >}} |
 |      | Mon, Sep 30 &<br>Tue, Oct 1 | {{< precept "p08-recursion" "Recursion" >}}              | |
 |      | Wed, Oct 2                  |{{< lecture "Performance" "static/lectures/41Performance.pdf" >}}<br> _Reading:_ 4.1  |     ||

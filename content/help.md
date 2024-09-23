@@ -18,13 +18,13 @@ comments: false
 
 **Instructor Office Hours.** For more substantial questions about the course materials, you should attend instructor office hours. You're welcome to attend *any* instuctors' office hours.  Some office hours are in person and some are on Zoom.  Please check the calendar. Office hours can be used for help on assignments, for questions about course topics, or even general advice on computer science.  We expect, however, that you have attended the appropriate lecture and attempted the corresponding precept exercises *before* going to office hours.
 
-{{< gdocs src="https://calendar.google.com/calendar/embed?src=c_lnskd7q3lhjqm6d5jd0c60p13k%40group.calendar.google.com&ctz=America%2FNew_York" >}}
+{{< gdocs src="https://calendar.google.com/calendar/embed?src=c_lnskd7q3lhjqm6d5jd0c60p13k%40group.calendar.google.com&ctz=America%2FNew_York&mode=WEEK" >}}
 
 **Intro COS Lab.** The [Intro COS Lab](https://introlab.cs.princeton.edu), located  in [Lewis Library](https://goo.gl/maps/W34eFbaZbYaVo7Rr7), is staffed by undergrads  and  is available to help you debug your code.  Please make sure you have first made a reasonable effort to identify the bug and isolate the problem.  This also means you should have attended the appropriate lecture and attempted the corresponding precept exercises *before* going to the Intro COS Lab.  
 
 **Tutoring and More at McGraw.** If you feel you need a peer tutor, please visit the [McGraw Center for Teaching and Learning](https://mcgraw.princeton.edu/undergraduates/programs/tutoring).
 
-McGraw also offers [Academic Life and Learning Strategies Consultations](https://mcgraw.princeton.edu/undergraduates/programs/allc). These are hour-long meetings between a student and a learning consultant (juniors and seniors). You can use these appointments for any questions or problems related to academics. Appointments can be scheduled at [here](schedule.princeton.edu).
+McGraw also offers [Academic Life and Learning Strategies Consultations](https://mcgraw.princeton.edu/undergraduates/programs/allc). These are hour-long meetings between a student and a learning consultant (juniors and seniors). You can use these appointments for any questions or problems related to academics. 
 
 
 

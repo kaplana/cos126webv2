@@ -24,7 +24,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:'
+  link: 'mailto:Colin Wang <zwcolin@princeton.edu>'
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)

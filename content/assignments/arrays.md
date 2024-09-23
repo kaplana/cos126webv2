@@ -12,7 +12,6 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
 
 
 {{< project "arrays" >}} |  {{< submit "Arrays" >}}
@@ -60,7 +59,7 @@ Each histogram value should right-justified in a field width of three characters
 For example, here are the results of an execution when (\\(m = 2\\) and \\(n = 500\\)):
 
 ```plaintext
-> java-introcs DiceHistogram 2 500
+java-introcs DiceHistogram 2 500
   2: **************
   3: ***************************
   4: *********************************
@@ -159,29 +158,54 @@ Recall from lecture that a sound wave is a mechancal wave and is subject to the 
 
 Here are some sample executions:
 ```plaintext
-> java-introcs EchoFilter IHaveADream.wav 0 0.0
-{{< audio src="arrays/audio/IHaveADream" type="audio/wav" preload="auto" >}}
-> java-introcs EchoFilter IHaveADream.wav 15000 0.5
-{{< audio src="arrays/audio/EchoIHaveADream" type="audio/wav" preload="auto" >}}
-> java-introcs EchoFilter PearlHarbor.wav 15000 0.5
-{{< audio src="arrays/audio/EchoPearlHarbor" type="audio/wav" preload="auto" >}}
-> java-introcs EchoFilter TheHillWeClimb.wav 10000 0.5
-{{< audio src="arrays/audio/EchoTheHillWeClimb" type="audio/wav" preload="auto" >}}
-> java-introcs EchoFilter Crow.wav 10000 0.5
-{{< audio src="arrays/audio/EchoCrow" type="audio/wav" preload="auto" >}}
-> java-introcs EchoFilter HelloWorld.wav 5000 1.0
-{{< audio src="arrays/audio/EchoHelloWorld" type="audio/wav" preload="auto" >}}
-> java-introcs EchoFilter RowYourBoat.wav 117600 1.0
-{{< audio src="arrays/audio/EchoRowYourBoat" type="audio/wav" preload="auto" >}}
+java-introcs EchoFilter IHaveADream.wav 0 0.0
 ```
+{{< audio src="arrays/audio/IHaveADream" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs EchoFilter IHaveADream.wav 15000 0.5
+```
+{{< audio src="arrays/audio/EchoIHaveADream" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs EchoFilter PearlHarbor.wav 15000 0.5
+```
+{{< audio src="arrays/audio/EchoPearlHarbor" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs EchoFilter TheHillWeClimb.wav 10000 0.5
+```
+{{< audio src="arrays/audio/EchoTheHillWeClimb" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs EchoFilter Crow.wav 10000 0.5
+```
+{{< audio src="arrays/audio/EchoCrow" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs EchoFilter HelloWorld.wav 5000 1.0
+```
+{{< audio src="arrays/audio/EchoHelloWorld" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs EchoFilter RowYourBoat.wav 117600 1.0
+```
+{{< audio src="arrays/audio/EchoRowYourBoat" type="audio/wav" preload="auto" >}}
+
 An echo filter is popular [voice effect](https://backlightblog.com/voice-effects-on-tiktok) that you can apply on social media platforms such as TikTok.
 
 #### FAQs ####
 
 Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 
+{{< details "Is the integer delay equal to the number of samples we are shifting over?" >}} Yes. 
+{{< /details >}}
+
+{{< details "How do I test my program?" >}} To help you design/debug your approach, you may want to start with a *small example*, such as the one shown above:
+`double[] original = { 1.0, 0.0, 0.5, 0.0, -1.0, -0.5, 1.0, 0.25 };`
+<br> with `decay = 0.5` and `delay = 1`. While it would not make sense to play an echo filter applied to this example, you can print the results after applying your echo filter to make sure your calculations are correct. 
+
+
+{{< /details >}}
+
+
 {{< details "Can I assume that delay is a non-negative integer?" >}} Yes. Though, some musicians have found uses for [reverse echo](https://en.wikipedia.org/wiki/Reverse_echo) effects, which correspond to negative delay parameters.
 {{< /details >}}
+
 
 {{< details "Can I assume that decay is between 0 and 1?" >}}
 Yes. We will test your program only with decay values between 0 and 1.

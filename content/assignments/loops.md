@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 
 {{< project "loops" >}} |  {{< submit "Loops" >}}
 
@@ -64,19 +64,19 @@ Write a program `SayMilitaryTime.java` to say a given military time using these 
 
 Below are some sample executions:
 ```plaintext
-> java-introcs SayMilitaryTime 2359 Alex
+java-introcs SayMilitaryTime 2359 Alex
 ```
 {{< audio src="loops/audio/Alex2359" type="audio/wav" preload="auto" >}}
 ```plaintext
-> java-introcs SayMilitaryTime 1100 Siri
+java-introcs SayMilitaryTime 1100 Siri
 ```
 {{< audio src="loops/audio/Siri1100" type="audio/wav" preload="auto" >}}
 ```plaintext
-> java-introcs SayMilitaryTime 0609 Veena
+java-introcs SayMilitaryTime 0609 Veena
 ```
 {{< audio src="loops/audio/Veena0609" type="audio/wav" preload="auto" >}}
 ```plaintext
-> java-introcs SayMilitaryTime 0011 Paulina
+java-introcs SayMilitaryTime 0011 Paulina
 ```
 {{< audio src="loops/audio/Paulina0011" type="audio/wav" preload="auto" >}}
 
@@ -144,7 +144,7 @@ To apply a duotone filter to an image, consider each pixel of a source image one
      - \\(r^\prime = luminance \times  r_1 + (1 - luminance) \times  r_2\\)
      - \\(g^\prime = luminance \times  g_1 + (1 - luminance) \times  g_2\\)
      - \\(b^\prime = luminance \times  b_1 + (1 - luminance) \times  b_2\\)
-     - When computing  \\(r^\prime, g^\prime, b^\prime\\, round the results to the nearest integer, so that \\(r^\prime\\), \\(g^\prime\\), and \\(b^\prime\\) are integers between \\(0\\) and \\(255\\).
+     - When computing  \\(r^\prime, g^\prime, b^\prime\\), round the results to the nearest integer, so that \\(r^\prime\\), \\(g^\prime\\), and \\(b^\prime\\) are integers between \\(0\\) and \\(255\\).
 
 Write a program `Duotone.java` that takes the name of an image file as a command-line argument, along with the values for  \\(r_1, g_1, b_1, r_2, g_2, b_2\\), and applies a duotone filter to that image, and displays the results in a window. Use `StdPicture` to read, modify, and display the picture.
 
@@ -194,17 +194,26 @@ Write a program `MusicalDiceGame.java` that plays a waltz according to the rules
 
 
 ```plaintext
-> java-introcs MusicalDiceGame mozart-piano
-{{< audio src="loops/audio/waltz-piano1" type="audio/wav" preload="auto" >}}
-> java-introcs MusicalDiceGame mozart-piano
-{{< audio src="loops/audio/waltz-piano2" type="audio/wav" preload="auto" >}}
-> java-introcs MusicalDiceGame mozart-clarinet
-{{< audio src="loops/audio/waltz-clarinet" type="audio/wav" preload="auto" >}}
-> java-introcs MusicalDiceGame mozart-flute-harp
-{{< audio src="loops/audio/waltz-flute-harp" type="audio/wav" preload="auto" >}}
-> java-introcs MusicalDiceGame mozart-mbira
-{{< audio src="loops/audio/waltz-mbira" type="audio/wav" preload="auto" >}}
+java-introcs MusicalDiceGame mozart-piano
 ```
+{{< audio src="loops/audio/waltz-piano1" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs MusicalDiceGame mozart-piano
+```
+{{< audio src="loops/audio/waltz-piano2" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs MusicalDiceGame mozart-clarinet
+```
+{{< audio src="loops/audio/waltz-clarinet" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs MusicalDiceGame mozart-flute-harp
+```
+{{< audio src="loops/audio/waltz-flute-harp" type="audio/wav" preload="auto" >}}
+```plaintext
+java-introcs MusicalDiceGame mozart-mbira
+```
+{{< audio src="loops/audio/waltz-mbira" type="audio/wav" preload="auto" >}}
+
 
 Context: each time you run the program you will compose a piece of music that has never been heard before! The precomposed measures obey a rigid harmonic structure so that each waltz reflects Mozart's distinct style. However, due to this rigid structure, the process never results in anything truly extraordinary.
 

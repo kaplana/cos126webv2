@@ -1,7 +1,7 @@
 ---
 title: 0. Hello, World 
 subtitle: 
-summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}}<br>{{<notreleased>}}
+summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}}
 weight: 1
 type: "page"
   
@@ -45,7 +45,7 @@ The purpose of this assignment is to introduce you to programming in Java and fa
 <!--SPRING	- `RGBtoCMYK.java`-->
    Recall, in IntelliJ, you create a new Java class with *LIFT → New Java Class*.
    
-- Complete the `readme.txt` and `acknowledgment.txt` files.
+- Complete the `readme.txt` and `acknowledgments.txt` files.
 
 
 ### **HelloWorld**
