@@ -1,7 +1,7 @@
 ---
 title: 3. Conjunction Function 
 subtitle: 
-summary:  Implement and test a collection of functions (also known as methods), which manipulate audio, and take a short quiz on how to get help in COS 126. {{< project "functions" >}} |  {{< submit "Functions" >}}<br>{{<notreleased>}}
+summary:  Implement and test a collection of functions (also known as methods), which manipulate audio, and take a short quiz on how to get help in COS 126. {{< project "functions" >}} |  {{< submit "Functions" >}}
 weight: 4
 type: "page"
   
@@ -91,7 +91,7 @@ public class AudioCollage {
 
 Creates a new sound that contains the same samples as an existing sound, but with each sample multiplied by a constant \\( \alpha \\). This increases the volume when \\( \alpha > 1 \\) and decreases it when \\( 0 < \alpha < 1\\). For example:
 
-{{< imgfig "images/amplify.png" >}}
+{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/amplify.png" >}}
 
 
 Note: `amplify()` may produce samples whose absolute value is larger than 1 even if all of the input samples are between –1 and +1. While you should not play samples whose absolute value is greater than 1, it’s fine to produce them as intermediate results.
@@ -99,7 +99,7 @@ Note: `amplify()` may produce samples whose absolute value is larger than 1 even
 #### `clamp()`
 Replaces all samples *greater than* +1.0 with 1.0; and all samples *less than* -1.0 with -1.0. For example:
 
-{{< imgfig "images/clamp.png" >}}
+{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/clamp.png" >}}
 
 
 #### `reverse()`
@@ -107,21 +107,21 @@ Replaces all samples *greater than* +1.0 with 1.0; and all samples *less than* -
 
 Creates a new sound that contains the same samples as an existing sound, but in reverse order. This can lead to unexpected and entertaining results. For example:
 
-{{< imgfig "images/reverse.png" >}}
+{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/reverse.png" >}}
 
 
 #### `merge()`
 
 Creates a new sound that combines two existing sounds by appending the second one after the first. If the two sounds have \\(m\\) and \\(n\\) samples, then the resulting sound has \\(m + n\\) samples. This enables you to play two sounds sequentially. For example:
 
-{{< imgfig "images/merge.png" >}}
+{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/merge.png" >}}
 
 
 #### `mix()`
 
 Creates a new sound that combines two existing sounds by summing the values of the corresponding samples. This enables you to play two sounds simultaneously. If, when summing, one sound is longer than the other, treat the shorter array as if 0s were appended to the end. For example:
 
-{{< imgfig "images/mix.png" >}}
+{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/mix.png" >}}
 
 
 Note: `mix()` may produce samples whose absolute value is larger than 1 even if all of the input samples are between –1 and +1. While you should not play samples whose absolute value is greater than 1, it is fine to produce them as intermediate results.
@@ -130,7 +130,7 @@ Note: `mix()` may produce samples whose absolute value is larger than 1 even if 
 
 Creates a new sound that changes the duration of an existing sound via resampling. If the existing sound has \\(n\\) samples, then the new sound has \\(⌊n / \alpha ⌋\\) samples for some constant \\( \alpha > 0 \\), with sample \\(i\\) of the new sound having the same amplitude as sample \\(⌊i \alpha ⌋\\) of the existing sound. Assume that \\(\alpha > 0\\).  For example:
 
-{{< imgfig "images/changeSpeed.png" >}}
+{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/changeSpeed.png" >}}
 
 The floor function \\(⌊x⌋\\) returns the largest integer less than or equal to \\(x\\). You can compute it in Java by either casting to an integer (resulting in an `int`) or calling `Math.floor(x)` (resulting in a `double`).
 

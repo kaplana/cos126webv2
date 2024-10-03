@@ -65,15 +65,14 @@ comments: false
 |      | Mon, Sep 23 &<br>Tue, Sep 24| {{< precept "p06-functions" "Functions" >}}       | |
 |      | Wed, Sep 24                 |{{< lecture "Libraries & Clients" "static/lectures/22Libraries.pdf" >}}<br> _Reading:_ 2.2  |   |
 |      | Wed, Sep 24 &<br>Thu, Sep 25| {{< precept "p07-libraries" "Libraries & Clients" >}}      | |
-|      | Sun, Sep 29                 |                                    | [_Assignment:_ Functions due]()         |
-|<hr>|
+|      | Sun, Sep 29                 |                                    | [_Assignment:_ Functions due]({{< ref "/assignments/functions" >}})         |
 | 4    | Mon, Sep 30                 |{{< lecture "Recursion" "static/lectures/23Recursion.pdf" >}}<br> _Reading:_ 2.3 |  {{< lecturedemo "Factorial Demo" "static/lectures/demos/23DemoFactorial" >}} |
 |      | Mon, Sep 30 &<br>Tue, Oct 1 | {{< precept "p08-recursion" "Recursion" >}}              | |
 |      | Wed, Oct 2                  |{{< lecture "Performance" "static/lectures/41Performance.pdf" >}}<br> _Reading:_ 4.1  |     ||
 |      | Wed, Oct 2 &<br>Thu, Oct 3  |    {{< precept "p09-performance" "Performance" >}}                   | |
-|      | Sun, Oct 6                  |                                    | [_Assignment:_ Recursive Graphics due]()         |
-|      |                             |                                   | |
-| 5    | Mon, Oct 7                  |_Lecture:_ TBD                     | |
+|      | Sun, Oct 6                  |                                    | [_Assignment:_ Recursive Graphics due]({{< ref "/assignments/recursion" >}})         |
+|<hr>|
+| 5    | Mon, Oct 7                  | Lecture: Exam Review              | |
 |      | Mon, Oct 7 &<br>Tue, Oct 8  | Precept: Exam Review              | |
 |      | Wed, Oct 9                  |_Written Exam 1_                   | |
 |      | Wed, Oct 9 &<br>Thu, Oct 10 | Precept: None                     | |
@@ -110,7 +109,7 @@ comments: false
 |      | Wed, Nov 20 &<br>Thu, Nov 21| Precept: Java Jeopardy           | |
 |      | Sun, Nov 24                 |                                   | [_Assignment:_ Hamming due]()         |
 |      |                             |                                   | |
-| 11   | Mon, Nov 25| Lecture: Networks - Jen???   |   |
+| 11   | Mon, Nov 25| Lecture: TBD   |   |
 |      | Mon, Nov 25 &<br>Tue, Nov 26 | No precept |
 |      | Wed, Nov 27 -<br> Fri, Nov 29| **THANKSGIVING BREAK** |
 | 12   | Mon, Dec 2 | {{< lecture "Circuits" "static/lectures/70Circuits.pdf" >}}<br> _Reading:_ 7.1, 7.3 |   |

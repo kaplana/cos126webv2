@@ -1,7 +1,7 @@
 ---
 title: 4. Recursion
 subtitle: 
-summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}}
+summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}} <br>{{<notreleased>}}
 weight: 5
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "recursion" >}} |  {{< submit "Recursion" >}}
 
 
@@ -74,19 +74,19 @@ public class DelannoyBrute {
 As you will see, this approach is hopelessly slow, even for moderately small values of \\(m\\) and \\(n\\).
 
 ```plaintext
-~/Desktop/recursion> java-introcs DelannoyBrute 2 2
+java-introcs DelannoyBrute 2 2
 13
 
-~/Desktop/recursion> java-introcs DelannoyBrute 3 2
+java-introcs DelannoyBrute 3 2
 25
 
-~/Desktop/recursion> java-introcs DelannoyBrute 2 3
+java-introcs DelannoyBrute 2 3
 25
 
-~/Desktop/recursion> java-introcs DelannoyBrute 3 3
+java-introcs DelannoyBrute 3 3
 63
 
-~/Desktop/recursion> java-introcs DelannoyBrute 20 20
+java-introcs DelannoyBrute 20 20
 [takes too long]
 ```
 
@@ -179,17 +179,17 @@ These are purely suggestions for how you might make progress. You do not have to
 	- To **test** your function, write `main()` so that it takes an integer command-line argument `n` and calls `sierpinski(n)`. Ignoring whitespace, you should get the following output when you call `sierpinski()` with `n` ranging from 0 to 5. Make sure you understand how this function works, and why it prints the numbers in the order it does. 
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 0
+java-introcs Sierpinski 0
 [no output]
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 1
+java-introcs Sierpinski 1
 1
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 2
+java-introcs Sierpinski 2
 2
 1
 1
@@ -197,7 +197,7 @@ These are purely suggestions for how you might make progress. You do not have to
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 3
+java-introcs Sierpinski 3
 3
 2 1 1 1
 2 1 1 1
@@ -205,7 +205,7 @@ These are purely suggestions for how you might make progress. You do not have to
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 4
+java-introcs Sierpinski 4
 4
 3 2 1 1 1 2 1 1 1 2 1 1 1
 3 2 1 1 1 2 1 1 1 2 1 1 1
@@ -213,7 +213,7 @@ These are purely suggestions for how you might make progress. You do not have to
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 5
+java-introcs Sierpinski 5
 5
 4 3 2 1 1 1 2 1 1 1 2 1 1 1
 3 2 1 1 1 2 1 1 1 2 1 1 1
@@ -230,17 +230,17 @@ These are purely suggestions for how you might make progress. You do not have to
 
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 0
+java-introcs Sierpinski 0
 [no output]
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 1
+java-introcs Sierpinski 1
 1 0.5
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 2
+java-introcs Sierpinski 2
 2 0.5
 1 0.25
 1 0.25
@@ -248,7 +248,7 @@ These are purely suggestions for how you might make progress. You do not have to
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 3
+java-introcs Sierpinski 3
 3 0.5
 2 0.25  1 0.125  1 0.125  1 0.125
 2 0.25  1 0.125  1 0.125  1 0.125
@@ -256,7 +256,7 @@ These are purely suggestions for how you might make progress. You do not have to
 ```
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 4
+java-introcs Sierpinski 4
 4 0.5
 3 0.25  2 0.125  1 0.0625  1 0.0625  1 0.0625
 2 0.125  1 0.0625  1 0.0625  1 0.0625
@@ -279,19 +279,19 @@ These are purely suggestions for how you might make progress. You do not have to
 Below are the target Sierpinski triangles for different values of `n`.
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 1
+java-introcs Sierpinski 1
 ```
 
 ![Sierpinski level 1]({{< resource url="static/assignments/recursion/images/sierpinski1.png" >}})
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 2
+java-introcs Sierpinski 2
 ```
 
 ![Sierpinski level 2]({{< resource url="static/assignments/recursion/images/sierpinski2.png" >}})
 
 ```plaintext
-~/Desktop/recursion> java-introcs Sierpinski 3
+java-introcs Sierpinski 3
 ```
 
 ![Sierpinski level 3]({{< resource url="static/assignments/recursion/images/sierpinski3.png" >}})
@@ -337,7 +337,7 @@ A very good approach is to first choose a self-referential pattern as a target o
 
 For example, the [Quadricross](https://en.wikipedia.org/wiki/File:Quadriccross.gif) looks very different from the in-class examples, but the code to generate it looks extremely similar to `HTree`, so it is a bad choice. On the other hand, even though the [Sierpinski curve](https://www.robertdickau.com/sierpinskiarrow.html) eventually generates something that looks like the Sierpinski triangle, the code is very different (probably including an angle argument in the recursive method), and so it would earn full marks.
 
-**Here is an animation we produced  using student art:** {{< youtube JDNrg1z-M7A >}}
+**Here is an animation we produced  using student art:** {{< youtube 5WgHMV2wH0w  >}}
 
 
 ### **Delannoy numbers (dynamic programming)**
@@ -347,6 +347,7 @@ You have now written three recursive programs.  This programming exercise demons
 Write a program `DelannoyMemo.java` that takes two integer command-line arguments \\(m\\) and \\(n\\) and computes the Delannoy number \\(D(m, n)\\) using dynamic programming.
 
 - Use a `private static` two-dimensional array with element `memo[i][j]` storing \\(D(i,j)\\).
+- Review pages 106-111 in your textbook.
 - Review  `FibonnaciMemo.java` (from lecture) and `PalindromeMemo.java` (from precept).  Your code `DelannoyMemo.java` should be structured similarly to these exercises.
 - You must not add `public` methods to the API; however, you may add `private` methods (which are accessible only in the class in which they are declared).
 
@@ -368,19 +369,19 @@ public class DelannoyMemo {
 This version should be fast enough to handle larger values of \\(m\\) and \\(n\\). 
 
 ```plaintext
-~/Desktop/recursion> java-introcs DelannoyMemo 2 2
+java-introcs DelannoyMemo 2 2
 13
 
-~/Desktop/recursion> java-introcs DelannoyMemo 3 2
+java-introcs DelannoyMemo 3 2
 25
 
-~/Desktop/recursion> java-introcs DelannoyMemo 2 3
+java-introcs DelannoyMemo 2 3
 25
 
-~/Desktop/recursion> java-introcs DelannoyMemo 3 3
+java-introcs DelannoyMemo 3 3
 63
 
-~/Desktop/recursion> java-introcs DelannoyMemo 20 20
+java-introcs DelannoyMemo 20 20
 260543813797441
 ```
 
@@ -390,30 +391,53 @@ Provide your answers to the following questions in  the  `readme.txt` file.
 Conduct the following experiments, where \\(m\\) and \\(n\\) are the same:
 
 ```plaintext
-~/Desktop/recursion> java-introcs DelannoyBrute 2 2
-~/Desktop/recursion> java-introcs DelannoyBrute 4 4
-~/Desktop/recursion> java-introcs DelannoyBrute 8 8
-~/Desktop/recursion> java-introcs DelannoyBrute 16 16
-~/Desktop/recursion> java-introcs DelannoyMemo 2 2
-~/Desktop/recursion> java-introcs DelannoyMemo 4 4
-~/Desktop/recursion> java-introcs DelannoyMemo 8 8
-~/Desktop/recursion> java-introcs DelannoyMemo 16 16
+java-introcs DelannoyBrute 2 2
+```
+```plaintext
+java-introcs DelannoyBrute 4 4
+```
+```plaintext
+java-introcs DelannoyBrute 8 8
+```
+```plaintext
+java-introcs DelannoyBrute 16 16
+```
+```plaintext
+java-introcs DelannoyMemo 2 2
+```
+```plaintext
+java-introcs DelannoyMemo 4 4
+```
+```plaintext
+java-introcs DelannoyMemo 8 8
+```
+```plaintext
+java-introcs DelannoyMemo 16 16
 ```
 
 1. Based your computational experiments, which function runs faster:   `DelannoyBrute.count()` or `DelannoyMemo.count()` ?
 
 2. Using a mathematical model, what is the  estimated order of growth of the running time of `DelannoyBrute.count(n, n)`   as a function of \\(n\\)?
 
-<!--
--  \\(\Theta(1)\\) - constant, \\(\Theta(\log n)\\) - logarithmic, \\(\Theta(n)\\) - linear, \\(\Theta(n\log n)\\) - linearithmic, \\(\Theta(n^2)\\) - quadratic, \\(\Theta(n^3)\\) - cubic or \\(\Theta(c^n)\\) - exponential?   -->
+
+   \\(\Theta(1)\\) - constant, \\(\Theta(\log n)\\) - logarithmic, \\(\Theta(n)\\) - linear, \\(\Theta(n\log n)\\) - linearithmic, \\(\Theta(n^2)\\) - quadratic, \\(\Theta(n^3)\\) - cubic or \\(\Theta(c^n)\\) - exponential
+
 3. Empirically analyze  `DelannoyMemo.count(n, n)` using the doubling method. Complete the following table by conducting experiments for n = 3000, 6000, 12000, 24000. 
 
 ```plaintext
-~/Desktop/recursion> java-introcs -Xss10m  DelannoyMemo 3000 3000
-~/Desktop/recursion> java-introcs -Xss10m  DelannoyMemo 6000 6000
-~/Desktop/recursion> java-introcs -Xss10m  DelannoyMemo 12000 12000
-~/Desktop/recursion> java-introcs -Xss10m  DelannoyMemo 24000 24000
+java-introcs -Xss10m  DelannoyMemo 3000 3000
 ```
+```plaintext
+java-introcs -Xss10m  DelannoyMemo 6000 6000
+```
+```plaintext
+java-introcs -Xss10m  DelannoyMemo 12000 12000
+```
+```plaintext
+java-introcs -Xss10m  DelannoyMemo 24000 24000
+```
+
+> The command-line option -Xss10m in Java is used to set the stack size for each thread. Specifically, `-Xss` allows you to specify the stack size in bytes, and in this case, `10m` indicates a size of 10 megabytes.
 
 | \\(n\\) | Time (seconds) |
 | -----  | -------------- |
@@ -424,6 +448,7 @@ Conduct the following experiments, where \\(m\\) and \\(n\\) are the same:
 
 4. Based on your empirical analysis, what is the estimated  order of growth of the running time of `DelannoyMemo.count(n, n)`   as a function of \\(n\\)?
 
+   \\(\Theta(1)\\) - constant, \\(\Theta(\log n)\\) - logarithmic, \\(\Theta(n)\\) - linear, \\(\Theta(n\log n)\\) - linearithmic, \\(\Theta(n^2)\\) - quadratic, \\(\Theta(n^3)\\) - cubic or \\(\Theta(c^n)\\) - exponential
 
 > Notes:
 > - For your empirical analysis, you may observe the result returned by `count()` will *overflow* a `long` data type.  However, you can ignore the values returned by `count()` since they do not impact the order of growth of the implementation.
@@ -431,9 +456,8 @@ Conduct the following experiments, where \\(m\\) and \\(n\\) are the same:
 > - If you receive a message such as `Exception in thread "main" java.lang.OutOfMemoryError: Java heap space`, try allocating more memory to your Java process. For example:
 >
 >    `java-introcs -Xss50m -Xmx5g DelannoyMemo 24000 24000`
-
-
-
+>
+> The command-line option `-Xmx5g` in Java is used to specify the maximum heap size for the Java Virtual Machine (JVM). The _heap_ is the area of memory used for dynamic memory allocation in Java. This is where objects created by your application are stored.  The `-Xmx` flag sets the upper limit for the heap memory that the JVM can allocate. In this case, `5g` means that the maximum heap size is set to 5 gigabytes.
 
 ### **Submission**
 
