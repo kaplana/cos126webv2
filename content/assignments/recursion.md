@@ -1,7 +1,7 @@
 ---
 title: 4. Recursion
 subtitle: 
-summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}} <br>{{<notreleased>}}
+summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}} 
 weight: 5
 type: "page"
   
@@ -148,7 +148,7 @@ Here is the layout of the initial equilateral triangle. The top vertex lies at \
 
 Here is the layout of an inverted equilateral triangle.
 
-![Inverted triangle example]({{< resource  url="static/assignments/recursion/images/inverted-equilateral-triangle.png" >}})
+{{< staticimg src="recursion/images/inverted-equilateral-triangle.jpg" wid=750 alt="Sample shifted and rescaled" >}}
 
 
 
@@ -337,7 +337,7 @@ A very good approach is to first choose a self-referential pattern as a target o
 
 For example, the [Quadricross](https://en.wikipedia.org/wiki/File:Quadriccross.gif) looks very different from the in-class examples, but the code to generate it looks extremely similar to `HTree`, so it is a bad choice. On the other hand, even though the [Sierpinski curve](https://www.robertdickau.com/sierpinskiarrow.html) eventually generates something that looks like the Sierpinski triangle, the code is very different (probably including an angle argument in the recursive method), and so it would earn full marks.
 
-**Here is an animation we produced  using student art:** {{< youtube 5WgHMV2wH0w  >}}
+**Here is an animation we produced  using student art:** {{< youtube P-LGv84LkEU  >}}
 
 
 ### **Delannoy numbers (dynamic programming)**
@@ -452,7 +452,7 @@ java-introcs -Xss10m  DelannoyMemo 24000 24000
 
 > Notes:
 > - For your empirical analysis, you may observe the result returned by `count()` will *overflow* a `long` data type.  However, you can ignore the values returned by `count()` since they do not impact the order of growth of the implementation.
-> - Instrument your working version `DelannoyMemo.java` similarly to how your code was instrumented in precept using `System.System.currentTimeMillis()`. Do not submit the instrumented version of `DelannoyMemo.java` to TigerFile.
+> - Instrument your working version `DelannoyMemo.java` similarly to how your code was instrumented in precept using `System.currentTimeMillis()`. Do not submit the instrumented version of `DelannoyMemo.java` to TigerFile.
 > - If you receive a message such as `Exception in thread "main" java.lang.OutOfMemoryError: Java heap space`, try allocating more memory to your Java process. For example:
 >
 >    `java-introcs -Xss50m -Xmx5g DelannoyMemo 24000 24000`

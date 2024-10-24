@@ -1,7 +1,7 @@
 ---
 title: 5. Object-Oriented Programming
 subtitle: 
-summary:  Gain experience with using and creating data types. <br>Partner assignment   {{< project "oop" >}} |  {{< submit "OOP" >}}
+summary:  Gain experience with using and creating data types. <br>Partner assignment   {{< project "oop" >}} |  {{< submit "OOP" >}}<br>{{<notreleased>}}
 weight: 6
 type: "page"
   
@@ -12,7 +12,6 @@ profile: false
 comments: false
 
 ---
-{{<construction>}}
 {{< project "oop" >}} |  {{< submit "OOP" >}}
 
 ### **Goals**
@@ -181,7 +180,7 @@ $$
 Although the Earth is not a perfect sphere, this formula provides a reasonably accurate approximation
 to the true distance, using \\(r = \text{6,371.0}\\) kilometers, which is the mean radius of the earth.
 For example, the great circle distance between \\((60^{\circ}, 15^{\circ})\\) and
-\\((120^{\circ}, 105^{\circ})\\) is approximately \\(4604.5\\) kilometers:
+\\((60^{\circ}, 105^{\circ})\\) is approximately \\(4604.5\\) kilometers:
 
 <img src = "../../static/assignments/oop/images/great-circle-trace.png" width = 700 alt = "great circle trace">
 
@@ -201,7 +200,7 @@ For example, the great circle distance between \\((60^{\circ}, 15^{\circ})\\) an
 Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 
 {{< details "How do I write and debug a program that involves a complicated formula?" >}}
-First, decompose a formula into smaller pieces and store each piece in a separate variable. Next, select input values for which computing the pieces by hand are relatively easy. Finally, check that each piece matches the value you expected. For example, the great-circle distance between (60°, 15°) and (120°, 105°) is approximately 4,604.53989 kilometers, as shown in the figure above.
+First, decompose a formula into smaller pieces and store each piece in a separate variable. Next, select input values for which computing the pieces by hand are relatively easy. Finally, check that each piece matches the value you expected. For example, the great-circle distance between (60°, 15°) and (60°, 105°) is approximately 4,604.53989 kilometers, as shown in the figure above.  Print the intermediate values for \\(\sin^2 \left ( \frac{x_2 - x_1}{2} \right )\\), \\( \cos x_1 \cos x_2\\), and \\(\sin^2 \left ( \frac{y_2 - y_1}{2} \right ) \\) to help you debug.
 {{< /details >}}
 
 {{< details "Which `Math` library functions should I use?" >}}
@@ -259,20 +258,20 @@ Here is some more information about the required behavior:
 - _Corner cases._ You may assume that all of the arguments are meaningful values (e.g., MIDI numbers are between 0 and 127).
 
 - _Note names and octaves._ Musicians often use [scientific pitch notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation) to describe notes, such as A4 to describe concert A (MIDI number 69) or C4 to describe middle C (MIDI number 60). Scientific pitch notation combines two components: the note name (C, C#, D, D#, E, F, F#, G, G#, A, A#, or B), followed by the octave (an integer). Each octave consists of twelve (12) notes. The following table documents the mapping between the two notations:
-|        | |MIDI| pitch |&emsp;|MIDI| pitch|&emsp;|MIDI| pitch|&emsp;|MIDI| pitch|&emsp;|MIDI| pitch| |        |
-|:------:|-|:--:|:----: |-|:--:|:----:|-|:--:|:----:|-|:--:|:----:|-|:--:|:----:|-|:------:|
-|        | | 36 |  C2   | | 48 |  C3  | | 60 |  C4  | | 72 |  C5  | | 84 |  C6  | |        |
-|        | | 37 |  C#2  | | 49 |  C#3 | | 61 |  C#4 | | 73 |  C#5 | | 85 |  C#6 | |        |
-|        | | 38 |  D2   | | 50 |  D3  | | 62 |  D4  | | 74 |  D5  | | 86 |  D6  | |        |
-|        | | 39 |  D#2  | | 51 |  D#3 | | 63 |  D#4 | | 75 |  D#5 | | 87 |  D#6 | |        |
-|        | | 40 |  E2   | | 52 |  E3  | | 64 |  E4  | | 76 |  E5  | | 88 |  E6  | |        |
-|&hellip;| | 41 |  F2   | | 53 |  F3  | | 65 |  F4  | | 77 |  F5  | | 89 |  F6  | |&hellip;|
-|        | | 42 |  F#2  | | 54 |  F#3 | | 66 |  F#4 | | 78 |  F#5 | | 90 |  F#6 | |        |
-|        | | 43 |  G2   | | 55 |  G3  | | 67 |  G4  | | 79 |  G5  | | 91 |  G6  | |        |
-|        | | 44 |  G#2  | | 56 |  G#3 | | 68 |  G#4 | | 80 |  G#5 | | 92 |  G#6 | |        |
-|        | | 45 |  A2   | | 57 |  A3  | | 69 |  A4  | | 81 |  A5  | | 93 |  A6  | |        |
-|        | | 46 |  A#2  | | 58 |  A#3 | | 70 |  A#4 | | 82 |  A#5 | | 94 |  A#6 | |        |
-|        | | 47 |  B2   | | 59 |  B3  | | 71 |  B4  | | 83 |  B5  | | 95 |  B6  | |        |
+|      |MIDI| pitch | |MIDI| pitch| |MIDI| pitch| |MIDI| pitch| |MIDI|pitch |     |
+|:----:|:--:|:----: |-|:--:|:----:|-|:--:|:----:|-|:--:|:----:|-|:--:|:----:|:---:|
+|      | 36 |  C2   | | 48 |  C3  | | 60 |  C4  | | 72 |  C5  | | 84 |  C6  |     |
+|      | 37 |  C#2  | | 49 |  C#3 | | 61 |  C#4 | | 73 |  C#5 | | 85 |  C#6 |     |
+|      | 38 |  D2   | | 50 |  D3  | | 62 |  D4  | | 74 |  D5  | | 86 |  D6  |     |
+|      | 39 |  D#2  | | 51 |  D#3 | | 63 |  D#4 | | 75 |  D#5 | | 87 |  D#6 |     |
+|      | 40 |  E2   | | 52 |  E3  | | 64 |  E4  | | 76 |  E5  | | 88 |  E6  |     |
+| ...  | 41 |  F2   | | 53 |  F3  | | 65 |  F4  | | 77 |  F5  | | 89 |  F6  | ... |
+|      | 42 |  F#2  | | 54 |  F#3 | | 66 |  F#4 | | 78 |  F#5 | | 90 |  F#6 |     |
+|      | 43 |  G2   | | 55 |  G3  | | 67 |  G4  | | 79 |  G5  | | 91 |  G6  |     |
+|      | 44 |  G#2  | | 56 |  G#3 | | 68 |  G#4 | | 80 |  G#5 | | 92 |  G#6 |     |
+|      | 45 |  A2   | | 57 |  A3  | | 69 |  A4  | | 81 |  A5  | | 93 |  A6  |     |
+|      | 46 |  A#2  | | 58 |  A#3 | | 70 |  A#4 | | 82 |  A#5 | | 94 |  A#6 |     |
+|      | 47 |  B2   | | 59 |  B3  | | 71 |  B4  | | 83 |  B5  | | 95 |  B6  |     |
 
 <!--
 MIDI| pitch | |MIDI| pitch |    MIDI| pitch| |MIDI| pitch|
@@ -318,6 +317,18 @@ Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 Recall from the _Creating Data Types_ lecture that you can declare a constant using the `private static final` modifiers. For example: `private static final int MINUTES_PER_HOUR = 60;`
 {{< /details >}}
 
+{{< details "MIDI values go from 0 to 127, however the table provided only shows the relationship between MIDI and octaves from 36 to 95. Should we only focus on those MIDI values? Or are we expected to generalize the relationship for the other values as well?" >}}
+You need to generalize.
+{{< /details >}}
+
+
+{{< details "There are only instrument audio files for MIDI numbers 12 through 116. Are our programs purposefully not intended to play MIDI numbers 0 through 11 and 117 through 127?" >}}
+While MIDI is defined for values 0 to 127, most instruments do not support that full range. For example, a typical piano has only 88 keys, not 128. You need not worry about that. The autograder won't call play() on a MIDI note for which there is no accompanying WAV file.
+{{< /details >}}
+
+{{< details "Do I need conditional (`if`) statements to determine a note name or octave?" >}}
+You can implement `name()` and `octave()` without any `if` statements. If you a have large multiway `if` statement ladder, you are probably not finding the most elegant way to implement these methods. Consider using integer division/remainder and an array.
+{{< /details >}}
 
 ####  Part 2: Write a client that uses the musical note data type.
 
