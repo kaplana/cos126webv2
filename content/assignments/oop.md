@@ -1,7 +1,7 @@
 ---
 title: 5. Object-Oriented Programming
 subtitle: 
-summary:  Gain experience with using and creating data types. <br>Partner assignment   {{< project "oop" >}} |  {{< submit "OOP" >}}<br>{{<notreleased>}}
+summary:  Gain experience with using and creating data types. <br>Partner assignment   {{< project "oop" >}} |  {{< submit "OOP" >}}
 weight: 6
 type: "page"
   

@@ -1,7 +1,7 @@
 ---
 title: 7. Guitar Hero 
 subtitle: 
-summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}}
+summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}}<br>{{<notreleased>}}
 weight: 8
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "guitar" >}} |  {{< submit "Guitar" >}}
 ### **Goals**
 
@@ -162,7 +162,7 @@ public class GuitarString {
 
 ### **`GuitarHero` client**
 
-Implement an interactive guitar player. `GuitarHeroLite.java` is a `GuitarString` client that plays the guitar in real time. It relies on a helper class `Keyboard.java` that provides a graphical user interface (GUI) to play notes using the keyboard. When a user types the lowercase letter `'a'` or `'c'` or clicks the piano keys, the program plucks the corresponding string. Since the combined result of several sound waves is the *superposition* of the individual sound waves, it plays the sum of the two string samples.
+Implement an interactive guitar player. `GuitarHeroLite.java` is a `GuitarString` client that plays the guitar in real time. It relies on a helper class `Keyboard.java` that provides a graphical user interface (GUI) to play notes using the keyboard.  When a user types the lowercase letter `p` or `v`, the program plucks the guitar string corresponding to middle C or concert A, respectively.  Since the combined result of several sound waves is the *superposition* of the individual sound waves, it plays the sum of the two string samples.
 
 #### Requirements
 
@@ -173,39 +173,41 @@ String keyboardString = "q2we4r5ty7u8i9op-[=zxdcfvgbnjmk,.;/' ";
 ```
 
 1. This keyboard arrangement imitates a piano keyboard: The *white keys* are on the qwerty and zxcv rows and the *black keys* are on the 12345 and asdf rows of the keyboard. <br>![Keyboard]({{< resource url="static/assignments/guitar/images/keyboard.png" >}})
-1. Each character `i` of `keyboardString` corresponds to a frequency of \\( 440 × 2^{(i−24)/12} \\) Hz, so that the character `'q'` is 110 Hz, `'i'` is 220 Hz, `'v'` is 440 Hz, and the space character is 880 Hz.
+1. Each character `i` of `keyboardString` corresponds to a frequency of
+$$ 440 \times 2^{(i − 24) / 12} $$ Hz, so that the character `'q'` is 110 Hz, `'i'` is 220 Hz, `'v'` is 440 Hz, and the space character is 880 Hz. 
 1. You **must not** declare 37 individual `GuitarString` variables and/or utilize 37-way `if` statements! Instead, create and initialize an array of 37 `GuitarString` objects and call `keyboardString.indexOf(key)` to determine which key was played.
 
 ### **Possible Progress Steps**
-We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to solve Guitar Hero without them.  It is up to you!
 
-{{< details "Click here to show possible progress steps" >}}
+We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to solve Guitar without them.  It is up to you!
+
+
+{{< details "Click here to show possible progress steps for RingBuffer" >}}
 
 #### Implementing `RingBuffer.java`
 
 1. You will need to define the instance variables, constructors, and instance methods.
 2. We recommend defining the instance variables as follows:
-
-   ```java
-   private double[] rb;   // items in the buffer
-   private int first;     // index for the next dequeue or peek
-   private int last;      // index for the next enqueue
-   private int size;      // number of items in the buffer
-   ```
+  ```java
+    private double[] rb;   // items in the buffer
+    private int first;     // index for the next dequeue or peek
+    private int last;      // index for the next enqueue
+    private int size;      // number of items in the buffer
+  ```
 3. Your constructor for `RingBuffer` will need to allocate and initialize an array of `doubles` using the `new` operator. Observe that you have to do this in the constructor (and not when you declare the instance variables) because you do not know the length of the array until the constructor is called.
 4. Implement `RingBuffer` in an incremental and iterative manner: implement *one method at a time*, together with a *corresponding test* in `main()`. 	
    - In `main()`, write some tests using small examples, for example, using a `RingBuffer` of capacity four (4) based on the worksheet.
    - You can implement a `private` helper method that prints a `RingBuffer` object, i.e., prints the current values for `first`, `last`, and `size`. This can be very useful to help you debug!
-
 5. After you implement all the methods for `RingBuffer`, test `RingBuffer` using the test client in the ***Testing*** section. **Do not proceed** until you have thoroughly tested your `RingBuffer` data type.
 
-> ***Is the size of a RingBuffer equal to its capacity?*** The size is the number of elements currently in it; the `capacity` is its maximum possible size. 
+***Is the size of a RingBuffer equal to its capacity?*** The size is the number of elements currently in it; the `capacity` is its maximum possible size. 
 
-> ***Is the size of a RingBuffer equal to the number of its non-zero elements?***  No. Some of the elements in the RingBuffer can be zero. 
+***Is the size of a RingBuffer equal to the number of its non-zero elements?***  No. Some of the elements in the RingBuffer can be zero. 
 
-> ***How do I throw a `IllegalStateException` with a custom message?***  Read the *Exceptions* paragraph on pages 465–466 of the textbook. Also, see the precept exercises for examples.
+***How do I throw a `IllegalStateException` with a custom message?***  Read the *Exceptions* paragraph on pages 465–466 of the textbook. Also, see the precept exercises for examples.
 
-> ***I get an `ArrayIndexOutOfBoundsException` or `NullPointerException`. What could cause this?*** Does your constructor correctly initialize all of the instance variables? Did you allocate memory for your array? Did you inadvertently re-declare an instance variable in a method or constructor, thereby shadowing the instance variable with the same name? 
+***I get an `ArrayIndexOutOfBoundsException` or `NullPointerException`. What could cause this?*** Does your constructor correctly initialize all of the instance variables? Did you allocate memory for your array? Did you inadvertently re-declare an instance variable in a method or constructor, thereby shadowing the instance variable with the same name? 
+
 
 #### Testing Your `RingBuffer.java` Implementation
 These provided tests only test the *functionality* of your code. The final `main()` that you submit should test all the public methods of that data type’s API.
@@ -255,14 +257,25 @@ StdOut.printf("**** Peek value is %.1f\n", buffer.peek());
 You can run this test by trying various `RingBuffer` sizes, for example, from the command line:
 
 ```plaintext
-> java-introcs RingBuffer 1
-> java-introcs RingBuffer 2
-> java-introcs RingBuffer 3
-> java-introcs RingBuffer 4
+java-introcs RingBuffer 1
+```
+```plaintext
+java-introcs RingBuffer 2
+```
+```plaintext
+java-introcs RingBuffer 3
+```
+```plaintext
+java-introcs RingBuffer 4
+```
+```plaintext
 ...
 ```
 
 
+{{< /details >}}
+
+{{< details "Click here to show possible progress steps for GuitarString" >}}
 
 #### Implementing `GuitarString.java`
 
@@ -270,31 +283,38 @@ You can run this test by trying various `RingBuffer` sizes, for example, from th
 2. Implement the `GuitarString(double frequency)` constructor, which creates a `RingBuffer` of the desired capacity `n` (the sampling rate 44,100 divided by the frequency, rounded up to the nearest integer), and initializes it to represent a guitar string at rest by enqueuing `n` zeros. (Use [`Math.ceil`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double)) and cast the result to an integer.)
 3. Implement the `length()` method, which returns the number of samples in the ring buffer.
 4. Implement the `sample()` method, which returns the value of the item at the front of the ring buffer. Use `peek()`.
-> ***How can I test the constructor and these methods?***
-> - In `main()`, instantiate a few different `GuitarString` objects using the `GuitarString(double frequency)` constructor.
-> - Invoke `length()` on each `GuitarString` object. Is the value returned by `length()` what you expect?
-> - Invoke `sample()` on each `GuitarString` object. Is the value returned by `sample()` what you expect? 
-5. Implement the `GuitarString(double[])` constructor, which creates a `RingBuffer` of capacity equal to the length `n` of the array, and initializes the contents of the ring buffer to the corresponding values in the array. In this assignment, this constructor's primary purpose is to facilitate testing and debugging.
-> ***How can I test the constructor and these methods?***
-> - Instantiate a few different `GuitarString` objects using the `GuitarString(double frequency)` constructor.
-> - Invoke `length()` on each `GuitarString` object. Is the value returned by `length()` what you expect?
-> - Invoke `sample()` on each `GuitarString` object. Is the value returned by `sample()` what you expect? 
-6. Implement `pluck()`, which replaces the `n` items in the ring buffer with `n` _random_ values between −0.5 and +0.5. Use a combination of `RingBuffer` methods including `dequeue()` and `enqueue()` to replace the buffer with values between −0.5 and 0.5. Hint: [StdRandom](https://introcs.cs.princeton.edu/java/11cheatsheet/#StdRandom)
-> ***When generating random values between −0.5 and +0.5, should I include the two endpoints?*** The assignment specification does not specify, so you are free to choose whichever convention you find most convenient. In Java, we typically include the left endpoint of an interval and exclude the right endpoint. For example, `StdRandom.uniformDouble(-0.5, 0.5)` generates a uniformly random value in the interval [−0.5, 0.5) and `s.substring(i, j)` returns the substring of the `String s` beginning at index `i` and ending at index `j - 1`.
 
-> ***How can I test the constructor and these methods?***
-> - Instantiate a `GuitarString` object.
-> - Invoke `length()` and `sample()` on this object.
-> - Next invoke `pluck()` on this object.
-> Next invoke `length()` and `sample()` again on each object. Are the values returned what you expect?
-> Try this with a few `GuitarString` objects. 
+***How can I test the constructor and these methods?***
+- In `main()`, instantiate a few different `GuitarString` objects using the `GuitarString(double frequency)` constructor.
+- Invoke `length()` on each `GuitarString` object. Is the value returned by `length()` what you expect?
+- Invoke `sample()` on each `GuitarString` object. Is the value returned by `sample()` what you expect? 
+
+5. Implement the `GuitarString(double[])` constructor, which creates a `RingBuffer` of capacity equal to the length `n` of the array, and initializes the contents of the ring buffer to the corresponding values in the array. In this assignment, this constructor's primary purpose is to facilitate testing and debugging.
+
+***How can I test the constructor and these methods?***
+- Instantiate a few different `GuitarString` objects using the `GuitarString(double frequency)` constructor.
+- Invoke `length()` on each `GuitarString` object. Is the value returned by `length()` what you expect?
+- Invoke `sample()` on each `GuitarString` object. Is the value returned by `sample()` what you expect? 
+
+6. Implement `pluck()`, which replaces the `n` items in the ring buffer with `n` _random_ values between −0.5 and +0.5. Use a combination of `RingBuffer` methods including `dequeue()` and `enqueue()` to replace the buffer with values between −0.5 and 0.5. Hint: [StdRandom](https://introcs.cs.princeton.edu/java/11cheatsheet/#StdRandom)
+
+***When generating random values between −0.5 and +0.5, should I include the two endpoints?*** The assignment specification does not specify, so you are free to choose whichever convention you find most convenient. In Java, we typically include the left endpoint of an interval and exclude the right endpoint. For example, `StdRandom.uniformDouble(-0.5, 0.5)` generates a uniformly random value in the interval [−0.5, 0.5) and `s.substring(i, j)` returns the substring of the `String s` beginning at index `i` and ending at index `j - 1`.
+
+***How can I test the constructor and these methods?***
+- Instantiate a `GuitarString` object.
+- Invoke `length()` and `sample()` on this object.
+- Next invoke `pluck()` on this object.
+Next invoke `length()` and `sample()` again on each object. Are the values returned what you expect?
+Try this with a few `GuitarString` objects.
+
 7. Implement `tic()`. Use the `enqueue()`, `dequeue()`, and `peek()` methods. This method applies the Karplus–Strong update: delete the first sample from the ring buffer and adds to the end of the ring buffer the average of the deleted sample and the first sample, scaled by an energy decay factor. 
-> ***How can I test the constructor and these methods?***
-> - Instantiate a `GuitarString` object.
-> - Invoke `length()` and `sample()` on this object.
-> - Next invoke `tic()` on this object.
-> - Next invoke `length()` and `sample()` again on each object. Are the values returned what you expect?
-> - Try this with a few `GuitarString` objects.
+
+***How can I test the constructor and these methods?***
+- Instantiate a `GuitarString` object.
+- Invoke `length()` and `sample()` on this object.
+- Next invoke `tic()` on this object.
+- Next invoke `length()` and `sample()` again on each object. Are the values returned what you expect?
+- Try this with a few `GuitarString` objects.
 8. _After_ you have implemented and tested each of the methods for `GuitarString`, run `GuitarString` using the test client in the ***Testing*** section.
 
 #### Testing Your `GuitarString.java` Implementation
@@ -324,7 +344,7 @@ StdOut.printf("Test #5 - check length after pluck is still == %d\n",
               len);
 StdOut.printf("**** Length is %d\n", gs2.length());
 
-StdOut.printf("Test #6 - check sample is range [-0.5..+0.5)\n");
+StdOut.printf("Test #6 - check sample is range [-0.5, +0.5)\n");
 StdOut.printf("**** Sample is %.2f\n", gs2.sample());
 
 GuitarString gs3 = new GuitarString(samples);
@@ -348,7 +368,7 @@ for (int i = 0; i < m; i++) {
 Run this test from the command line with some input n:
 
 ```plaintext
-> java-introcs GuitarString 4
+java-introcs GuitarString 4
 (Test #1 - Test #8 not shown)...
 
 Test #9 - test 25 tics
@@ -380,6 +400,9 @@ Test #9 - test 25 tics
 ```
 
 
+{{< /details >}}
+
+{{< details "Click here to show possible progress steps for GuitarHero" >}}
 
 #### Implementing `GuitarHero.java`
 
@@ -387,28 +410,28 @@ Test #9 - test 25 tics
 1. To implement `GuitarHero.java`, use the code in `GuitarHeroLite.java` as a starting point.
 1. Create an array of `GuitarString` objects. Remember: to create an array of objects, you need to create the array, then you need to create each individual object.
 1. Can you play individual notes? Do the notes have the correct frequencies? Can you play a chord?
-> ***Where do I play notes in `GuitarHeroLite` and `GuitarHero`?*** Be sure that the interactive `Keyboard` window has focus by clicking it. Then, either click the piano keys or type the keystrokes.
 
-> ***What happens if I call `StdAudio.play(x)` where `x` is greater than 1 or less than −1?*** The value is clipped – it is replaced by the value +1.0 or −1.0, respectively. This is fine and can happen when you play chords.
+***Where do I play notes in `GuitarHeroLite` and `GuitarHero`?*** Be sure that the interactive `Keyboard` window has focus by clicking it. Then, either click the piano keys or type the keystrokes.
 
-> ***Why do I get a `RuntimeException` or an `ArrayIndexOutOfBoundsException` in `GuitarHeroLite` before I type any keystrokes?*** Did you forget to initialize the ring buffer to contain `n` zeros in your `GuitarString` constructor?
+***What happens if I call `StdAudio.play(x)` where `x` is greater than 1 or less than −1?*** The value is clipped – it is replaced by the value +1.0 or −1.0, respectively. This is fine and can happen when you play chords.
 
-> ***When I run `GuitarHeroLite` for the first time, I hear no sound. What am I doing wrong?*** Make sure you have tested with the `main()` provided for `GuitarString`. If that works, there is likely something wrong with `pluck()` since the `main()` provided for `GuitarString` does not test that method. To diagnose the problem, print the values of `sample()` and check that they become nonzero after you type the keystrokes `'a'` and `'c'`.
+***Why do I get a `RuntimeException` or an `ArrayIndexOutOfBoundsException` in `GuitarHeroLite` before I type any keystrokes?*** Did you forget to initialize the ring buffer to contain `n` zeros in your `GuitarString` constructor?
 
-> ***When I run `GuitarHeroLite`, I hear static (either just one click and then silence, or continual static). What am I doing wrong?*** It's likely that `pluck()` is working, but `tic()` is not. The best test is to run the `main()` provided for `GuitarString`.
+***When I run `GuitarHeroLite` for the first time, I hear no sound. What am I doing wrong?*** Make sure you have tested with the `main()` provided for `GuitarString`. If that works, there is likely something wrong with `pluck()` since the `main()` provided for `GuitarString` does not test that method. To diagnose the problem, print the values of `sample()` and check that they become nonzero after you type the keystrokes `p` and `v`.
 
-> ***How do I use `keyboardString.indexOf(key)`?*** If `keyboard` is a `String` and `key` is a character, then `keyboardString.indexOf(key)` returns the integer index of the first occurrence of the character `key` in the `String keyboardString`, or `–1` if it does not occur.  You can read about it in the [`String` Javadoc page](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/String.html#indexOf(int)).
+***When I run `GuitarHeroLite`, I hear static (either just one click and then silence, or continual static). What am I doing wrong?*** It's likely that `pluck()` is working, but `tic()` is not. The best test is to run the `main()` provided for `GuitarString`.
 
-> ***Can I hardwire the constants 44,100, 0.996, 440.0, and 37 in my program?*** As usual, we may deduct style points for using an unnamed constant, especially if you use it more than once. We recommend using `SAMPLING_RATE` for `44100`, `DECAY_FACTOR` for `0.996`, `CONCERT_A` for `440.0`, and the expression `keyboardString.length()` for `37`. You do not need to name all of the constants in the formula: $$ 2^{(i − 24)/12} $$.
+***How do I use `keyboardString.indexOf(key)`?*** If `keyboardString` is a `String` and `key` is a character, then `keyboardString.indexOf(key)` returns the integer index of the first occurrence of the character `key` in the `String keyboardString`, or `–1` if it does not occur.  You can read about it in the [`String` Javadoc page](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/String.html#indexOf(int)).
 
-
+***Can I hardwire the constants 44,100, 0.996, 440.0, and 37 in my program?*** As usual, we may deduct style points for using an unnamed constant, especially if you use it more than once. We recommend using `SAMPLING_RATE` for `44100`, `DECAY_FACTOR` for `0.996`, `CONCERT_A` for `440.0`, and the expression `keyboardString.length()` for `37`. You do not need to name all of the constants in the formula:
+\\[ 440 \times 2^{(i − 24)/12} \\]
 {{< /details >}}
 
 ### **Rock on! Play your GuitarHero**
 
 Here are some example tunes you can play on your GuitarHero. Try these below, and then compose some of your own:
 
-1. An A major chord. {{< audio src="static/assignments/guitar/audio/Amajor" >}}
+1. An A major chord. 
 
    ```plaintext
 	i - z    i
@@ -416,23 +439,30 @@ Here are some example tunes you can play on your GuitarHero. Try these below, an
 	         z
    ```
 
-2. An A major scale. {{< audio src="static/assignments/guitar/audio/Ascale" >}}
+{{< audio src="guitar/audio/Amajor" type="audio/wav" preload="auto" >}}
+
+2. An A major scale.
 
     ```plaintext
 	i o - [ z d f v   v f d z [ - o i
     ```
+{{< audio src="guitar/audio/Ascale" type="audio/mp3" preload="auto" >}}
 
-3. Type the following into your guitar to get the beginning of Led Zeppelin's *Stairway to Heaven*. Multiple notes in a column are dyads and chords. {{< audio src="static/assignments/guitar/audio/sth" >}}
+
+3. Type the following into your guitar to get the beginning of Led Zeppelin's *Stairway to Heaven*. Multiple notes in a column are dyads and chords. 
     ```plaintext
                                                   w q q
             8       u       7       y             o p p
     i p z v b z p b n z p n d [ i d z p i p z p i u i i
     ```
 
+{{< audio src="guitar/audio/sth" type="audio/wav" preload="auto" >}}
+
 4. What is this familiar melody? (**S** == space)
     ```plaintext
     nn//SS/ ..,,mmn //..,,m //..,,m nn//SS/ ..,,mmn
     ```
+
 
 ### **Submission**
 

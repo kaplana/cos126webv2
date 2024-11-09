@@ -12,7 +12,7 @@ profile: false
 comments: false
 
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "classifier" >}} |  {{< submit "Classifier" >}}
 
 ### **Goals**
@@ -152,7 +152,7 @@ In the previous section, we used a single perceptron for the binary classificati
 
 We train each perceptron independently and make predictions by distilling the results from the \\( m \\) perceptrons.
 
-- *Multiclass training.* Initialize the weight vector of each of the \\( m \\) perceptrons to be zero and process the labeled training inputs one at a time. To train the perceptrons on an input vector \\( x \\) with multiclass label \\( i \\) (0 to \\( m-1 \\)):
+- *Multiclass training.* Initialize the weight vector of each of the \\( m \\) perceptrons to be zero and process the labeled training inputs one at a time. To train the perceptrons on an input vector \\( x \\) with class label \\( i \\) (0 to \\( m-1 \\)):
 	- Train perceptron \\( i \\) on input vector \\( x \\) with the binary label \\(+1\\)
 	- Train the other \\( m-1 \\) perceptrons on input vector \\( x \\) with the binary label  \\(-1\\)  <br>
 
@@ -210,7 +210,6 @@ public class MultiPerceptron {
 *Corner cases*. You may assume that the arguments to the constructor and instance methods are valid. For example, you may assume that any class label is an integer between 0 and \\( m-1 \\), any input vector \\( x \\) is of length \\( n \\), and \\( m \ge 1 \\) and \\( n \ge 1 \\).
 
 
-
 ### **ImageClassifier data type**
 
 Your final task is to write a data type `ImageClassifier.java` that classifies images using the `MultiPerceptron` data type described in the previous section by:
@@ -240,7 +239,7 @@ public class ImageClassifier {
     public int classifyImage(Picture picture) 
 
     // Returns the error rate on the given testing data file.
-    // Also prints the misclassified examples - see below.
+    // Also prints the misclassified examples - see specification.
     public double testClassifier(String testFile) 
 
     // Tests this class using a configuration file, training file and test file.
@@ -338,10 +337,12 @@ It then creates an `ImageClassifier` object, trains the classifier,  tests the c
 
 A template for the `main()` test client is provided in `ImageClassifier.java` in the project folder.  
 
-Here are some sample executions:
+Here are some sample executions you should try:
 	
 ```plaintext
-> java-introcs ImageClassifier digits.txt digits-training20.txt digits-testing10.txt
+java-introcs ImageClassifier digits.txt digits-training20.txt digits-testing10.txt
+```
+```plaintext
 digits/testing/1/46.png, label = one, predict = three
 digits/testing/7/36.png, label = seven, predict = two
 digits/testing/7/80.png, label = seven, predict = two
@@ -351,10 +352,12 @@ digits/testing/7/79.png, label = seven, predict = two
 digits/testing/9/20.png, label = nine, predict = two
 digits/testing/9/58.png, label = nine, predict = four
 test error rate = 0.8
+```
 
-
-> java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing10K.txt
+```plaintext
 java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing10K.txt
+```
+```plaintext
 jar:file:digits.jar!/testing/6/4814.png, label = six, predict = zero
 jar:file:digits.jar!/testing/5/4915.png, label = five, predict = eight
 jar:file:digits.jar!/testing/6/2754.png, label = six, predict = zero
@@ -363,11 +366,6 @@ jar:file:digits.jar!/testing/4/1751.png, label = four, predict = three
 jar:file:digits.jar!/testing/3/9614.png, label = three, predict = five
 jar:file:digits.jar!/testing/5/6043.png, label = five, predict = three
 test error rate = 0.1318
-> java-introcs ImageClassifier fashion.txt fashion-training60K.txt fashion-testing10K.txt
-...
-
-> java-introcs ImageClassifier Kuzushiji.txt Kuzushiji-training60K.txt Kuzushiji-testing10K.txt
-...
 ```
 
 ### **Possible Progress Steps**
@@ -392,37 +390,58 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
 
 #### Testing Your `Perceptron.java` Implementation
 
-Here is Java code that trains a `Perceptron` on four input vectors (of length 3) from the assignment specification:
+Here is Java code that trains a `Perceptron` on four input vectors (of length three) based on the example provided in the assignment specification:
+
 
 ```java
+// create a Perceptron with n inputs
 int n = 3;
-
-double[] training1 = {  3.0,  4.0,  5.0 };  // yes
-double[] training2 = {  2.0,  0.0, -2.0 };  // no
-double[] training3 = { -2.0,  0.0,  2.0 };  // yes
-double[] training4 = {  5.0,  4.0,  3.0 };  // no
-
 Perceptron perceptron = new Perceptron(n);
-StdOut.println(perceptron);
-perceptron.train(training1, +1);
-StdOut.println(perceptron);
-perceptron.train(training2, -1);
-StdOut.println(perceptron);
-perceptron.train(training3, +1);
-StdOut.println(perceptron);
-perceptron.train(training4, -1);
-StdOut.println(perceptron);
+StdOut.printf("Test #1 - constructor Perceptron(%d)\n", n);
+StdOut.println("  expect: (0.0, 0.0, 0.0)");
+StdOut.println("  result: " + perceptron);
+
+StdOut.println("Test #2 - numberOfInputs");
+StdOut.printf("  expect: %d\n", n);
+StdOut.println("  result: " + perceptron.numberOfInputs());
+
+double[] training1 = { 3.0, 4.0, 5.0 };  // +1 (yes)
+double[] training2 = { 2.0, 0.0, -2.0 };  // -1 (no)
+double[] training3 = { -2.0, 0.0, 2.0 };  // +1 (yes)
+double[] training4 = { 5.0, 4.0, 3.0 };  // -1 (no)
+
+// Test 3: perceptron.weightedSum(training1))
+//         perceptron.predict(training1))
+//         perceptron.train(training1, +1); // yes
+StdOut.println("Test #3a - weightedSum(3.0, 4.0, 5.0)");
+StdOut.printf("  expect: %2.1f\n", 0.0);
+StdOut.println("  result: " + perceptron.weightedSum(training1));
+
+StdOut.println("Test #3b - predict(3.0, 4.0, 5.0)");
+StdOut.printf("  expect: %d\n", -1);
+StdOut.println("  result: " + perceptron.predict(training1));
+
+StdOut.println("Test #3c - train(3.0, 4.0, 5.0, +1)");
+perceptron.train(training1, +1); // yes
+StdOut.println("  expect: (3.0, 4.0, 5.0)");
+StdOut.println("  result: " + perceptron);
+
+// Test 4: perceptron.weightedSum(training2))
+//         perceptron.predict(training2))
+//         perceptron.train(training2, -1); // no
+// Write these tests - similar to Test #3
+
+// Test 5: perceptron.weightedSum(training3))
+//         perceptron.predict(training3))
+//         perceptron.train(training3, +1); // yes
+// Write these tests - similar to Test #3
+
+// Test 6: perceptron.weightedSum(training4))
+//         perceptron.predict(training4))
+//         perceptron.train(training4, -1); // no
+// Write these tests - similar to Test #3
 ```
 
-And the desired output:
-
-```bash
-(0.0, 0.0, 0.0)
-(3.0, 4.0, 5.0)
-(3.0, 4.0, 5.0)
-(3.0, 4.0, 5.0)
-(-2.0, 0.0, 2.0)
-```
 
 
 
@@ -438,60 +457,53 @@ And the desired output:
 
 #### Testing Your `MultiPerceptron.java` Implementation
 
-Here is Java code that trains a `MultiPerceptron` on four input vectors (of length 3) from the assignment specification:
+Here is Java code that trains a `MultiPerceptron` on four input vectors (of length three) and then tests   a `MultiPerceptron` on two input vectors (of length three)  based on the example provided in the assignment specification:
 
 ```java
-int m = 2;
-int n = 3;
+// training data
+double[] training1 = { 3.0, 4.0, 5.0 };  // class 1
+double[] training2 = { 2.0, 0.0, -2.0 };  // class 0
+double[] training3 = { -2.0, 0.0, 2.0 };  // class 1
+double[] training4 = { 5.0, 4.0, 3.0 };  // class 0
 
-double[] training1 = {  3.0,  4.0,  5.0 };  // class 1
-double[] training2 = {  2.0,  0.0, -2.0 };  // class 0
-double[] training3 = { -2.0,  0.0,  2.0 };  // class 1
-double[] training4 = {  5.0,  4.0,  3.0 };  // class 0
+// Training test #1 - class 1
+StdOut.println("Training test #1 class 1: trainMulti((3, 4, 5), 1)");
+mp1.trainMulti(training1, 1);
+StdOut.println("  expect: ((0.0, 0.0, 0.0), (3.0, 4.0, 5.0))");
+StdOut.println("  result: " + mp1);
 
-MultiPerceptron perceptron = new MultiPerceptron(m, n);
-StdOut.println(perceptron);
-perceptron.trainMulti(training1, 1);
-StdOut.println(perceptron);
-perceptron.trainMulti(training2, 0);
-StdOut.println(perceptron);
-perceptron.trainMulti(training3, 1);
-StdOut.println(perceptron);
-perceptron.trainMulti(training4, 0);
-StdOut.println(perceptron);
-```
+// Training test #2 - class 0
+StdOut.println("Training test #2 class 0: trainMulti((2, 0, -2), 0)");
+mp1.trainMulti(training2, 0);
+StdOut.println("  expect: ((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))");
+StdOut.println("  result: " + mp1);
 
-And the desired output:
+// Training test #3 - class 1
+StdOut.println("Training test #3 class 1: trainMulti((-2, 0, 2), 1)");
+mp1.trainMulti(training3, 1);
+StdOut.println("  expect: ((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))");
+StdOut.println("  result: " + mp1);
 
-```bash
-((0.0, 0.0, 0.0), (0.0, 0.0, 0.0))
-((0.0, 0.0, 0.0), (3.0, 4.0, 5.0))
-((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))
-((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))
-((2.0, 0.0, -2.0), (-2.0, 0.0, 2.0))
-```
+// Training test #4 - class 0
+StdOut.println("Training test #4 class 0: trainMulti(( 5, 4, 3 ), 0)");
+mp1.trainMulti(training4, 0);
+StdOut.println("  expect: ((2.0, 0.0, -2.0), (-2.0, 0.0, 2.0))");
+StdOut.println("  result: " + mp1);
 
-Here is Java code that tests a `MultiPerceptron` on two input vectors (of length 3) from the assignment specification, based on the trained `Multiperceptron` object:
-
-```java
+// testing data
 double[] testing1 = { -1.0, -2.0, 3.0 };
 double[] testing2 = { 2.0, -5.0, 1.0 };
 
-StdOut.println(perceptron.predictMulti(testing1));
-StdOut.println(perceptron);
-StdOut.println(perceptron.predictMulti(testing2));
-StdOut.println(perceptron);
+// Testing test #1 - expect class 1
+StdOut.println("Testing test #1 - predictMulti(-1, 2, 3)");
+StdOut.println("  expect class: 1");
+StdOut.println("  result result: " + mp1.predictMulti(testing1));
+
+// Testing test #2 - expect class 0
+StdOut.println("Testing test #2 - predictMulti(2, -5, -1)");
+StdOut.println("  expect class: 0");
+StdOut.println("  result class: " + mp1.predictMulti(testing2));
 ```	
-
-And the desired output:
-
-```bash
-1
-((2.0, 0.0, -2.0), (-2.0, 0.0, 2.0))
-0
-((2.0, 0.0, -2.0), (-2.0, 0.0, 2.0))
-```
-
 
 #### Implementing `ImageClassifier.java`
 
@@ -539,7 +551,9 @@ And the desired output:
 Now, the fun part. Use large training and testing input files. Be prepared to wait for one (1) minute (or more) while your program processes 60,000 images.
 
 ```plaintext
-> java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing10K.txt
+java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing10K.txt
+```
+```plaintext
 jar:file:digits.jar!/testing/5/9428.png, label = 5, predict = 3
 jar:file:digits.jar!/testing/6/4814.png, label = 6, predict = 0
 jar:file:digits.jar!/testing/5/4915.png, label = 5, predict = 8
@@ -553,6 +567,38 @@ test error rate = 0.1318
 Don’t worry about the odd looking filenames. It's just a verbose way to specify the location to a specific image file in a JAR (*Java ARchive*) file. Modern operating systems are not so adept at manipulating hundreds of thousands of individual image files, so this makes training more efficient. In this case, `jar:file:digits.jar` identifies the JAR file `digits.jar`, and `/training/7/4545.png` identifies a file named `4545.png`, which is located in the subdirectory `/training/7/` of the JAR file.
 
 
+Try experimenting with the other datasets:
+
+```plaintext
+java-introcs ImageClassifier fashion.txt fashion-training60K.txt fashion-testing10K.txt
+```
+```plaintext
+...
+```
+```plaintext
+java-introcs ImageClassifier Kuzushiji.txt Kuzushiji-training60K.txt Kuzushiji-testing10K.txt
+```
+```plaintext
+...
+```
+```plaintext
+java-introcs ImageClassifier music.txt  music-training50K.txt music-testing10K.txt
+```
+```plaintext
+...
+```
+```plaintext
+java-introcs ImageClassifier fruit.txt fruit-training30K.txt fruit-testing6K.txt 
+```
+```plaintext
+...
+```
+```plaintext
+java-introcs ImageClassifier animals.txt animals-training60K.txt animals-testing12K.txt 
+```
+```plaintext
+...
+```
 
 ### **Analysis - `readme.txt`**
 
@@ -599,8 +645,8 @@ java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing1K.
 <!--
 **Part 2**:  Run the following experiment (you may wish to redirect the standard output to a file):
 
-```bash
-> java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing1K.txt
+```plaintext
+java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing1K.txt
 ```
 
 - What digit is misclassified the most frequently? 

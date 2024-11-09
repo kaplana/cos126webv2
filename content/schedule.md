@@ -75,26 +75,24 @@ comments: false
 |      | Mon, Oct 7 &<br>Tue, Oct 8  | Precept: Exam Review              | |
 |      | Wed, Oct 9                  |_Written Exam 1_                   | |
 |      | Wed, Oct 9 &<br>Thu, Oct 10 | Precept: None                     | |
-|      |                             |                                   | |
 |      | Mon, Oct 14 -<br> Fri, Oct 18| **BREAK** |
 | 6    | Mon, Oct 21                 |{{< lecture "Using Data Types" "static/lectures/31UsingDataTypes.pdf" >}}<br> _Reading:_ 3.1 |   |
 |      | Mon, Oct 21 &<br>Tue, Oct 22| {{< precept "p12-using-data-types" "Using Data Types" >}} | |
 |      | Wed, Oct 23                 |{{< lecture "Creating Data Types" "static/lectures/32CreatingDataTypes.pdf" >}}<br> _Reading:_ 3.2  |   |
 |      | Wed, Oct 23 &<br>Thu, Oct 24| {{< precept "p13-creating-data-types" "Creating Data Types" >}}                     | |
 |      | Sun, Oct 27                 |                                    | [_Assignment:_ Object-Oriented Programming due]()         |
-|      |                             |                                   | |
-|<hr>|
 | 7    | Mon, Oct 28                 |{{< lecture "Designing Data Types" "static/lectures/33DesigningDataTypes.pdf" >}}<br> _Reading:_ 3.3 |   |
 |      | Mon, Oct 28 &<br>Tue, Oct 29|  {{< precept "p14-designing-data-types" "Designing Data Types" >}}                | |
 |      | Wed, Oct 30                 |{{< lecture "Intro to Machine Learning" "static/lectures/AIML.pdf" >}}<br> _Reading:_ [2 \| Machine Learning Paradigms](https://www.wolfram.com/language/introduction-machine-learning/machine-learning-paradigms)  |   |
 |      | Wed, Oct 30 &<br>Thu, Oct 31| {{< precept "p15-aiml" "Intro to Machine Learning" >}}                       | |
 |      | Sun, Nov 3                  |                                    | [_Assignment:_ Image Classifier due]()         |
-|      |                             |                                   | |
 | 8    | Mon, Nov 4                  |{{< lecture "Algorithms" "static/lectures/42Algorithms.pdf" >}}<br> _Reading:_ 4.2 |  {{< lecturedemo "Binary Search Demo" "static/lectures/demos/42DemoBinarySearch" >}}  <br> {{< lecturedemo "Insertion Sort Demo" "static/lectures/demos/42DemoInsertionSort" >}} <br> {{< lecturedemo "Mergesort Demo" "static/lectures/demos/42DemoMerge" >}}|
 |      | Mon, Nov 4  &<br>Tue, Nov 5 |  {{< precept "p16-algorithms" "Algorithms" >}}       | |
 |      | Wed, Nov 6                  |{{< lecture "Data Structures" "static/lectures/43DataStructures.pdf" >}}<br> _Reading:_ 4.3 |  {{< lecturedemo "Dijkstra Two Stack" "static/lectures/demos/43DemoDijkstraTwoStack" >}} |
 |      | Wed, Nov 6 &<br>Thu, Nov 8  | {{< precept "p17-data-structures" "Data Structures" >}}                   | |
 |      | Sun, Nov 10                  |                                    | [_Assignment:_ Guitar Hero due]()         |
+|<hr>|
+|      |                             |                                   | |
 |                                    |                                    | |
 | 9    | Mon, Nov 11                 | {{< lecture "Theory of Computing" "static/lectures/50TheoryOfComputing.pdf" >}}<br> _Reading:_ 5.3-5.4 |   |
 |      | Mon, Nov 11 &<br>Tue, Nov 12| {{<precept "p18-theory" "Theory of Computing" >}}             | |
@@ -108,7 +106,7 @@ comments: false
 |      | Wed, Nov 20 &<br>Thu, Nov 21| Precept: Java Jeopardy           | |
 |      | Sun, Nov 24                 |                                   | [_Assignment:_ Hamming due]()         |
 |      |                             |                                   | |
-| 11   | Mon, Nov 25| Lecture: TBD   |   |
+| 11   | Mon, Nov 25| No lecture   |   |
 |      | Mon, Nov 25 &<br>Tue, Nov 26 | No precept |
 |      | Wed, Nov 27 -<br> Fri, Nov 29| **THANKSGIVING BREAK** |
 | 12   | Mon, Dec 2 | {{< lecture "Circuits" "static/lectures/70Circuits.pdf" >}}<br> _Reading:_ 7.1, 7.3 |   |
