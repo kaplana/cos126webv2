@@ -19,9 +19,9 @@ comments: false
 
 {{<construction>}}
 
-### **TigerFile Submission Requirements - 20 submission limit**
+<!-- ### **TigerFile Submission Requirements - 20 submission limit**
 
-For the final project, there is a limit of twenty (20)  times that you may click the _Check Submitted Files_ to receive feedback from the TigerFile auto-grader. If you are working with a partner, this limit applies to the group. This policy is intended to enable timely and constructive feedback on your work while you are programming (but discourage you from relying on the autograder as your exclusive debugging tool).
+For the final project, there is a limit of twenty (20)  times that you may click the _Check Submitted Files_ to receive feedback from the TigerFile auto-grader. If you are working with a partner, this limit applies to the group. This policy is intended to enable timely and constructive feedback on your work while you are programming (but discourage you from relying on the autograder as your exclusive debugging tool). -->
 
 ### **Getting Started**
 
@@ -119,6 +119,8 @@ The `main()` method takes an integer *min*, a floating-point number *tau*, and t
 
 ```bash
 java-introcs BeadFinder 0 180.0 run_1/frame00001.jpg
+```
+```plaintext
 29 (214.7241,  82.8276)
 36 (223.6111, 116.6667)
  1 (254.0000, 223.0000)
@@ -135,7 +137,10 @@ java-introcs BeadFinder 0 180.0 run_1/frame00001.jpg
 35 (588.5714, 402.1143)
 13 (638.1538, 155.0000)
 
+```bash
 java-introcs BeadFinder 25 180.0 run_1/frame00001.jpg
+```
+```plaintext
 29 (214.7241,  82.8276)
 36 (223.6111, 116.6667)
 42 (260.2381, 234.8571)
@@ -163,6 +168,8 @@ Next, write a `main()` method in `BeadTracker.java` that takes an integer *min*,
 
 ```bash
 java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
+```
+```plaintext
 7.1833
 4.7932
 2.1693
@@ -204,6 +211,8 @@ For the final part, write `Avogadro.java` with a `main()` that reads the radial 
 
 ```bash
 more displacements-run_1.txt
+```
+```plaintext
  7.1833
  4.7932
  2.1693
@@ -211,11 +220,15 @@ more displacements-run_1.txt
  5.4292
  4.3962
 ...
-
+```
+```bash
 java-introcs Avogadro < displacements-run_1.txt
+```
+```plaintext
 Boltzmann = 1.2535e-23
 Avogadro  = 6.6329e+23
-
+```
+```bash
 java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg | java-introcs Avogadro
 Boltzmann = 1.2535e-23
 Avogadro  = 6.6329e+23
@@ -237,230 +250,234 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
 
 
 
-{{< details "Click to show possible progress steps" >}}
-
+{{< details "Click here to show possible progress steps for Blob" >}}
 1. Observe that each directory `run_1`, `run_2`, ..., `run_9` contains a sequence of 200 JPEG images. In total, these data files consume 70MB of space. The file `beads-run_1.txt` lists the beads found in each frame of `run_1` (using tau = 180.0 and min = 25). The files `displacements-run_1.txt` and `displacements-run_2.txt` are the output of `BeadTracker` for those runs. 
-
 2. Implement the `Blob` data type. Do not store all of the individual pixels that comprise a blob; instead, store three values. Two alternatives are:
    - number of pixels, \\(x\\)-coordinate center of mass, and \\(y\\)-coordinate center of mass or
    - number of pixels, sum of \\(x\\)-coordinates, and sum of \\(y\\)-coordinates needed to compute the center of mass.
+3. Recall the `main()` method is used to write your _test client_. This is where you should thoroughly test your `Blob` implementation.  For example, create various `Blob` objects and call the various `Blob` methods on these objects.
+4. Some FAQs:
+- **How can I implement the `toString()` method to format the numbers?** Use `String.format()`. It works like `StdOut.printf()`, but returns the resulting string instead of printing it. See pp. 130–132 of the textbook to learn more about formatted printing.
+- **Which value should `distanceTo()` return if the mass of one or both blobs is zero?** We recommend `Double.NaN`. Since this corner case is not specified in the API, we will not test it.
+- **What should `toString()` return if the mass is zero?** We recommend returning the value `"0 (NaN, NaN)"`. Since this corner case is not specified in the API, we will not test it.
+{{< /details >}}
 
-    Recall the `main()` method is used to write your _test client_. This is where you should thoroughly test your `Blob` implementation.  For example, create various `Blob` objects and call the various `Blob` methods on these objects.
+{{< details "Click here to show possible progress steps for BeadFinder" >}}
+1. This is the most challenging code to implement.
+2. Review Section 2.4 in the textbook, especially the part on depth-first search. Finding all the pixels in a blob is similar to finding a percolating path.
+3. Write the constructor to find all of the blobs and initialize the instance variables. Most of the work for the `BeadFinder` data type will be here.
+4. The crux of this part is to write a *private* recursive method `dfs()` that locates all of the foreground pixels in the same blob as the foreground pixel *(x, y)*. To do this, use *depth-first search*:
+- Mark pixel *(x, y)* as in the current blob.
+- Then recursively mark all of its foreground neighbors as in the current blob (but do not recur if the pixel has previously been marked or the pixel indices are out-of-bounds).
+- *It is up to you to decide which arguments would be useful for the `dfs()` method.*
+- The constructor should call `dfs()` from each unmarked pixel *(x, y)*. All of the pixels encountered during a single call to `dfs()` comprise one blob.
+-  Next, implement the method `getBeads(int min)` that searches through the blobs and stores all of the beads (blobs that contain at least the specified number of pixels) in a `Blob` array. The length of the array should be equal to the number of beads. To determine the number of beads, you may find it helpful to implement a private method `countBeads(int min)` that counts and returns the number of beads.
+- Implement a `main()` method that takes as command-line arguments `min`, `tau`, and the name of a JPEG file. The `main(`) method prints the list of beads. 
 
-    > **How can I implement the `toString()` method to format the numbers?** Use `String.format()`. It works like `StdOut.printf()`, but returns the resulting string instead of printing it. Here is our `toString()` method in `Blob`.
-    > ```java
-    >     public String toString() {
-    >       return String.format("%2d (%8.4f, %8.4f)", mass, cx, cy);
-    >    }
-    >  ```
-    >
-    > See pp. 130–132 of the textbook to learn more about formatted printing.
-    >
-    > **Which value should `distanceTo()` return if the mass of one or both blobs is zero?** We recommend `Double.NaN`. Since this corner case is not specified in the API, we will not test it.
-    >
-    > **What should `toString()` return if the mass is zero?** We recommend returning the value `"0 (NaN, NaN)"`. Since this corner case is not specified in the API, we will not test it.
-
-3. Implement the `BeadFinder` data type. This is the most challenging code to implement.
-   - Review Section 2.4 in the textbook, especially the part on depth-first search. Finding all the pixels in a blob is similar to finding a percolating path.
-   - Write the constructor to find all of the blobs and initialize the instance variables. Most of the work for the `BeadFinder` data type will be here.
-     - The crux of this part is to write a *private* recursive method `dfs()` that locates all of the foreground pixels in the same blob as the foreground pixel *(x, y)*. To do this, use *depth-first search*:
-       - mark pixel *(x, y)* as in the current blob;
-       - then recursively mark all of its foreground neighbors as in the current blob (but do not recur if the pixel has previously been marked or the pixel indices are out-of-bounds).
-       - *It is up to you to decide which arguments would be useful for the `dfs()` method.*
-     - The constructor should call `dfs()` from each unmarked pixel *(x, y)*. All of the pixels encountered during a single call to `dfs()` comprise one blob.
-   -  Next, implement the method `getBeads(int min)` that searches through the blobs and stores all of the beads (blobs that contain at least the specified number of pixels) in a `Blob` array. The length of the array should be equal to the number of beads. To determine the number of beads, you may find it helpful to implement a private method `countBeads(int min)` that counts and returns the number of beads.
-
-   - Implement a `main()` method that takes as command-line arguments `min`, `tau`, and the name of a JPEG file. The `main(`) method prints the list of beads. 
-
-
-    > **Can I assume that the dimensions of all of the images are 640-by-480 pixels?** No, do not hardwire these constants into your program. Use `picture.width()` and `picture.height()` for the width and height, respectively.
-    >
-    > **To compute the luminance of a pixel:** First, get the `Color` value of that pixel. Then, use the appropriate method in [Luminance.java](https://introcs.cs.princeton.edu/31datatype/Luminance.java.html) (Program 3.1.3) to get the luminance value for that color.
-    > 
-    > **Are diagonal pixels  _not_ considered adjacent?**  Use only the four ordinal neighbors (north, east, south, and west).
-    > 
-    > **Must I print the beads and displacements in the same order as shown in the assignment specification?** No, the order is not specified.
-
-   - **Testing:**   The initial description of `BeadFinder` shows the output from running `BeadFinder` with `run_1/frame00001.jpg`. Note that the order in which you print the beads is not important. Here are the results for `run_1/frame00000.jpg`: 
-
+5. Some FAQs:
+- **Can I assume that the dimensions of all of the images are 640-by-480 pixels?** No, do not hardwire these constants into your program. Use `picture.width()` and `picture.height()` for the width and height, respectively.
+- **To compute the luminance of a pixel:** First, get the `Color` value of that pixel. Then, use the appropriate method in [Luminance.java](https://introcs.cs.princeton.edu/31datatype/Luminance.java.html) (Program 3.1.3) to get the luminance value for that color.
+- **Are diagonal pixels  _not_ considered adjacent?**  Use only the four ordinal neighbors (north, east, south, and west).
+- **Must I print the beads and displacements in the same order as shown in the assignment specification?** No, the order is not specified.
+6. Testing:  The initial description of `BeadFinder` shows the output from running `BeadFinder` with `run_1/frame00001.jpg`. Note that the order in which you print the beads is not important. Here are the results for `run_1/frame00000.jpg`: 
 ```bash
-java-introcs BeadFinder 0 180.0 run_1/frame00000.jpg
-37 (220.0270, 122.8919)
-1 (254.0000, 223.0000)
-17 (255.4118, 233.8824)
-23 (265.8261, 316.4348)
-36 (297.8333, 394.5000)
-39 (312.3077, 215.8205)
-23 (373.0000, 357.1739)
-19 (390.8421, 144.8421)
-31 (433.7742, 375.4839)
-32 (475.5000,  44.5000)
-31 (525.2903, 443.2903)
-24 (591.0000, 399.5000)
-35 (632.7714, 154.5714)
-
-java-introcs BeadFinder 25 180.0 run_1/frame00000.jpg
-37 (220.0270, 122.8919)
-36 (297.8333, 394.5000)
-39 (312.3077, 215.8205)
-31 (433.7742, 375.4839)
-32 (475.5000,  44.5000)
-31 (525.2903, 443.2903)
-35 (632.7714, 154.5714)
+   java-introcs BeadFinder 0 180.0 run_1/frame00000.jpg
 ```
-
-
+```plaintext
+   37 (220.0270, 122.8919)
+   1 (254.0000, 223.0000)
+   17 (255.4118, 233.8824)
+   23 (265.8261, 316.4348)
+   36 (297.8333, 394.5000)
+   39 (312.3077, 215.8205)
+   23 (373.0000, 357.1739)
+   19 (390.8421, 144.8421)
+   31 (433.7742, 375.4839)
+   32 (475.5000,  44.5000)
+   31 (525.2903, 443.2903)
+   24 (591.0000, 399.5000)
+   35 (632.7714, 154.5714)
+```
+```bash
+   java-introcs BeadFinder 25 180.0 run_1/frame00000.jpg
+```
+```plaintext
+   37 (220.0270, 122.8919)
+   36 (297.8333, 394.5000)
+   39 (312.3077, 215.8205)
+   31 (433.7742, 375.4839)
+   32 (475.5000,  44.5000)
+   31 (525.2903, 443.2903)
+   35 (632.7714, 154.5714)
+```
 ```bash
 java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
- 1 ( 25.0000, 373.0000)
- 1 ( 26.0000, 372.0000)
- 1 ( 27.0000, 373.0000)
- 1 ( 29.0000, 369.0000)
-63 ( 34.2063,  32.3175)
- 9 ( 97.0000, 341.0000)
-65 (141.4615,  54.0615)
-70 (165.8571, 165.2857)
-60 (173.5667, 200.5333)
-50 (198.7000, 113.0200)
- 1 (254.0000, 223.0000)
-89 (276.9101, 306.6629)
-24 (296.3750,  82.9583)
-62 (306.6774, 474.6774)
-59 (339.1356,  81.5932)
-68 (358.9706, 159.0588)
-40 (397.0750,  39.2000)
-86 (573.3488, 427.0581)
-51 (611.7451, 143.8235)
-53 (636.1132, 230.6038)
-14 (634.5000, 421.7143)
-26 (636.5000,  35.0000)
-
-java-introcs BeadFinder 25 180.0 run_6/frame00010.jpg
-63 ( 34.2063,  32.3175)
-65 (141.4615,  54.0615)
-70 (165.8571, 165.2857)
-60 (173.5667, 200.5333)
-50 (198.7000, 113.0200)
-89 (276.9101, 306.6629)
-62 (306.6774, 474.6774)
-59 (339.1356,  81.5932)
-68 (358.9706, 159.0588)
-40 (397.0750,  39.2000)
-86 (573.3488, 427.0581)
-51 (611.7451, 143.8235)
-53 (636.1132, 230.6038)
-26 (636.5000,  35.0000)
 ```
+```plaintext
+    1 ( 25.0000, 373.0000)
+    1 ( 26.0000, 372.0000)
+    1 ( 27.0000, 373.0000)
+    1 ( 29.0000, 369.0000)
+   63 ( 34.2063,  32.3175)
+    9 ( 97.0000, 341.0000)
+   65 (141.4615,  54.0615)
+   70 (165.8571, 165.2857)
+   60 (173.5667, 200.5333)
+   50 (198.7000, 113.0200)
+    1 (254.0000, 223.0000)
+   89 (276.9101, 306.6629)
+   24 (296.3750,  82.9583)
+   62 (306.6774, 474.6774)
+   59 (339.1356,  81.5932)
+   68 (358.9706, 159.0588)
+   40 (397.0750,  39.2000)
+   86 (573.3488, 427.0581)
+   51 (611.7451, 143.8235)
+   53 (636.1132, 230.6038)
+   14 (634.5000, 421.7143)
+   26 (636.5000,  35.0000)
+```
+```bash
+   java-introcs BeadFinder 25 180.0 run_6/frame00010.jpg
+```
+```plaintext
+   63 ( 34.2063,  32.3175)
+   65 (141.4615,  54.0615)
+   70 (165.8571, 165.2857)
+   60 (173.5667, 200.5333)
+   50 (198.7000, 113.0200)
+   89 (276.9101, 306.6629)
+   62 (306.6774, 474.6774)
+   59 (339.1356,  81.5932)
+   68 (358.9706, 159.0588)
+   40 (397.0750,  39.2000)
+   86 (573.3488, 427.0581)
+   51 (611.7451, 143.8235)
+   53 (636.1132, 230.6038)
+   26 (636.5000,  35.0000)
+```
+{{< /details >}}
 
-4. Implement the `BeadTracker` client.
-   - The `main()` method in `BeadTracker` takes an arbitrary number of command-line arguments, `args[0]`, `args[1]`, and so forth.
-   - You need to consider only two frames at a time, so **do not** store all of the frames at the same time. 
-
-   > Use the [Picture](http://introcs.cs.princeton.edu/java/stdlib/javadoc/Picture.html) data type to read a JPEG file.
-   >
-   > **What should I do if several of the beads in frame `t+1` have the same bead in frame `t` as their closest bead?** That happens only rarely, so you should not worry about it—just let the bead in frame `t` get paired a second time.
-   > 
-   > **I am able to find beads and blobs correctly, but my `BeadTracker` gives a few errors, despite that it is mostly working. Why could this be?**
-   >   - Check that, for each bead in frame `t + 1`, you are finding the closest bead in frame `t`, and not vice versa.
-   >   - Be sure to discard distances greater than *delta*, not greater than or equal to *delta*. 
-   > 
-   > **Why do I have to compare each bead in frame `t + 1` to each bead in frame `t`? Why can't I do it the other way around?** It is an arbitrary choice, but one that you must follow because it is prescribed in the assignment specification.
-   > 
-   >
-   > **Can I assume that all of the runs consist of 200 frames?** No, do not hardwire `200` into your program. Use `args.length` for the number of command-line arguments.
-   > 
-   > **How can I specify 200 image names on the command line?** One way is to type them all in.
-   >
-   > ```bash
-   > java-introcs BeadTracker 25 180.0 25.0 run_1/frame00000.jpg run_1/frame00001.jpg run_1/frame00002.jpg ...
-   > ```
-   > 
-   > An easier alternative is to use the *wildcard* capability of the terminal. For example, the following specifies (in alphabetical order) all `.jpg` files in the `run_1` directory.
-   >
-   > ```bash
-   > java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
-   > ```
-
-   - Testing: For reference, `displacements-run_1.txt`, `displacements-run_2.txt`, and `displacements-run_6.txt` contain a list of all of the displacements (using *tau* = 180.0 and *min* = 25) for `run_1`, `run_2`, and `run_6`, respectively. They were obtained by running
+{{< details "Click here to show possible progress steps for BeadTracker" >}}
+1. The `main()` method in `BeadTracker` takes an arbitrary number of command-line arguments, `args[0]`, `args[1]`, and so forth.
+2. You need to consider only two frames at a time, so **do not** store all of the frames at the same time. 
+3. Use the [Picture](http://introcs.cs.princeton.edu/java/stdlib/javadoc/Picture.html) data type to read a JPEG file.
+4. Some FAQs
+- **What should I do if several of the beads in frame `t+1` have the same bead in frame `t` as their closest bead?** That happens only rarely, so you should not worry about it—just let the bead in frame `t` get paired a second time.
+- **I am able to find beads and blobs correctly, but my `BeadTracker` gives a few errors, despite that it is mostly working. Why could this be?**
+  - Check that, for each bead in frame `t + 1`, you are finding the closest bead in frame `t`, and not vice versa.
+  - Be sure to discard distances greater than *delta*, not greater than or equal to *delta*. 
+- **Why do I have to compare each bead in frame `t + 1` to each bead in frame `t`? Why can't I do it the other way around?** It is an arbitrary choice, but one that you must follow because it is prescribed in the assignment specification.
+- **Can I assume that all of the runs consist of 200 frames?** No, do not hardwire `200` into your program. Use `args.length` for the number of command-line arguments.
+- **How can I specify 200 image names on the command line?** Use the *wildcard* capability of the terminal. For example, the following specifies (in alphabetical order) all `.jpg` files in the `run_1` directory.
+```bash
+   java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
+```
+5. Testing: For reference, `displacements-run_1.txt`, `displacements-run_2.txt`, and `displacements-run_6.txt` contain a list of all of the displacements (using *tau* = 180.0 and *min* = 25) for `run_1`, `run_2`, and `run_6`, respectively. They were obtained by running
 
 ```bash
-java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
-7.1833
-4.7932
-2.1693
-5.5287
-5.4292
-4.3962
-...
-
-java-introcs BeadTracker 25 180.0 25.0 run_2/*.jpg
-5.1818
-7.6884
-6.7860
-6.4907
-4.2102
-1.1412
-4.4724
-7.5191
-3.0659
-4.4238
-5.0600
-1.7280
-...
-
-java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg
-11.1876
-12.4269
-10.3113
- 1.3954
- 3.3196
- 0.4732
- 1.7367
- 3.0060
- 4.6087
- 1.3282
+   java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
 ```
+```plaintext
+   7.1833
+   4.7932
+   2.1693
+   5.5287
+   5.4292
+   4.3962
+   ...
+```
+```bash
+   java-introcs BeadTracker 25 180.0 25.0 run_2/*.jpg
+```
+```plaintext
+   5.1818
+   7.6884
+   6.7860
+   6.4907
+   4.2102
+   1.1412
+   4.4724
+   7.5191
+   3.0659
+   4.4238
+   5.0600
+   1.7280
+   ...
+```
+```bash
+   java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg
+```
+```plaintext
+   11.1876
+   12.4269
+   10.3113
+    1.3954
+    3.3196
+    0.4732
+    1.7367
+    3.0060
+    4.6087
+    1.3282
+```
+{{< /details >}}
 
-5. Implement the `Avogadro` client.
-   - The `main()` method in `Avogadro` reads a sequence of floating-point numbers from standard input and prints the estimate of Avogadro's number using the formulas provided in the assignment.
-   - To calculate \\(σ^2\\), use the second formula listed with radial displacements; these are the results from `BeadTracker`. 
-
-   > **How accurate of an estimate should I get?** You should get within 10% or so of the exact value for Avogadro's number \\(6.022142 × 10^{23}\\). The standard deviation of the radius of the beads is about 10%, so you should not expect results more accurate than this. Your output, however, should agree *exactly* with ours.
-   > 
-   > **My physics is a bit rusty. Do I need to worry about converting units?** Not much, since all of the constants are in SI units. The only conversion you should need to do is to convert from distances measured in pixels (the radial displacements) to distances measured in meters, by using the conversion factor of \\(0.175 × 10^{−6}\\) meters per pixel.
-   > 
-   > **Checkstyle complains about the variables `I` named `T` and `R`. Which names should I use instead?** A constant variable (a variable whose value does not change during the execution of a program, or from one execution of the program to the next) should begin with an uppercase letter and use underscores to separate any word boundaries, such as `GRAVITATIONAL_CONSTANT`. Constant variables should have more meaningful names, such as `TEMPERATURE` or `GAS_CONSTANT`.
-
-   - Below are the output for `displacements-run_1.txt`, `displacements-run_2.txt`, and `displacements-run_6.txt`.
+{{< details "Click here to show possible progress steps for Avogadro" >}}
+1. The `main()` method in `Avogadro` reads a sequence of floating-point numbers from standard input and prints the estimate of Avogadro's number using the formulas provided in the assignment.
+2. To calculate \\(σ^2\\), use the second formula listed with radial displacements; these are the results from `BeadTracker`. 
+3. Some FAQs: 
+- **How accurate of an estimate should I get?** You should get within 10% or so of the exact value for Avogadro's number \\(6.022142 × 10^{23}\\). The standard deviation of the radius of the beads is about 10%, so you should not expect results more accurate than this. Your output, however, should agree *exactly* with ours.
+- **My physics is a bit rusty. Do I need to worry about converting units?** Not much, since all of the constants are in SI units. The only conversion you should need to do is to convert from distances measured in pixels (the radial displacements) to distances measured in meters, by using the conversion factor of \\(0.175 × 10^{−6}\\) meters per pixel.
+- **Checkstyle complains about the variables `I` named `T` and `R`. Which names should I use instead?** A constant variable (a variable whose value does not change during the execution of a program, or from one execution of the program to the next) should begin with an uppercase letter and use underscores to separate any word boundaries, such as `GRAVITATIONAL_CONSTANT`. Constant variables should have more meaningful names, such as `TEMPERATURE` or `GAS_CONSTANT`.
+4. Testing - below are the output for `displacements-run_1.txt`, `displacements-run_2.txt`, and `displacements-run_6.txt`.
 
 ```bash
 java-introcs Avogadro < displacements-run_1.txt
+```
+```plaintext
 Boltzmann = 1.2535e-23
 Avogadro  = 6.6329e+23
-
+```
+```bash
 java-introcs Avogadro < displacements-run_2.txt
+```
+```bash
 Boltzmann = 1.4200e-23
 Avogadro  = 5.8551e+23
-
+```
+```bash
 java-introcs Avogadro < displacements-run_6.txt
+```
+```plaintext
 Boltzmann = 1.3482e-23
 Avogadro  = 6.1670e+23
 ```
+{{< /details >}}
 
-6. Perform system testing. As a final test, combine the data collection (`BeadTracker`) for `run_1`, `run_2`, and `run_6` with the data analysis (`Avogadro`). The data for `run_2` contains light boundary pixels and `run_6` contains pixels whose luminance is exactly 180.0.
+{{< details "Click here to show possible progress steps for system testing" >}}
+1. As a final test, combine the data collection (`BeadTracker`) for `run_1`, `run_2`, and `run_6` with the data analysis (`Avogadro`). The data for `run_2` contains light boundary pixels and `run_6` contains pixels whose luminance is exactly 180.0.
 
 ```bash
-java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg | java-introcs Avogadro
-Boltzmann = 1.2535e-23
-Avogadro  = 6.6329e+23
-
-java-introcs BeadTracker 25 180.0 25.0 run_2/*.jpg | java-introcs Avogadro
-Boltzmann = 1.4200e-23
-Avogadro  = 5.8551e+23
-
+   java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg | java-introcs Avogadro
+```
+```plaintext
+   Boltzmann = 1.2535e-23
+   Avogadro  = 6.6329e+23
+```
+```
+```bash
+   java-introcs BeadTracker 25 180.0 25.0 run_2/*.jpg | java-introcs Avogadro
+```
+```plaintext
+   Boltzmann = 1.4200e-23
+   Avogadro  = 5.8551e+23
+```
+```bash
 java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg | java-introcs Avogadro
-Boltzmann = 1.3482e-23
-Avogadro  = 6.1670e+23
+```
+```plaintext
+   Boltzmann = 1.3482e-23
+   Avogadro  = 6.1670e+23
 ```
 
 {{< /details >}}
@@ -478,13 +495,17 @@ Avogadro  = 6.1670e+23
 
 ```bash
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0]*.jpg    > temp.txt
-
+```
+```bash
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0-1]*.jpg  > temp.txt
-
+```
+```bash
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0-3]*.jpg  > temp.txt
-
+```
+```bash
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0-7]*.jpg  > temp.txt
-
+```
+```bash
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000*.jpg run_1/frame001[0-5]*.jpg > temp.txt
 ```
 

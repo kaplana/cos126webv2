@@ -1,7 +1,7 @@
 ---
 title: 8. Chat126
 subtitle: 
-summary:  Use a Markov chain to create a statistical model of a piece of English text. Simulate the Markov chain to generate stylized pseudo-random text. <br>Partner assignment   {{< project "chat126" >}} |  {{< submit "Chat126" >}}
+summary:  Use a Markov chain to create a statistical model of a piece of English text. Simulate the Markov chain to generate stylized pseudo-random text. <br>Partner assignment   {{< project "chat126" >}} |  {{< submit "Chat126" >}}<!--<br>{{<notreleased>}}-->
 weight: 9
 type: "page"
   
@@ -11,7 +11,6 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
 
 {{< project "chat126" >}} |  {{< submit "Chat126" >}}
 
@@ -152,9 +151,10 @@ The `predictNext()` method must return a character that immediately follows the 
 
 #### Circular string.
 
-To avoid dead ends, treat the input text as a _circular string_: the last character is considered to precede the first character. For example, if k = 2 and the text is the 17-character string `gagggagaggcgagaaa`, then the salient features of the Markov model are captured in the table below:
+To avoid dead ends, treat the input text as a _circular string_: the first character is considered to succeed the last character. For example, if \\(k = 2\\) and the text is the 17-character string `"gagggagaggcgagaaa"`, then the salient features of the Markov model are captured in the table below.  Note that the frequency of `"ag"` is 5 (and not 4) because we treat the string as circular. 
 
-```bash
+{{< staticimg src="chat126/images/example-circular.jpg" wid=500 >}}
+<!--```plaintext
                frequency of   probability that
                 next char       next char is
 kgram   freq    a   c   g        a    c    g
@@ -167,9 +167,15 @@ kgram   freq    a   c   g        a    c    g
  gg      3      1   1   1       1/3  1/3  1/3
 ----------------------------------------------
         17      7   1   9
-```
+```-->
 
- Note that the frequency of `"ag"` is 5 (and not 4) because we treat the string as circular.
+
+
+
+
+<!-- As another example, consider the text 6-character string `"banana"`.  If \\(k = 2\\), then there are 6 2-grams: `"ba"`, `"an"`, `"na"`, `"an"`, `"na"`, `"ab"`:
+
+{{< staticimg src="chat126/images/banana-circular.jpg" wid="400" >}} -->
 
 #### Corner cases.
 
@@ -177,7 +183,7 @@ kgram   freq    a   c   g        a    c    g
 
 - Throw an `IllegalArgumentException` in `predictNext()` if kgram does not appear in the text.
 
-> Suggestion: Use short exception messages or split the exception message into two `String` literals appended using  `+` so the message can placed on two lines. This will avoid Checkstyle long line messages (i.e., over 86 characters). 
+> Suggestion: Use short exception messages or split the exception message into two `String` literals appended using  `+` so the message can placed on two lines. This will avoid Checkstyle long line messages (i.e., over 87 characters). 
 
 #### Performance requirements.
 
@@ -209,8 +215,6 @@ Write a client program `Chat126` that takes two integer command-line arguments \
 
 ```plaintext
 more input17.txt
-```
-```plaintext
 gagggagaggcgagaaa
 ```
 ```plaintext

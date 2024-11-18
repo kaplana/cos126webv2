@@ -14,15 +14,23 @@ comments: false
 
 Note that the course changes from semester to semester, so some topics from previous exams may not be relevant. You are responsible only for the material covered in this semester's lectures, precepts, and programming assignments.
 
+#### Programming Exams on TigerFile.
 
-<!--
-Here's the the Fall'22 Programming Exam 2 hosted on TigerFile.  it will give you practice with downloading the exam/project folder (from TigerFile) in the same manner that you will do on real programming exam.
+Here's the Spring'24 Programming Exam 2 hosted on TigerFile.  This will give you practice with downloading the exam/project folder (from TigerFile) in the same manner that you will do on real programming exam.
+
+{{< download-project "Tiger_Wallet" >}} |  {{< submit "Tiger_Wallet" >}}
+
+And here's the the Fall'22 Programming Exam 2 hosted on TigerFile.
 
 {{< download-project "Binary_Polynomial" >}} |  {{< submit "Binary_Polynomial" >}}
--->
+
 <!--Do not access the programming exam download/submit links (below) until instructed to do so.
 
 **Spring 2024 Programming Exam: {{< download-project "Programming_Exam" >}} |  {{< submit "Programming_Exam" >}}** -->
+
+#### Past exams.
+
+
 
 | Semester    | Written Exam 1   |  Programming Exam 2 | Written Exam 2    |
 |-------------| ---------------- | --------------------| ------------------|

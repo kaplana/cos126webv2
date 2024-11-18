@@ -1,7 +1,7 @@
 ---
 title: 7. Guitar Hero 
 subtitle: 
-summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}}<br>{{<notreleased>}}
+summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}}
 weight: 8
 type: "page"
   

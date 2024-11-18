@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{< alert >}}
+<!--{{< alert >}}-->
 
 {{< project "hamming" >}} |  {{< submit "Hamming" >}}
 ### **Goals**
@@ -124,7 +124,9 @@ The input format for `encode.toy` is a text file that contains the sequence of b
 The file `encode3.txt` contains three lines of 4-hex sequences, each representing a 4-bit sequence:
 
 ```bash
-> more encode3.txt
+more encode3.txt
+```
+```plaintext
 0001 0001 0000 0001
 0001 0001 0001 0000
 0001 0001 0001 0001
@@ -138,7 +140,9 @@ The 4-hex sequence `0001 0001 0001 0001` represents the 4-bit sequence `1111`.<b
 The input format for `decode.toy` is similar, except that each line consists of a sequence of seven (7) hex digits, each representing a 7-bit sequence. For example:
 
 ```bash
-> more decode4.txt
+more decode4.txt
+```
+```plaintext
 0001 0001 0000 0001 0001 0000 0000
 0001 0000 0000 0001 0001 0000 0000
 0001 0001 0000 0000 0001 0000 0000
@@ -158,7 +162,7 @@ In summary, input files for `encode.toy` will have a multiple of four `0000`'s a
 Use the [Visual X-TOY simulator](https://lift.cs.princeton.edu/xtoy/) by executing the following command in the IntelliJ terminal:
 
 ```bash
-> java -jar toy.jar
+java -jar toy.jar
 ```
 
 The Visual X-TOY simulator provides lots of useful development features. There are two major modes: *edit* and *debug*. Use *Mode > Edit Mode* to edit `.toy` programs and *Mode > Debug Mode* to debug or run `.toy` programs. In Debug Mode, use the *Reference*, *Stdin*, *Stdout* and *Core* tabs on the right to help debug your program.  
@@ -192,6 +196,7 @@ These are purely suggestions for how you might make progress. You do not have to
 	1. Open and experiment with `multiply.toy`, which is included in the project folder.
 	1. Try executing some of the programs from precept.
 1. Read, compile, and run the reference solutions `HammingEncoder.java` and `HammingDecoder.java`. Use these reference solutions as a *design* for your TOY programs.
+1. The `readme.txt` provides tables to help your design/implementation/debugging of `encode.toy` and `decode.toy.`  This will help you think about how you plan to use and/or re-use the Toy registers as you implement these Toy programs.  Before you start coding, complete these tables, and update as needed.  They  will be very helpful for you as well as those helping you during office hours and/or Lab TA debugging sessions.
 1. As you write your TOY programs, remember:
 	- The first column contains the TOY instruction ***in hex***.
 	- The second column contains the TOY pseudo-code.
@@ -233,7 +238,7 @@ _Decoding_
 To test your TOY program using the command-line `TOY.java` simulator, type the commands below into the IntelliJ embedded terminal. You should see the following output - one _bit_ (Toy hex word) per line:
 
 ```plaintext
-> java-introcs TOY encode.toy < encode3.txt
+java-introcs TOY encode.toy < encode3.txt
 ```
 ```
 0001
@@ -261,7 +266,7 @@ FFFF
 ```
 
 ```plaintext
-> java-introcs TOY decode.toy < decode4.txt
+java-introcs TOY decode.toy < decode4.txt
 ```
 ```
 0001
@@ -293,7 +298,7 @@ The most complete way to test your TOY programs is to encode and decode all poss
 Optionally, you can also use `HammingChecker.java` to easily compare the output to the corresponding answer file. First, redirect standard output from running your TOY program to an output file (e.g., `decode4-output.txt`).
 
 ```bash
-> java-introcs TOY decode.toy < decode4.txt > decode4-output.txt
+java-introcs TOY decode.toy < decode4.txt > decode4-output.txt
 ```
 
 Then, run `HammingChecker`, passing in three (3) command-line arguments:
@@ -304,13 +309,17 @@ Then, run `HammingChecker`, passing in three (3) command-line arguments:
 
 For example:
 ```bash
-> java-introcs HammingChecker decode decode4-answer.txt decode4-output.txt
+java-introcs HammingChecker decode decode4-answer.txt decode4-output.txt
+```
+```plaintext
 SUCCESS: Actual output is identical to the expected output.
 ```
 
 If your output doesn't match the expected output, an error message will highlight which lines don't match.
 ```bash
-> java-introcs HammingChecker decode decode4-answer.txt decode4-output.txt
+java-introcs HammingChecker decode decode4-answer.txt decode4-output.txt
+```
+```plaintext
 ERROR: Actual output differs from the expected output.
 
 Expected Output (line 003):     1 1 0 1 
@@ -373,7 +382,7 @@ Also
 
 Run TigerTalk by executing the following command in the IntelliJ embedded terminal:
 
-`> java-introcs -jar TigerTalk.jar`
+`java-introcs -jar TigerTalk.jar`
 
 
 In this simulator,  Alan Turing and John von Neumann can send (ASCII) text messages to each other, and you can independently:

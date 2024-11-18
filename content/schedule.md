@@ -91,20 +91,18 @@ comments: false
 |      | Wed, Nov 6                  |{{< lecture "Data Structures" "static/lectures/43DataStructures.pdf" >}}<br> _Reading:_ 4.3 |  {{< lecturedemo "Dijkstra Two Stack" "static/lectures/demos/43DemoDijkstraTwoStack" >}} |
 |      | Wed, Nov 6 &<br>Thu, Nov 8  | {{< precept "p17-data-structures" "Data Structures" >}}                   | |
 |      | Sun, Nov 10                  |                                    | [_Assignment:_ Guitar Hero due]()         |
-|<hr>|
-|      |                             |                                   | |
 |                                    |                                    | |
 | 9    | Mon, Nov 11                 | {{< lecture "Theory of Computing" "static/lectures/50TheoryOfComputing.pdf" >}}<br> _Reading:_ 5.3-5.4 |   |
 |      | Mon, Nov 11 &<br>Tue, Nov 12| {{<precept "p18-theory" "Theory of Computing" >}}             | |
 |      | Wed, Nov 13                 | {{< lecture "Toy I" "static/lectures/60ToyI.pdf" >}}<br> _Reading:_ 6.1-6.2  |   |
 |      | Wed, Nov 13 &<br>Thu, Nov 14| Precept: Toy I                    | |
 |      | Sun, Nov 17                 |                                    | [_Assignment:_ Chat126 due]()         |
-|      |                             |                                   | |
 | 10   | Mon, Nov 18                 | {{< lecture "Toy II" "static/lectures/60ToyII.pdf" >}}<br> _Reading:_ 6.3-6.4 |   |
 |      | Mon, Nov 18 &<br>Tue, Nov 19| {{< precept "p20-toy2" "Toy II" >}}           | |
 |      | Wed, Nov 20                 |_Programming Exam_ <br>         |   |
 |      | Wed, Nov 20 &<br>Thu, Nov 21| Precept: Java Jeopardy           | |
 |      | Sun, Nov 24                 |                                   | [_Assignment:_ Hamming due]()         |
+|<hr>|
 |      |                             |                                   | |
 | 11   | Mon, Nov 25| No lecture   |   |
 |      | Mon, Nov 25 &<br>Tue, Nov 26 | No precept |
