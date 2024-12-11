@@ -370,7 +370,7 @@ freq("ish ")      = 3
 freq("tuna")      = 0
 ```
 
-To test `predictNext()`, write a loop that calls `predictNext()` repeatedly, and count how many times a particular character is returned. For example, with `model1` above, `predictNext("na")` should return `b` about one-half of the time; with `model2` above, `predictNext("fish")` should return `o` about one-quarter of the time.
+To test `predictNext()`, write a loop that calls `predictNext()` repeatedly, and count how many times a particular character is returned. For example, with `model1` above, `predictNext("na")` should return `b` about one-half of the time; with `model3` above, `predictNext("fish")` should return `o` about one-quarter of the time.
 
 
 Of course, you should try to define and test other models.

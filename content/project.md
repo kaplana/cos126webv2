@@ -17,7 +17,7 @@ comments: false
 
 {{< project "atomic" >}} |  {{< submit "Atomic" >}}
 
-{{<construction>}}
+<!--{{<construction>}}-->
 
 <!-- ### **TigerFile Submission Requirements - 20 submission limit**
 
@@ -117,7 +117,7 @@ Next, write a data type `BeadFinder` that has the following API. Use a recursive
 
 The `main()` method takes an integer *min*, a floating-point number *tau*, and the name of an image file as command-line arguments; create a `BeadFinder` object using a luminance threshold of *tau*; and print all beads (blobs containing at least *min* pixels), as shown here:
 
-```bash
+```plaintext
 java-introcs BeadFinder 0 180.0 run_1/frame00001.jpg
 ```
 ```plaintext
@@ -136,8 +136,8 @@ java-introcs BeadFinder 0 180.0 run_1/frame00001.jpg
 38 (521.7105, 445.8421)
 35 (588.5714, 402.1143)
 13 (638.1538, 155.0000)
-
-```bash
+```
+```plaintext
 java-introcs BeadFinder 25 180.0 run_1/frame00001.jpg
 ```
 ```plaintext
@@ -166,7 +166,7 @@ The next step is to determine how far a bead moves from one time \\(t\\) to the 
 
 Next, write a `main()` method in `BeadTracker.java` that takes an integer *min*, a double value *tau*, a double value *delta*, and a sequence of image filenames as command-line arguments; identifies the beads (using the specified values for *min* and *tau*) in each image (using `BeadFinder`); and prints the distance that each bead moves from one frame to the next (assuming that distance is no longer than *delta*). You will do this for beads in each pair of consecutive frames, printing each distance that you discover, one after the other.
 
-```bash
+```plaintext
 java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
 ```
 ```plaintext
@@ -199,7 +199,7 @@ $$ σ^2 = \frac{(Δx^2_1+…+Δx^2_n)+(Δy^2_1+\ldots+Δy^2_n)}{2n}  = \frac{r^2
 	where, for our data,
 
     - \\(T\\) = absolute temperature = \\(297\\) Kelvin (room temperature);
-    - \\(\eta\\) = viscosity of water at room temperature = \\( 9.135 × 10^{−4} N·s·m^{−2} \\); 
+    - \\(\eta\\) = viscosity of water at room temperature = \\( 9.135 × 10^{−4}\ \ \ N·s·m^{−2} \\) (\\(N\\) newtons, \\(s\\)  seconds, \\(m\\) meters);
     - \\(\rho\\) = radius of bead = \\(0.5 × 10^{−6}\\) meters; and
     - \\(k\\) is the *Boltzmann constant*.
 
@@ -209,7 +209,7 @@ All parameters are given in [SI units](https://en.wikipedia.org/wiki/Internation
 
 For the final part, write `Avogadro.java` with a `main()` that reads the radial displacements \\(r_1, r_2, r_3, \ldots\\) from standard input and estimates Boltzmann's constant and Avogadro's number using the formulas described above.
 
-```bash
+```plaintext
 more displacements-run_1.txt
 ```
 ```plaintext
@@ -221,14 +221,14 @@ more displacements-run_1.txt
  4.3962
 ...
 ```
-```bash
+```plaintext
 java-introcs Avogadro < displacements-run_1.txt
 ```
 ```plaintext
 Boltzmann = 1.2535e-23
 Avogadro  = 6.6329e+23
 ```
-```bash
+```plaintext
 java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg | java-introcs Avogadro
 Boltzmann = 1.2535e-23
 Avogadro  = 6.6329e+23
@@ -280,7 +280,7 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
 - **Are diagonal pixels  _not_ considered adjacent?**  Use only the four ordinal neighbors (north, east, south, and west).
 - **Must I print the beads and displacements in the same order as shown in the assignment specification?** No, the order is not specified.
 6. Testing:  The initial description of `BeadFinder` shows the output from running `BeadFinder` with `run_1/frame00001.jpg`. Note that the order in which you print the beads is not important. Here are the results for `run_1/frame00000.jpg`: 
-```bash
+```plaintext
    java-introcs BeadFinder 0 180.0 run_1/frame00000.jpg
 ```
 ```plaintext
@@ -298,7 +298,7 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
    24 (591.0000, 399.5000)
    35 (632.7714, 154.5714)
 ```
-```bash
+```plaintext
    java-introcs BeadFinder 25 180.0 run_1/frame00000.jpg
 ```
 ```plaintext
@@ -310,7 +310,7 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
    31 (525.2903, 443.2903)
    35 (632.7714, 154.5714)
 ```
-```bash
+```plaintext
 java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
 ```
 ```plaintext
@@ -337,7 +337,7 @@ java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
    14 (634.5000, 421.7143)
    26 (636.5000,  35.0000)
 ```
-```bash
+```plaintext
    java-introcs BeadFinder 25 180.0 run_6/frame00010.jpg
 ```
 ```plaintext
@@ -370,12 +370,12 @@ java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
 - **Why do I have to compare each bead in frame `t + 1` to each bead in frame `t`? Why can't I do it the other way around?** It is an arbitrary choice, but one that you must follow because it is prescribed in the assignment specification.
 - **Can I assume that all of the runs consist of 200 frames?** No, do not hardwire `200` into your program. Use `args.length` for the number of command-line arguments.
 - **How can I specify 200 image names on the command line?** Use the *wildcard* capability of the terminal. For example, the following specifies (in alphabetical order) all `.jpg` files in the `run_1` directory.
-```bash
+```plaintext
    java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
 ```
 5. Testing: For reference, `displacements-run_1.txt`, `displacements-run_2.txt`, and `displacements-run_6.txt` contain a list of all of the displacements (using *tau* = 180.0 and *min* = 25) for `run_1`, `run_2`, and `run_6`, respectively. They were obtained by running
 
-```bash
+```plaintext
    java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
 ```
 ```plaintext
@@ -387,7 +387,7 @@ java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
    4.3962
    ...
 ```
-```bash
+```plaintext
    java-introcs BeadTracker 25 180.0 25.0 run_2/*.jpg
 ```
 ```plaintext
@@ -405,7 +405,7 @@ java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
    1.7280
    ...
 ```
-```bash
+```plaintext
    java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg
 ```
 ```plaintext
@@ -431,21 +431,21 @@ java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
 - **Checkstyle complains about the variables `I` named `T` and `R`. Which names should I use instead?** A constant variable (a variable whose value does not change during the execution of a program, or from one execution of the program to the next) should begin with an uppercase letter and use underscores to separate any word boundaries, such as `GRAVITATIONAL_CONSTANT`. Constant variables should have more meaningful names, such as `TEMPERATURE` or `GAS_CONSTANT`.
 4. Testing - below are the output for `displacements-run_1.txt`, `displacements-run_2.txt`, and `displacements-run_6.txt`.
 
-```bash
+```plaintext
 java-introcs Avogadro < displacements-run_1.txt
 ```
 ```plaintext
 Boltzmann = 1.2535e-23
 Avogadro  = 6.6329e+23
 ```
-```bash
+```plaintext
 java-introcs Avogadro < displacements-run_2.txt
 ```
-```bash
+```plaintext
 Boltzmann = 1.4200e-23
 Avogadro  = 5.8551e+23
 ```
-```bash
+```plaintext
 java-introcs Avogadro < displacements-run_6.txt
 ```
 ```plaintext
@@ -457,22 +457,21 @@ Avogadro  = 6.1670e+23
 {{< details "Click here to show possible progress steps for system testing" >}}
 1. As a final test, combine the data collection (`BeadTracker`) for `run_1`, `run_2`, and `run_6` with the data analysis (`Avogadro`). The data for `run_2` contains light boundary pixels and `run_6` contains pixels whose luminance is exactly 180.0.
 
-```bash
+```plaintext
    java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg | java-introcs Avogadro
 ```
 ```plaintext
    Boltzmann = 1.2535e-23
    Avogadro  = 6.6329e+23
 ```
-```
-```bash
+```plaintext
    java-introcs BeadTracker 25 180.0 25.0 run_2/*.jpg | java-introcs Avogadro
 ```
 ```plaintext
    Boltzmann = 1.4200e-23
    Avogadro  = 5.8551e+23
 ```
-```bash
+```plaintext
 java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg | java-introcs Avogadro
 ```
 ```plaintext
@@ -485,7 +484,7 @@ java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg | java-introcs Avogadro
 
 ### **Performance Analysis - `readme.txt`.**
 
-- Formulate a hypothesis for the running time (in seconds) of `BeadTracker` as a function of the input size \\(n\\) (total number of pixels read in across all frames being processed). Justify your hypothesis in your `readme.txt` file with empirical data.
+- Formulate a hypothesis for the running time (in seconds) of `BeadTracker` as a function of the input size \\(n\\) (total number of pixels read in across all frames being processed). Using the doubling hypothesis, justify your results in your `readme.txt` file with empirical data.
 
 - Review the lecture and precept exercises for applying the doubling method. 
 
@@ -493,19 +492,19 @@ java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg | java-introcs Avogadro
 
 - **How can I run `BeadTracker` with a variety of input sizes? Do not all the runs have 200 frames?** They do, but when you are performing timing experiments, you can simply use a subset of them. You can use the wildcard capability of the terminal  to run 10 frames, 20 frames, 40 frames, 80 frames, and 160 frames, as follows:
 
-```bash
+```plaintext
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0]*.jpg    > temp.txt
 ```
-```bash
+```plaintext
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0-1]*.jpg  > temp.txt
 ```
-```bash
+```plaintext
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0-3]*.jpg  > temp.txt
 ```
-```bash
+```plaintext
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000[0-7]*.jpg  > temp.txt
 ```
-```bash
+```plaintext
    java-introcs -Xint BeadTracker 25 180.0 25.0 run_1/frame000*.jpg run_1/frame001[0-5]*.jpg > temp.txt
 ```
 
@@ -513,13 +512,13 @@ java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg | java-introcs Avogadro
 
 - **How long should `BeadTracker` take?** It depends on the speed of your computer, but processing 200 frames should take around 10 seconds or less without the `-Xint` option and about two minutes with the `-Xint` option.
 
-- **How much memory should my program use?** Our program uses less than 5 MB. You will receive a deduction if you use substantially more. The most common way to waste memory is to hold references to an array of `Picture` objects in `BeadTracker` instead of only two at a time. You can use the `-Xmx` option to limit how much memory Java uses: for example, the following command limits the memory available to Java to 5 MB.
-```bash
-   java-introcs -Xint -Xmx5m BeadTracker 25 180.0 25.0 run_1/*.jpg
+- **How much memory should my program use?** Our program uses less than ten (10)  MB. You will receive a deduction if you use substantially more. The most common way to waste memory is to hold references to an array of `Picture` objects in `BeadTracker` instead of only two at a time. You can use the `-Xmx` option to limit how much memory Java uses: for example, the following command limits the memory available to Java to ten (10) MB.
+```plaintext
+   java-introcs -Xint -Xmx10m BeadTracker 25 180.0 25.0 run_1/*.jpg
 ```
 
 - **When I test with a very small luminance threshold, I get a `StackOverflowError`, but my code works for larger luminance thresholds. What does this mean?** Since DFS is recursive, it consumes memory proportional to the height of the function-call tree. If the luminance threshold is small, the blobs can be very big, and the height of the function-call tree may be very large. We will not test your program on inputs with such big blobs. If, however, you are determined to get it to work on such cases, use the command-line option `-Xss20m` to increase the stack space.
-```bash
+```plaintext
    java-introcs -Xint -Xss20m BeadTracker 25 18.0 25.0 run_1/*.jpg
 ```
 
