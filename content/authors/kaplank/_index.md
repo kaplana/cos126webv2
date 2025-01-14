@@ -6,11 +6,11 @@ title: Kobi Kaplan
 superuser: false
 
 # Role/position
-role: Course Administrator <br> Office - 204 CS Building
+role: Course Administrator <br> Office - 204 Computer Science
 
 
 office_hours:
-- 226 CS Building
+- 204 Computer Science
 - Mon/Wed/Thu
 
 # Organizations/Affiliations

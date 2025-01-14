@@ -39,5 +39,4 @@ And here's the the Fall'22 Programming Exam 2 hosted on TigerFile.
 | Fall   2023 | {{< we f23 1 >}} |  {{< pe f23 2 >}}   | {{< we f23 2 >}}  |
 | Spring 2023 | {{< we s23 1 >}} |  {{< pe s23 2 >}}   | {{< we s23 2 >}}  |
 | Fall   2022 | {{< we f22 1 >}} |  {{< pe f22 2 >}}   | {{< we f22 2 >}}  |  
-| Spring 2022 | {{< we s22 1 >}} |  {{< pe s22 2 >}}   | {{< we s22 2 >}}  |
-| Fall   2021 | {{< we f21 1 >}} |  {{< pe f21 2 >}}   | {{< we f21 2 >}}  |
+

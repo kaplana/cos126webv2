@@ -17,21 +17,21 @@ comments: false
 | Section         | Days/Time                        | Room              | Instructor             |
 | --------------- | ---------------------------------| ----------------- | ---------------------- |
 |Lecture          |  Mon/Wed, 1:30pm–2:50pm          | McCosh 50         | Adam Finkelstein |
-|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        | Max Gonzalez-Saez |   
+|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        |  |   
 |Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        |  |
-|Precept P10B     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        | Nobline Yoo |
-|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108        | Alan Kaplan |
+|Precept P10B     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        |  |
+|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 108        |  |
 |Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend 108        |  |
-|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 108        | Alan Kaplan |
-|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend 108        | Theresa Lim |
-|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 110        | Tanvi Namjoshi |
+|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 108        |  |
+|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend 108        |  |
+|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 110        |  |
 |Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 108        |  |
-|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 110        | Owen Zhang |
+|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 110        |  |
 |Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend 009        |  |
-|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 108        | Kathryn Wantlin  |
-|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 110        | Abhishek Joshi |
+|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 108        |  |
+|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 110        |  |
 |Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 108        |  |
-|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 110        | Beza Desta|
+|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 110        |  |
 
 
 {{< /details >}}
@@ -72,8 +72,8 @@ comments: false
 |      | Wed, Feb 26                  |{{< lecture "Performance" "static/lectures/41Performance.pdf" >}}<br> _Reading:_ 4.1  |     ||
 |      | Wed, Feb 26<br>Thu, Feb 27  |    {{< precept "p09-performance" "Performance" >}}                   | |
 |      | Sun, Mar 2                   |                                    | [_Assignment:_ Recursive Graphics due]({{< ref "/assignments/recursion" >}})         |
-| 5    | Mon, Mar 3                  | Lecture: Internet/Jen?              | |
-|      | Mon, Mar 3 <br>Tue, Mar 4  | Precept: Internet?            | |
+| 5    | Mon, Mar 3                  | Lecture: Written Exam Review              | |
+|      | Mon, Mar 3 <br>Tue, Mar 4  | Precept: Written Exam Review            | |
 |      | Wed, Mar 5                  |_Written Exam 1_                   | |
 |      | Wed, Mar 6 <br>Thu, Mar 7 | Precept: None                     | |
 |      |                            | | |
@@ -110,5 +110,5 @@ comments: false
 |      | Mon, Apr 21  <br>Tue, Apr 22| Precept: Circuits            | |
 |      | Wed, Apr 23                 |_Written Exam 2_                    | |
 |      | Wed, Apr 23 <br>Thu, Apr 24| No precept                    | |
-| 12+  | Wed, May 14                      | |   _Final Project:_ Atomic due, 12:30pm|
+| 12+  | Wed, May 14                      | |   _Final Project:_ Atomic due, 5:00pm|
 

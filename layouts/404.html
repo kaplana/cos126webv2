@@ -1,0 +1,30 @@
+<!--
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Not Found</title>
+  </head>
+  <body>
+    <h1>{{ .Site.Title }}</h1>
+    <p>The content you want to access is not available yet.  If you believe this is an error, please post on Ed.</p>
+  </body>
+</html>
+-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0;url={{ .Site.BaseURL }}/notavailable">
+</head>
+<body>
+  <p>If you're not redirected, <a href="{{ .Site.BaseURL }}/notavailabe">click here</a>.</p>
+</body>
+</html>
+
+
+
+

@@ -20,7 +20,7 @@ comments: false
 
 **Booksite.** The *[booksite](https://introcs.cs.princeton.edu/java/home)* is a resource that accompanies the textbook for use while online (for example, while programming); it contains the code from the book and solutions to selected exercises. The textbook is for your use when initially learning new material or reinforcing your understanding of that material (for example, when reviewing for an exam).
 
-**Textbook on Reserve.**  The textbook - hardcopy and digital versions - is on reserve at the [Engineering Library](https://catalog.princeton.edu/catalog/9999429913506421). 
+**Textbook on Reserve.**  The textbook is on reserve at the [Engineering Library](https://catalog.princeton.edu/catalog/9999429913506421). 
 
 **iClickers.** To make the lectures more interactive, we will be using *[iClickers](https://www.iclicker.com/students/)*. To earn participation credit, you must attend lecture and participate in the iClicker polls. You must also register your mobile/web app:
    - If needed, create a [iClicker Student account](https://student.iclicker.com/#/account/create).
