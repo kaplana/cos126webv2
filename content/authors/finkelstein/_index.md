@@ -1,24 +1,25 @@
 ---
 # Display name
-title: Alan Kaplan
-
-# Is this the primary user of the site?
-superuser: false
+title: Adam Finkelstein
 
 # Disable
 draft: false
 
+
+# Is this the primary user of the site?
+superuser: false
+
 # Role/position
-role: Faculty<br>221 Nassau St - 106
+role: Faculty<br>424 Computer Science
 
 office_hours:
-- 221 Nassau St.
+- 424 Computer Science
 
 
 # Organizations/Affiliations
 organizations:
 - name: Princeton University
-  url: https://www.cs.princeton.edu/~ak18
+  url: https://www.cs.princeton.edu/~af
 
 
 
@@ -29,7 +30,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:Alan Kaplan <alan.kaplan@cs.princeton.edu>'
+  link: 'mailto:Adam Finkelstein <af@cs.princeton.edu>'
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
@@ -43,3 +44,4 @@ highlight_name: false
 user_groups:
   - Senior Staff
 ---
+

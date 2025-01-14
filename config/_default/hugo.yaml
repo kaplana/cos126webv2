@@ -3,15 +3,15 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: COS 126 Fall 2024 # Website name
-baseurl: "https://www.cs.princeton.edu/courses/archive/fall24/cos126/" # Website URL
+title: COS 126 Spring 2025 # Website name
+baseurl: "https://www.cs.princeton.edu/courses/archive/spr25/cos126/" # Website URL
 params:
-  tigerfileurl: "https://tigerfile.cs.princeton.edu/COS126_F2024"
+  tigerfileurl: "https://tigerfile.cs.princeton.edu/COS126_S2025"
   edurl: "https://edstem.org/us/courses/60428/discussion/"
   edlessonsurl: "https://edstem.org/us/courses/60428/lessons"
-  iclickerSem: "COS 126 Fall'24"
+  iclickerSem: "COS 126 Spring'25"
   surveyurl: "https://forms.cs50.io/0a89f0c4-b3e5-48ab-bfdc-52a63bc82e15"
-  semester: "FALL"
+  semester: "SPRING"
 
 ############################
 ## LANGUAGE

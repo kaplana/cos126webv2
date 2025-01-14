@@ -3,7 +3,7 @@
 title: Prof. Kevin Wayne
 
 # Disable
-draft: false
+draft: true
 
 # Is this the primary user of the site?
 superuser: false

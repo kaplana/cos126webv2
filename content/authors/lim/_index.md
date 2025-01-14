@@ -5,6 +5,9 @@ title:  Theresa Lim
 # Is this the primary user of the site?
 superuser: false
 
+# Disable
+draft: true
+
 # Role/position
 role: Graduate Student
 

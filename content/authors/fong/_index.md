@@ -5,6 +5,9 @@ title: Prof. Ruth Fong
 # Is this the primary user of the site?
 superuser: false
 
+# Disable
+draft: true
+
 # Role/position
 role: Faculty <br> 032 Corwin Hall
 

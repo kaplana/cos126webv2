@@ -1,24 +1,19 @@
 ---
 # Display name
-title: Alan Kaplan
+title:  Jane Castleman 
 
 # Is this the primary user of the site?
 superuser: false
 
-# Disable
-draft: false
-
 # Role/position
-role: Faculty<br>221 Nassau St - 106
+role: Graduate Student
 
 office_hours:
-- 221 Nassau St.
-
 
 # Organizations/Affiliations
 organizations:
 - name: Princeton University
-  url: https://www.cs.princeton.edu/~ak18
+  url: ""
 
 
 
@@ -29,7 +24,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:Alan Kaplan <alan.kaplan@cs.princeton.edu>'
+  link: 'mailto: Jane Castleman <janeec@princeton.edu>'
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
@@ -41,5 +36,5 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Senior Staff
+  - Assistant Instructors
 ---

@@ -1,9 +1,13 @@
 ---
 # Display name
-title:  Yanjin Chen
+title:  Berlin Chen
 
 # Is this the primary user of the site?
 superuser: false
+
+# Disable
+draft: false
+
 
 # Role/position
 role: Graduate Student
@@ -24,7 +28,7 @@ organizations:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:Yanjin Chen <yc0901@cs.princeton.edu>'
+  link: 'mailto:Berlin Chen <bc2188@princeton.edu>'
 
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)

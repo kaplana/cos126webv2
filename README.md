@@ -108,3 +108,8 @@ rsync -azu --progress --size-only --delete --exclude 'static' public/ cos126:pub
   - `shortcodes` - useful Hugo shortcodes - note these need to be cleaned up to generalize semester dependencies
 - `content` - web site markdown files
 - `static` - not maintained on Git
+
+### Before each semester
+- There are two md files - schedule-spr.md and schedule-fall-md. Copy one to schedule.md.
+- Update Atomic (final assessment date)
+- Update hugo.md - semester details and including survey  url

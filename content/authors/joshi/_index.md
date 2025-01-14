@@ -8,6 +8,10 @@ superuser: false
 # Role/position
 role: Graduate Student
 
+# Disable
+draft: false
+
+
 office_hours:
 
 # Organizations/Affiliations

@@ -8,6 +8,9 @@ superuser: false
 # Role/position
 role: Undergraduate Student
 
+# Disable
+draft: true
+
 office_hours:
 
 # Organizations/Affiliations
