@@ -46,7 +46,7 @@ comments: false
 
 | Week | Date        | Topic | Handouts \| Demos \| Assignments |
 | ---- | -------     | ---|---|
-| 0    | Mon, Jan 27 |{{< lecture "Introduction to COS 126" "static/lectures/00IntroCOS126.pdf" >}}<br> {{< lecture "Intro to Java" "static/lectures/11IntroJava.pdf" >}}<br> _Reading:_ 1.1|  |
+| 0    | Mon, Jan 27 |{{< lecture "Introduction to COS 126" "static/lectures/00IntroCOS126.pdf" >}}<br> {{< lecture "Hello, World" "static/lectures/11HelloWorld.pdf" >}}<br> _Reading:_ 1.1|  |
 |      | Mon, Jan 27 <br>Tue, Jan 28|  {{< precept "p00-hello-world" "Hello World" >}} | |
 |      | Wed, Jan 29 | {{< lecture "Data Types" "static/lectures/12DataTypes.pdf" >}}<br> _Reading:_ 1.2| 
 |      | Wed, Jan 29 <br>Thu, Jan 29|  {{< precept "p01-data-types" "Data Types" >}} | |

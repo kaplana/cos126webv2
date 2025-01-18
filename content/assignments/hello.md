@@ -21,7 +21,7 @@ The purpose of this assignment is to introduce you to programming in Java and fa
 
 ### **Requirements**
 
-- Install the COS 126 Java programming environment, called IntelliJ, on your computer.  Follow these step-by-step instructions carefully. If you encounter difficulties, please consult the undergraduate [Lab TAs](https://introlab.cs.princeton.edu) schedule and go to Lewis Library for assistance. Don't be afraid to ask for help!  _Note - even if you have an existing version of IntelliJ, you should install the COS 126 version._
+- Install the latest COS 126 Java programming environment, called IntelliJ, on your computer.  Follow these step-by-step instructions carefully. If you encounter difficulties, please consult the undergraduate [Lab TAs](https://introlab.cs.princeton.edu) schedule and go to Lewis Library for assistance. Don't be afraid to ask for help!  _Note - even if you have an existing version of IntelliJ, you should install the latest COS 126 version._
 
    - [Mac OS X](https://lift.cs.princeton.edu/java/mac/)
    - [Windows](https://lift.cs.princeton.edu/java/windows/)
