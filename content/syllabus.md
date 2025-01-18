@@ -55,7 +55,7 @@ This course includes lectures, precepts, programming assignments, a final projec
 **Final project.** The final project is approximately the length of two programming assignments.   We encourage you to work with a partner.  You may not use late days on the final project. Check the course schedule for the final project submission deadline. 
 
 **Exams.**
-There are two written exams and one programming exam during the semester.  There is no final exam. No makeup exams will be considered without a Dean's and/or Assistant Dean's recommendation and our approval in advance.  
+There are two written exams and one programming exam during the semester, equally weighted.  There is no final exam. No makeup exams will be considered without a Dean's and/or Assistant Dean's recommendation and our approval in advance.  
 
 **Regrades.** If you feel a mistake has been made grading your work, please use the regrade request features of codePost (programming assignments, programming exams) or GradeScope (written exams). Regrade requests must be submitted within three (3) days of your work being returned. 
 
@@ -70,7 +70,7 @@ Your final grade will be calculated based on a weighted sum of all the assignmen
 | Final Project           | 7.5%                       |
 | Lecture Participation   | 2.5%                       |
 | Precept Participation   | 2.5%                       |
-| Exams:<br>two written exams, one programming exam | 50% |
+| Exams:<br>two written exams, one programming exam<br>equally weighted | 50% |
 
 
 While final letter grade cutoffs will be determined at the end of the semester, a 93.0% will guarantee an A, 90.0% for an A–, 87.0% for a B+, 83.0% for a B, 80.0% for a B-, 77.0% for a C+, 73.0% for a C, 70.0% for a C-, or 60.0% for a D. You risk course failure if you earn below 60.0% of the available points.  Grades are not rounded.
