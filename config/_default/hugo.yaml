@@ -7,8 +7,8 @@ title: COS 126 Spring 2025 # Website name
 baseurl: "https://www.cs.princeton.edu/courses/archive/spr25/cos126/" # Website URL
 params:
   tigerfileurl: "https://tigerfile.cs.princeton.edu/COS126_S2025"
-  edurl: "https://edstem.org/us/courses/60428/discussion/"
-  edlessonsurl: "https://edstem.org/us/courses/60428/lessons"
+  edurl: "https://edstem.org/us/courses/71961/discussion/"
+  edlessonsurl: "https://edstem.org/us/courses/71961/lessons"
   iclickerSem: "COS 126 Spring'25"
   surveyurl: "https://forms.cs50.io/0a89f0c4-b3e5-48ab-bfdc-52a63bc82e15"
   semester: "SPRING"

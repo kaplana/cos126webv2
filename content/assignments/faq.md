@@ -163,10 +163,10 @@ For grading purposes, your test client will satisfy the requirements if it calls
 {{< details "How should I compose a program?"  >}}
 
 **Answer:**
-- Use meaningful variables names. Each variable's purpose should be obvious from its name, if possible. For example, name a variable `isOrdered` instead of `o` or `ordered`. One common exception to this rule is with loop-index variables: they often have short names, such as `i` or `j`.
+- Use meaningful variable names. Each variable's purpose should be obvious from its name, if possible. For example, name a variable `isOrdered` instead of `o` or `ordered`. One common exception to this rule is with loop-index variables: they often have short names, such as `i` or `j`.
 - Use straightforward logic and flow-of-control. For example, you should simplify the statement if`(isBlue == true)` to `if (isBlue)`.
 - Follow directions. For example, if a command-line argument is specified as an integer, read it into a variable of type `int`; if the assignment says to use a `while` loop, use a `while` loop.
-- Follow output formats exactly. If the assignments specifies to print Hello, World, don't print Hello Moon instead. You should also have the specified number of lines of output. (This means that you should remove (or comment out) extraneously debugging print statements before submitting.)
+- Follow output formats exactly. If the assignments specifies to print `Hello, World`, don't print `Hello Moo`n instead. You should also have the specified number of lines of output. This means that you should remove,or comment out, extraneous debugging print statements before submitting.)
 - Avoid magic numbers. A *magic number* is an unnamed numeric constant (other than `-1`, `0`, `1`, or `2`, used in an obvious manner). Magic numbers make programs hard to debug and maintain. 
 - Declare variables to minimize scope. For example, variables that are only used within a loop should be declared within the loop itself.  In object-oriented programs (starting with the _Classifier_ assignment), don't declare a variable to be an instance variable if it is used only as a local variable in one method. All instance variables must be private. 
 

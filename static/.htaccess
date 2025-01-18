@@ -1,0 +1,24 @@
+AuthUserFile /u/cos126/sites/.htpasswd
+AuthType Basic
+AuthName "My restricted Area"
+Require valid-user
+#  Default page is syllabus.html
+DirectoryIndex syllabus.html index.html
+
+RewriteEngine On
+
+# Check if the requested file is a .zip and doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} \.zip$ [NC]
+
+# Redirect to a custom HTML page (e.g., not-found.html)
+RewriteRule ^(.*)$ https://www.cs.princeton.edu/courses/archive/spr25/cos126/notavailable/index.html [R=302,L]
+
+# Prevent caching so you don't have to refresh any pages
+<filesMatch "\.(html|htm||php)$">
+FileETag None
+Header unset ETag
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+Header set Pragma "no-cache"
+Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+</filesMatch>

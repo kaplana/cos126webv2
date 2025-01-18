@@ -90,7 +90,7 @@ drwxr-xr-x  37 alankaplan  staff  1184 Sep  1 10:43 public/
 ```
 > pwd
 /Users/alankaplan/Dev/cos126web
-> rsync -azu --progress --delete --exclude 'static' public/ cos126:public_html/
+> rsync -azu --progress --delete --exclude-from 'exclude.txt' public/ cos126:public_html/
 ```
 
 - To publish incremental changes, use `rsync` with `--size-only` (which only updates files whose file sizes differ):

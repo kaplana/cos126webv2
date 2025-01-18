@@ -25,26 +25,29 @@ This course includes lectures, precepts, programming assignments, a final projec
 
 **Lectures.** You are expected to attend and participate in lecture. Lecture participation accounts for 2.5% of the course grade.
 
-- ***Lecture Absences.*** The first four absences are automatically waived. This is intended to account for  illnesses, religious observances, varsity athletic competitions, late course enrollment, along with technical issues with your iClicker app. Please do not request a waiver unless you will be exceeding this limit. To request a lecture attendance waiver, contact the Course Administrator.
+- ***Lecture Absences.*** The first four absences are automatically waived. This is intended to account for  illnesses, religious observances, varsity athletic competitions, and late course enrollment, along with technical issues with your iClicker app. Please do not request a waiver unless you will be exceeding this limit. To request a lecture participation waiver, please post privately in Ed using the *Accommodations* category and explain the situation. 
 
 
 **Precepts.**  Precepts  meet twice per week (either Monday/Wednesday or Tuesday/Thursday). Working within a small group, your preceptor will review key learning objectives for the week's lectures and precept exercises. The precept will involve question and answer, group discussion, etc.   Each precept involves working with a partner on interactive exercises and problem sets.   Precept participation counts for 2.5% of your overall grade.
 
-- ***Precept Absences.*** The first four absences are automatically waived. This is intended to account for  illnesses, religious observances, varsity athletic competitions, and late course enrollment. Please do not request a waiver unless you will be exceeding this limit. To request a precept attendance waiver, contact the Course Administrator.   Arriving significantly late to a precept or leaving significantly early does not count as attendance (unless given permission from the instructor).   
+- ***Precept Absences.*** The first four absences are automatically waived. This is intended to account for  illnesses, religious observances, varsity athletic competitions, and late course enrollment. Please do not request a waiver unless you will be exceeding this limit. To request a precept participation waiver, please post privately in Ed using the Accommodations category and explain the situation.  Arriving significantly late to a precept or leaving significantly early does not count as attendance (unless given permission from the instructor).   
 
-- ***Attending Another Precept.*** If you cannot attend your scheduled precept, you can *occassionally* visit another precept and this will count as attendance – but please let your regular preceptor know about it, as well as the preceptor of the one you visit. Keep in mind you may not regulary attend a precept other than your assigned one. If you miss a precept entirely, it’s still a good idea to contact your preceptor to let them know what’s up.
+- ***Attending Another Precept.*** If you cannot attend your scheduled precept, you can *occasionally* visit another precept and this will count as attendance – but please let your regular preceptor know about it, as well as the preceptor of the one you visit. Keep in mind you may not regulary attend a precept other than your assigned one. If you miss a precept entirely, it’s still a good idea to contact your preceptor to let them know what’s up.
 
 - ***Reviewing Precept.*** If you miss a precept or want to review precept exercises, you can access precept content on Ed Lessons.  
 
 **Programming Assignments.** There are ten (10) programming assignments, all equally weighted. 
 
-- ***The `acknowledgments.txt` File.***  All assignments must include a file named `acknowledgments.txt`, which includes your acknowledgment of original work (as specified in [Rights, Rules, Responsibilities](https://rrr.princeton.edu)), any citations, names and dates of those who provided help, etc. Submitting the  `acknowledgments.txt` indicates that you have stopped working on your assignment and your submitted work is ready to be graded.  Your assignment solution will only be graded if the  `acknowledgments.txt` is submitted.
+- ***The `acknowledgments.txt` File.***  All assignments must include a file named `acknowledgments.txt`, which includes your acknowledgment of original work (as specified in [Rights, Rules, Responsibilities](https://rrr.princeton.edu)), any citations, names and dates of those who provided help, the nature of the help, etc. When visiting instructor office hours or Lab TAs,  please make sure you ask for the name of person helping you. Submitting the  `acknowledgments.txt` indicates that you have stopped working on your assignment and your submitted work is ready to be graded.  Your assignment solution will only be graded if the  `acknowledgments.txt` is submitted.
+
+- ***Style.*** In addition to program correctness, we also grade for _program style_.  In the very least, your code should be commented appropriately and formatted properly.  You should also have no Checkstyle warning or error messages.  So you can certainly lose points on your assignment for style-related issues.  
+
 
 - ***Late Work.*** Assignments are due at 11:59pm ET on Sunday evenings. If any part of an assignment is submitted late, the entire assignment will be marked late. We consider your assignment submitted as soon as you submit the `acknowledgments.txt` file.
 
-- ***Penalties for late submissions.***  Late assignments are assessed a penalty equal to 10% of the possible points on the assignment per day (or partial day) late. The penalties for your first four late days are waived automatically. This is intended to account for illnesses, religious observances,  travel, and late course enrollment. To request an extension beyond that, post in the appropriate Ed Discussion forum.  Please do not contact course staff if you need to utilize one (or more) of your automatically waived late days.
+- ***Penalties for late submissions.***  Late assignments are assessed a penalty equal to 10% of the possible points on the assignment per day (or partial day) late. The penalties for your first four late days are waived automatically. This is intended to account for illnesses, religious observances,  travel, and late course enrollment.   Please do not contact course staff if you need to utilize one (or more) of your automatically waived late days.
 
-- ***Additional Late Days.***   Additional late penalties will be waived only in the case of a medical or personal emergency, as documented by your residential college Dean or Assistant Dean for Studies, who must provide a recommendation to the course administrator.  We will make a decision on any waivers or accommodations based on this recommendation. Notes from McCosh cannot be accepted for late work. 
+- ***Additional Late Days.***   To request an extension beyond the four late days, please post privately in Ed using the Accommodations category and explain the situation. Additional late penalties will be waived only in the case of a medical or personal emergency, as documented by your residential college Dean or Assistant Dean for Studies, who must provide a recommendation to the course administrator.  We will make a decision on any waivers or accommodations based on this recommendation. Notes from McCosh cannot be accepted for late work. 
 
 - ***Late Days and Partners.***   If you are working with a partner, any late penalties apply to the group. The number of free late days a group can use is the minimum of the number of free late days each member has remaining. 
 
@@ -67,7 +70,7 @@ Your final grade will be calculated based on a weighted sum of all the assignmen
 | Final Project           | 7.5%                       |
 | Lecture Participation   | 2.5%                       |
 | Precept Participation   | 2.5%                       |
-| Written Exams:<br>two written exams, one programming exam | 50% |
+| Exams:<br>two written exams, one programming exam | 50% |
 
 
 While final letter grade cutoffs will be determined at the end of the semester, a 93.0% will guarantee an A, 90.0% for an A–, 87.0% for a B+, 83.0% for a B, 80.0% for a B-, 77.0% for a C+, 73.0% for a C, 70.0% for a C-, or 60.0% for a D. You risk course failure if you earn below 60.0% of the available points.  Grades are not rounded.

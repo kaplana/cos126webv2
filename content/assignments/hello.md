@@ -18,7 +18,6 @@ comments: false
 
 The purpose of this assignment is to introduce you to programming in Java and familiarize you with the mechanics of preparing and submitting assignment solutions. You will learn to use IntelliJ editor for writing, compiling, and executing Java programs, and TigerFile for submitting your work electronically.
 
-<!--{{< semester "**Tjos**" >}}-->
 
 ### **Requirements**
 
@@ -28,7 +27,7 @@ The purpose of this assignment is to introduce you to programming in Java and fa
    - [Windows](https://lift.cs.princeton.edu/java/windows/)
    - [Linux](https://lift.cs.princeton.edu/java/linux/)
 
--  Use the *project folder* called `hello` that you downloaded after you installed IntelliJ. All assignments require that you download a project `zip` file and expand this this into a project folder. It’s a good idea to save this folder somewhere safe, along with all the folders you create for future assignments in the class.
+-  Use the *project folder* named `hello` that you downloaded after you installed IntelliJ. All assignments require that you download a project `zip` file and expand this this into a project folder. It’s a good idea to save this folder somewhere safe, along with all the folders you create for future assignments in the class.
 
 - Read both Sections 1.1 and 1.2 of the textbook. If you don't understand something, post a question on Ed or attend office hours for assistance. Don't be bashful about asking for help.
 
@@ -40,10 +39,10 @@ The purpose of this assignment is to introduce you to programming in Java and fa
 	- `HelloWorld.java`
 	- `Greeting.java`
 	- `SayHelloWorld.java`
-	- `SumThree.java`
-<!--SPRING	- `Ordered.java` -->
-<!--SPRING	- `RGBtoCMYK.java`-->
-   Recall, in IntelliJ, you create a new Java class with *LIFT → New Java Class*.
+	- `Ordered.java`
+	- `RGBtoCMYK.java`
+<!-- FALL	- `SumThree.java` -->
+- Recall, in IntelliJ, you create a new Java class with *LIFT → New Java Class*.
    
 - Complete the `readme.txt` and `acknowledgments.txt` files.
 
@@ -157,7 +156,7 @@ Also, record yourself speaking *Hello, World*, convert it to a WAV file named `M
    - iPhone:  *Voice Memo app  →  Record*. Then, copy the recording to your laptop and convert the M4A file to a WAV file via [Zamzar](https://zamzar.com)
    - Android: Use an app that allows you record audio.  Then, copy the audio file to your laptop and convert to a WAV via [Zamzar](https://zamzar.com)
 
-<!-- SPRING
+<!-- SPRING -->
 ### **Ordered**
 
 This exercise demonstrates the use of the `int` and `boolean` data types. Write a program `Ordered.java` that takes three integer command-line arguments, \\(x\\), \\(y\\), and \\(z\\). Define a `boolean` variable whose value is `true` if the three values are either in strictly ascending order \\((x < y < z)\\) or in strictly descending order \\((x > y > z)\\), and `false` otherwise. Then, print this `boolean` value.  Do not use a conditional statement or a loop statement (such as an `if`, `while`, or `for` statement) in your solution. 
@@ -178,7 +177,7 @@ false
 
 This exercise demonstrates the use of  type conversions. Several different formats are used to represent color. For example, the primary format for LCD displays, digital cameras, and web pages — known as the *RGB format* — specifies the level of red (R), green (G), and blue (B) on an integer scale from 0 to 255 inclusive. The primary format for publishing books and magazines — known as the *CMYK format* — specifies the level of cyan (C), magenta (M), yellow (Y), and black (K) on a real scale from 0.0 to 1.0 inclusive.
 
-Write a program `RGBtoCMYK.java` that converts from RGB format to CMYK format. Your program must take three integer command-line arguments, red, green, and blue; print the RGB values; then print the equivalent CMYK values using the following mathematical formulas.
+Write a program `RGBtoCMYK.java` that converts from RGB format to CMYK format. Your program must take three **integer** command-line arguments, red, green, and blue; print the RGB values; then print the equivalent CMYK values using the following mathematical formulas.
 
 $$ white = max ({ \frac{red}{255}, \frac{green}{255}, \frac{blue}{255}}) $$
 
@@ -206,11 +205,11 @@ yellow  = 0.0                                                   yellow  = 1.0
 black   = 0.4901960784313726                                    black   = 0.0
 ```
 
-*Restriction:* You may not use `if` statements on this assignment, but you may assume that the command-line arguments are not all simultaneously zero.
+*Restriction:* You may not use `if` statements on this assignment, but you may assume that the values command-line arguments are not all simultaneously zero ($0$).
 
 > Hint. Recall that `Math.max(x, y)` returns the maximum of `x` and `y`.
--->
 
+<!-- FALL
 ### **SumThree**
 
 Write a program `SumThree.java` that takes three integer command-line arguments and prints the three integers and their sum in the form of an equation. 
@@ -228,7 +227,7 @@ java-introcs SumThree -2 5 -8
 ```
 -2 + 5 + -8 = -5
 ```
-
+-->
 ### **readme.txt**
 
 Edit the text file named `readme.txt` that is a narrative description of your work. Each week, we provide a `readme.txt` file for you to download and use as a template, answering all questions in the space provided. Submit this file with your `.java` files.
@@ -249,20 +248,27 @@ Submitting the `acknowledgments.txt` file indicates that you have stopped workin
 
 ### **Submission**
 
-Submit `HelloWorld.java`, `Greeting.java`, `SayHelloWorld.java`, `SumThree.java`, and a completed `readme.txt`  to {{< tigerfile "Hello" >}}  Please do not include your name, netid and/or email address in your  `.java` and `readme.txt` files.</p>
+Complete and submit your `.java` files and  `readme.txt` file  to {{< tigerfile "Hello" >}}  Please do not include your name, netid and/or email address in your  `.java` and `readme.txt` files.</p>
 
+Complete and submit both the Collaboration Policy Quiz on  [Canvas](https://canvas.princeton.edu) and the [Entry Survey]({{< param surveyurl >}})
+
+Complete and submit the `acknowledgments.txt` file when you have completed the assignment.
 
 Login using your OIT NetID (if necessary) and upload the specified files. Finally, click the *Check Submitted Files* button:
 
 ![TigerFile]({{< resource url="static/assignments/hello/images/tigerfile-check-submitted-files.png" >}})
 
-This will compile and execute your programs, alerting you to potential problems before we grade your work. Fix any problems and resubmit. You may submit one file at a time or several files at a time. However, you may only click the *Check Submitted Files* button a total of twenty (20) times.
+This will compile and execute your programs, alerting you to potential problems before we grade your work. Fix any problems (including those reported in your `readme.txt` and `acknowledgments.txt` files) and resubmit.
 
-Also, complete and submit both the Collaboration Policy Quiz on  [Canvas](https://canvas.princeton.edu) and the [Entry Survey]({{< param surveyurl >}})
+- Make sure all lines are less than 87 characters. 
+- If you are not sure how to fix a reported problem, then please ask!
+- You may submit one file at a time or several files at a time.
+- However, you may only click the *Check Submitted Files* button a total of twenty (20) times.
 
-Complete and submit the `acknowledgments.txt` file when you have completed the assignment.
+
 
 ### **Grading**
+<!-- FALL
 | Files                | Points   |
 | ---------------      | ---------|
 | HelloWorld.java      |   8      |
@@ -272,11 +278,26 @@ Complete and submit the `acknowledgments.txt` file when you have completed the a
 | readme.txt           |   4      |
 | Survey               |   4      |
 | Total                |  40      |
+-->
 
-You must repeat the _Collaboration Policy Quiz_ until you answer **all** questions correctly; otherwise, you will not receive credit for any programming assignment.
+<!-- SPRING -->
 
-Submissions without any comments will receive style deductions.
-Code that is not properly formatted will also receive style deductions. (Hint - in IntelliJ, use Code → Reformat Code.)
+| Files                | Points   |
+| ---------------      | ---------|
+| HelloWorld.java      |   4      |
+| Greeting.java        |   8      |
+| SayHelloWorld.java   |   8      |
+| Ordered.java         |   8      |
+| RGBtoCMYK.java       |   8      |
+| readme.txt           |   2      |
+| Survey               |   2      |
+| Total                |  40      |
+
+- You must repeat the _Collaboration Policy Quiz_ until you answer **all** questions correctly; otherwise, you will not receive credit for any programming assignment.
+- Submissions without any comments will receive style deductions.
+- Submissions with Checkstyle errors/warnings will receive deductions.
+- Code that is not properly formatted will also receive style deductions. (Hint - in IntelliJ, use Code → Reformat Code.)
+
 
 ### **Enrichment**
 
