@@ -101,13 +101,17 @@ rsync -azu --progress --size-only --delete --exclude 'static' public/ cos126:pub
 ```
 
 ### Directories
-- `config_default` 
+- `config/_default` 
   - `config.yaml` - semester base URL
   - `menus.yaml` - web site menus and order (by weight)
 - `layouts`
   - `shortcodes` - useful Hugo shortcodes - note these need to be cleaned up to generalize semester dependencies
 - `content` - web site markdown files
 - `static` - not maintained on Git
+
+### Note
+- `static/.htaccess` - update as needed, will be pushed to website
+
 
 ### Before each semester
 - There are two md files - schedule-spr.md and schedule-fall-md. Copy one to schedule.md.
