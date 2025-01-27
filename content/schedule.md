@@ -13,25 +13,27 @@ comments: false
 
 ---
 
-{{< details "Click here for  the precept schedule" >}}
+{{< details "Click here for the precept schedule, including rooms and instructor" >}}
+
+<i class='fas fa-bell' style='font-size:48px;color:red'></i> Note - this is subject to change.
 | Section         | Days/Time                        | Room              | Instructor             |
 | --------------- | ---------------------------------| ----------------- | ---------------------- |
 |Lecture          |  Mon/Wed, 1:30pm–2:50pm          | McCosh 50         | Adam Finkelstein |
-|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend         |  |   
-|Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend         |  |
-|Precept P10B     |  Mon/Wed, 3:00pm-4:20pm          | Friend         |  |
-|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend         |  |
-|Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend         |  |
-|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend         |  |
-|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend         |  |
-|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend         |  |
-|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend         |  |
-|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend         |  |
-|Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend         |  |
-|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend         |  |
-|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend         |  |
-|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend         |  |
-|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend         |  |
+|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        |  Max Gonzalez Saez-Diez |   
+|Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend 110        |  Donna Gabai |
+|Precept P10B     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        | Beza Desta |
+|Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 009        | Abhishek Joshi |
+|Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend 009        | Berlin Chen |
+|Precept P02      |  Tue/Thu, 9:00am–9:50am          | Friend 009        | Alan Kaplan |
+|Precept P03      |  Tue/Thu, 10:00am-10:50am        | Friend 009        | Kathryn Wantlin |
+|Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 108        | Kylie Zhang |
+|Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 009        | Donna Gabai |
+|Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 108        | Owen Zhang |
+|Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend 005        | Nicholas Sudarsky |
+|Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 009        | Tanvi Namjoshi |
+|Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 108        | Jane Castleman |
+|Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 009        | Nobline Yoo |
+|Precept P15      |  Tue/Thu, 1:30pm-2:50pm          | Friend 111        | Ruyu Yan |
 
 
 {{< /details >}}
@@ -72,8 +74,8 @@ comments: false
 |      | Wed, Feb 26                  |{{< lecture "Performance" "static/lectures/41Performance.pdf" >}}<br> _Reading:_ 4.1  |     ||
 |      | Wed, Feb 26<br>Thu, Feb 27  |    {{< precept "p09-performance" "Performance" >}}                   | |
 |      | Sun, Mar 2                   |                                    | [_Assignment:_ Recursive Graphics due]({{< ref "/assignments/recursion" >}})         |
-| 5    | Mon, Mar 3                  | Lecture: Written Exam Review              | |
-|      | Mon, Mar 3 <br>Tue, Mar 4  | Precept: Written Exam Review            | |
+| 5    | Mon, Mar 3                  | Lecture: TBD              | |
+|      | Mon, Mar 3 <br>Tue, Mar 4  | Precept: TBD            | |
 |      | Wed, Mar 5                  |_Written Exam 1_                   | |
 |      | Wed, Mar 6 <br>Thu, Mar 7 | Precept: None                     | |
 |      |                            | | |
@@ -99,16 +101,16 @@ comments: false
 | 9    | Mon, Apr 7                 | {{< lecture "Theory of Computing" "static/lectures/50TheoryOfComputing.pdf" >}}<br> _Reading:_ 5.3-5.4 |   |
 |      | Mon, Apr 7<br>Tue, Apr 8| {{<precept "p18-theory" "Theory of Computing" >}}             | |
 |      | Wed, Apr 9                 | {{< lecture "Toy I" "static/lectures/60ToyI.pdf" >}}<br> _Reading:_ 6.1-6.2  |   |
-|      | Wed, Apr 9 <br>Thu, Apr 10| Precept: Toy I                    | |
+|      | Wed, Apr 9 <br>Thu, Apr 10| Precept Toy I                    | |
 |      | Sun, Apr 13                 |                                    | [_Assignment:_ Chat126 due]()         |
 | 10   | Mon, Apr 14                 | {{< lecture "Toy II" "static/lectures/60ToyII.pdf" >}}<br> _Reading:_ 6.3-6.4 |   |
 |      | Mon, Apr 14 <br>Tue, Apr 15| {{< precept "p20-toy2" "Toy II" >}}           | |
 |      | Wed, Apr 16                 |_Programming Exam_ <br>         |   |
-|      | Wed, Apr 16 <br>Thu, Apr 17| Precept: Java Jeopardy           | |
+|      | Wed, Apr 16 <br>Thu, Apr 17| Precept Java Jeopardy           | |
 |      | Sun, Apr 20                 |                                   | [_Assignment:_ Hamming due]()         |
 | 11   | Mon, Apr 21 | {{< lecture "Circuits" "static/lectures/70Circuits.pdf" >}}<br> _Reading:_ 7.1, 7.3 |   |
-|      | Mon, Apr 21  <br>Tue, Apr 22| Precept: Circuits            | |
+|      | Mon, Apr 21  <br>Tue, Apr 22| Precept Circuits            | |
 |      | Wed, Apr 23                 |_Written Exam 2_                    | |
 |      | Wed, Apr 23 <br>Thu, Apr 24| No precept                    | |
-| 12+  | Wed, May 14                      | |   _Final Project:_ Atomic due, 5:00pm|
+| 12+  | Wed, May 14                      | |   _Final Project:_ Atomic due, 3:30pm|
 

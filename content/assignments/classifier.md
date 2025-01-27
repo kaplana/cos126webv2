@@ -12,7 +12,7 @@ profile: false
 comments: false
 
 ---
-<!--{{<construction>}}-->
+{{<construction>}}
 {{< project "classifier" >}} |  {{< submit "Classifier" >}}
 
 ### **Goals**

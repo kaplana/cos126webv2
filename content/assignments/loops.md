@@ -1,7 +1,7 @@
 ---
 title: 1. Conditionals & Loops 
 subtitle: 
-summary:   The goals of this assignment are to deepen your understanding of loops and conditionals and to learn how to debug code.  {{< project "loops" >}} |  {{< submit "Loops" >}}
+summary: The goals of this assignment are to deepen your understanding of loops and conditionals and to learn how to debug code.  {{< project "loops" >}} |  {{< submit "Loops" >}}
 weight: 2
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-<!--{{<construction>}}-->
+{{<construction>}}
 
 {{< project "loops" >}} |  {{< submit "Loops" >}}
 

@@ -82,7 +82,7 @@ The best way to contact course staff is to use our Ed platform. We encourage you
 
 This course permits (and encourages) many forms of collaboration, including with course staff, classmates, and lab TAs. However, you must be careful to collaborate only as authorized below. Here is an executive summary:
 
-|                                         | your partner   | course staff | COS 126 alums | classmates | AI Chatbots | Other  |
+|                                         | your partner   | course staff | COS 126 alums | classmates | Generative AI | Other  |
 |-----------------------------------------|----------------|--------------|---------------|------------|-------------|--------|
 | **discuss _concepts_ with ...**         | yes            | yes          | yes           | yes        | yes         | yes    |
 | **acknowledge collaboration with ...**  | yes            | yes          | yes           | yes        | yes         | yes    |
@@ -92,9 +92,9 @@ This course permits (and encourages) many forms of collaboration, including with
 
 **Concepts.** Understand the difference between _concepts_ and actual _code_.  You may discuss general concepts, e.g., what is the syntax of a `for` loop, or explain how to input a sequence of numeric values.  But you may not discuss specific code-related solutions to programming assignments.
 
-**Collaboration with an AI chatbot.** You may not use AI composition software (such as ChatGPT, Copilot, Jetbrains AI Assistant, Gemini, Meta AI, ...) to create or debug programming assignment code.  You may use these tools to discuss _concepts_ (see above) related to lecture, reading and/or precept.   However, you may not use these tools to help you understand or assist in completing programming assignments.
+**Collaboration with  Generative AI (GAI).** You may not use GAI software/services/platforms/tools/etc. (such as ChatGPT, Copilot, Jetbrains AI Assistant, Gemini, Meta AI, ...) to help with, create or debug programming assignment code.  You may use these tools to discuss _concepts_ (see above) related to lecture, reading and/or precept.   However, you may not use these tools to help you understand or assist in completing programming assignments.
 
-If you are uncertain about how or when to use AI tools, please consult with the course staff prior to their use.
+If you are uncertain about how or when to use GAI in COS 126, please consult with the course staff prior to their use.
 
 Caveat emptor! While modern AI technology can produce impressive results, there are occasions when these results may be incorrect, incomplete, inconsistent, especially  with respect to COS 126 topics. Exercise caution and verify information  as needed.
 

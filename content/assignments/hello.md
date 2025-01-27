@@ -1,7 +1,7 @@
 ---
 title: 0. Hello, World 
 subtitle: 
-summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}}
+summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}}  {{< notreleased >}}
 weight: 1
 type: "page"
   
@@ -11,6 +11,7 @@ share: false
 profile: false
 comments: false
 ---
+<!--{{<construction>}}-->
 
 {{< submit "Hello" >}}
 
@@ -114,10 +115,10 @@ For greetings in a large number of languages, see [HelloWorldMultilingual.java](
 
 ### **SayHelloWorld**
 
-Write a program `SayHelloWorld.java` that takes the name of a sound file (of someone speaking Hello World) and plays that sound file using `StdAudio.play()`. Recall, `StdAudio.play()` takes a string as an argument (such as `"HelloWorld.wav"`); treats that string as the name of a sound file; and plays that sound file to your speaker.
+Write a program `SayHelloWorld.java` that takes the name of a sound file (of someone speaking Hello World) and plays that sound file using `StdAudio.play()`. Recall, `StdAudio.play()` takes a string as an argument (such as `"HelloWorld.wav"`); treats that string as the name of a sound file; and plays that sound file to your speaker.  
 
 Please note that you will need to use `javac-introcs` and `java-introcs` commands (instead of the default `javac` and `java` commands) to compile and execute your programs.
-These versions provide access to our course libraries, including `StdAudio`, which you will use in this program. To try these commands, in IntelliJ, select *LIFT > Terminal*. Compile your program using the `javac-introcs` command and execute it using the `java-introcs` command:
+The `javac-introcs` and `java-introcs` commands provide access to our course libraries, including [`StdAudio`](https://introcs.cs.princeton.edu/java/11cheatsheet/#StdAudio), which you will use in this program. To try these commands, in IntelliJ, select *LIFT → Terminal*. Compile your program using the `javac-introcs` command and execute it using the `java-introcs` command:
 
 The `people`, `google` and `siri` subdirectories in the project directory contains a large number of WAV files of _Hello World_ spoken in different voices and languages, both real (from various individuals) and synthetic (from [Google Translate](https://translate.google.com) and [Apple Siri](https://www.apple.com/siri)). Below are some sample executions:
 
@@ -294,9 +295,9 @@ This will compile and execute your programs, alerting you to potential problems 
 | Total                |  40      |
 
 - You must repeat the _Collaboration Policy Quiz_ until you answer **all** questions correctly; otherwise, you will not receive credit for any programming assignment.
-- Submissions without any comments will receive style deductions.
-- Submissions with Checkstyle errors/warnings will receive deductions.
-- Code that is not properly formatted will also receive style deductions. (Hint - in IntelliJ, use Code → Reformat Code.)
+- Submissions without any comments may receive style deductions.
+- Submissions with Checkstyle errors/warnings may receive deductions.
+- Code that is not properly formatted will also receive style deductions. (Hint - in IntelliJ, use *Code → Reformat Code*.)
 
 
 ### **Enrichment**
