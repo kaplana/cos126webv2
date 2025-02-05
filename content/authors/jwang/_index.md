@@ -1,12 +1,9 @@
 ---
 # Display name
-title: Ayomide Adekoya 
+title: Jessie Wang
 
 # Is this the primary user of the site?
 superuser: false
-
-# Disable
-draft: false
 
 # Role/position
 role: Undergraduate Student

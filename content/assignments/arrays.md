@@ -38,7 +38,6 @@ This assignment is based on the concepts and techniques described in Sections 1.
 - Implement these programs:
    - `DiceHistogram.java`
    - `EchoFilter.java`
-   - `SoundWaveVisualizer.java`
    - `WorldMap.java`
 - Recall: To create a new Java class files,  use LIFT → New → Java Class.
 - Complete a `readme.txt`.
@@ -151,7 +150,7 @@ Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 
 Consider what happens if you superpose a sound file with itself, but shifted over a specified number of samples. You'll hear the same sound twice, the second time slightly delayed. If the delay is relatively short (say, 15,000 samples or about 1/3 of a second) and you decrease the loudness of the second copy (by multiplying the samples by a factor of, say, 0.5), it will result in an echo effect, much like you might hear in a tunnel or large empty room.
 
-Recall from lecture that a sound wave is a mechancal wave and is subject to the *principle of superposition*. This means that to combine two (or more) sound waves, you simply add the corresponding samples together. 
+Recall from lecture that a sound wave is a mechanical wave and is subject to the *principle of superposition*. This means that to combine two (or more) sound waves, you simply add the corresponding samples together. 
 {{< staticimg src="arrays/images/echo-filter.png" wid=450 alt="Sample shifted and rescaled" >}}
 
  Write a program `EchoFilter.java` that takes three command-line arguments (a string filename, an integer delay, and a floating-point decay factor) and applies an echo filter to the given sound file.   Note that the length of the resulting sound wave will be equal to the original length plus the delay.
@@ -217,6 +216,7 @@ You could superpose several copies of the original sound source, with successive
 
 
 
+<!--
 ### **Sound Wave Visualizer**
 
 With digital audio, we model a sound wave as a sequence of real numbers between –1 and +1. In this exercise you will write a program to plot these values (using [`StdDraw`](https://introcs.cs.princeton.edu/java/11cheatsheet/index.html#StdDraw)) while playing the sound (using [`StdAudio`](https://introcs.cs.princeton.edu/java/11cheatsheet/index.html#StdAudio)), to produce a visualization like the following:
@@ -292,6 +292,7 @@ Drawing on the screen is an expensive operation (in terms of CPU time). If \\(k 
 {{< details "Is this the actual algorithm used by various apps to visualize audio files?" >}}
 Yes. It is known as the *MinMax algorithm*. The *root mean square (RMS) algorithm* is a popular competitor: instead of using the maximum absolute value of the samples in a group, it uses the square root of the sums of the squares of the samples in the group. You can also combine the two—plot the line segment for the *MinMax* in in dark blue and the line segment for *RMS* in light blue.
 {{< /details >}}
+-->
 
 ### **World Maps**
 
@@ -368,19 +369,18 @@ Every [map projection](https://en.wikipedia.org/wiki/Map_projection) of a sphere
 
 ### **Submission**
 
-Submit `DiceHistogram.java`, `EchoFilter.java`,  `SoundWaveVisualizer.java`,  `WorldMap.java`, `readme.txt` and `acknowledgments.txt` files to {{< tigerfile "Arrays" >}}. 
+Submit `DiceHistogram.java`, `EchoFilter.java`,  `WorldMap.java`, `readme.txt` and `acknowledgments.txt` files to {{< tigerfile "Arrays" >}}. 
 
 ### **Grading**
-| Files                     | Points    |
-| ------------------------  | ----------|
-| DiceHistogram.java        |  9      |
-| EchoFilter.java           |  9      |
-| SoundWaveVisualizer.java  |  9      |
-| WorldMap.java             |  9      |
-| readme.txt                |  4        |
-| Total                     |  40       |
+| Files                     | Points  |
+| ------------------------  | --------|
+| DiceHistogram.java        |  12     |
+| EchoFilter.java           |  12     |
+| WorldMap.java             |  12     |
+| readme.txt                |  4      |
+| Total                     |  40     |
 
-This assignment was developed by [Kevin Wayne](http://www.cs.princeton.edu/~wayne). Copyright © 2022–2024.
+This assignment was developed by [Kevin Wayne](http://www.cs.princeton.edu/~wayne). Copyright © 2022–2025.
 
 
 

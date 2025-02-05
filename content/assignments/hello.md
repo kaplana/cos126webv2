@@ -1,7 +1,7 @@
 ---
 title: 0. Hello, World 
 subtitle: 
-summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}}  {{< notreleased >}}
+summary:   Install a Java programming environment, take a collaboration quiz, answer a survey, and then  write a few short Java programs, and submit them using TigerFile. <br> {{< submit "Hello" >}} 
 weight: 1
 type: "page"
   
@@ -46,6 +46,13 @@ The purpose of this assignment is to introduce you to programming in Java and fa
 - Recall, in IntelliJ, you create a new Java class with *LIFT → New Java Class*.
    
 - Complete the `readme.txt` and `acknowledgments.txt` files.
+
+- Be careful about line lengths in all `.java` and `.txt` files - they must be less that 87 characters.
+
+- Here are some recommended style [guidelines](https://introcs.cs.princeton.edu/java/11style) for programming assignments. 
+
+- Please also  read our programming assignment [FAQ]({{< ref "faq" >}}).
+
 
 
 ### **HelloWorld**

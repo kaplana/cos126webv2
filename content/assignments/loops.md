@@ -1,7 +1,7 @@
 ---
 title: 1. Conditionals & Loops 
 subtitle: 
-summary: The goals of this assignment are to deepen your understanding of loops and conditionals and to learn how to debug code.  {{< project "loops" >}} |  {{< submit "Loops" >}}
+summary: The goals of this assignment are to deepen your understanding of loops and conditionals and to learn how to debug code.  {{< project "loops" >}} |  {{< submit "Loops" >}}  {{< notreleased >}}
 weight: 2
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 
 {{< project "loops" >}} |  {{< submit "Loops" >}}
 
@@ -33,7 +33,13 @@ This assignment is based on the concepts and techniques described in Section 1.3
    - `Duotone.java`
    - `MusicalDiceGame.java`
 - Recall: To create a new Java class files,  use LIFT → New → Java Class.
-- Complete a `readme.txt`.
+- Complete the `readme.txt` and `acknowledgments.txt` files.
+
+- Be careful about line lengths in all `.java` and `.txt` files - they must be less that 87 characters.
+
+- Here are some recommended style [guidelines](https://introcs.cs.princeton.edu/java/11style) for programming assignments. 
+
+- Please also  read our programming assignment [FAQ]({{< ref "faq" >}}).
 
 ### **Requirements**
 
@@ -230,4 +236,8 @@ Submit the files `Military.java`, `RandomWalkers.java`, `Duotone.java`, `MyPhoto
 | readme.txt            |  4        |
 | Total                 |  40       |
 
-This assignment was developed by [Kevin Wayne](http://www.cs.princeton.edu/~wayne). Copyright © 2022–2024.
+- Submissions without any comments may receive style deductions.
+- Submissions with Checkstyle errors/warnings may receive deductions.
+- Code that is not properly formatted will also receive style deductions. (Hint - in IntelliJ, use *Code → Reformat Code*.)
+
+This assignment was developed by [Kevin Wayne](http://www.cs.princeton.edu/~wayne). Copyright © 2022–2025.

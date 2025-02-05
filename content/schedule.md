@@ -29,7 +29,7 @@ comments: false
 |Precept P03A     |  Tue/Thu, 10:00am-10:50am        | Friend 108        | Kylie Zhang |
 |Precept P04      |  Tue/Thu, 11:00am-11:50am        | Friend 009        | Donna Gabai |
 |Precept P04A     |  Tue/Thu, 11:00am-11:50am        | Friend 108        | Owen Zhang |
-|Precept P14      |  Tue/Thu, 11:00am-12:20pm        | Friend 005        | Nicholas Sudarsky |
+|Precept P14 (RPi)      |  Tue/Thu, 11:00am-12:20pm        | Friend 005        | Nicholas Sudarsky |
 |Precept P05      |  Tue/Thu, 12:30pm-1:20pm         | Friend 009        | Tanvi Namjoshi |
 |Precept P05A     |  Tue/Thu, 12:30pm-1:20pm         | Friend 108        | Jane Castleman |
 |Precept P06      |  Tue/Thu, 1:30pm-2:20pm          | Friend 009        | Nobline Yoo |
