@@ -145,12 +145,13 @@ To apply a duotone filter to an image, consider each pixel of a source image one
 - Change the color of the pixel from \\((r, g, b)\\) to \\((r^\prime, g^\prime, b^\prime)\\) by applying the following formulas:
 
   - First, compute the *monochrome luminance* of the given color as an intensity between \\(0.0\\) and \\(255.0\\) using the [NTSC](https://en.wikipedia.org/wiki/NTSC) formula:
-     - \\(luminance = (0.299r + 0.587g + 0.114b) / 255.0 \\)
+     - \\(luminance = 0.299r + 0.587g + 0.114b \\)
+  - Second, rescale \\(luminance\\) to be a real number between \\(0.0\\) and \\(1.0\\) by setting \\(\alpha = luminance / 255.0\\)
   - Then, compute  \\(r^\prime, g^\prime, b^\prime\\) using the formulas:
-     - \\(r^\prime = luminance \times  r_1 + (1 - luminance) \times  r_2\\)
-     - \\(g^\prime = luminance \times  g_1 + (1 - luminance) \times  g_2\\)
-     - \\(b^\prime = luminance \times  b_1 + (1 - luminance) \times  b_2\\)
-     - When computing  \\(r^\prime, g^\prime, b^\prime\\), round the results to the nearest integer, so that \\(r^\prime\\), \\(g^\prime\\), and \\(b^\prime\\) are integers between \\(0\\) and \\(255\\).
+     - \\(r^\prime = \alpha \times  r_1 + (1 - \alpha) \times  r_2\\)
+     - \\(g^\prime = \alpha \times  g_1 + (1 - \alpha) \times  g_2\\)
+     - \\(b^\prime = \alpha \times  b_1 + (1 - \alpha) \times  b_2\\)
+     - When computing  \\(r^\prime, g^\prime, b^\prime\\), **round** the results to the nearest **integer**, so that \\(r^\prime\\), \\(g^\prime\\), and \\(b^\prime\\) are integers between \\(0\\) and \\(255\\).
 
 Write a program `Duotone.java` that takes the name of an image file as a command-line argument, along with the values for  \\(r_1, g_1, b_1, r_2, g_2, b_2\\), and applies a duotone filter to that image, and displays the results in a window. Use `StdPicture` to read, modify, and display the picture.
 

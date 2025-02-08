@@ -1,7 +1,7 @@
 ---
 title: 2. Arrays and IO
 subtitle: 
-summary:   The goal of this assignment is to deepen your understanding of arrays and input/output (IO).  {{< project "arrays" >}} |  {{< submit "Arrays" >}}
+summary:   The goal of this assignment is to deepen your understanding of arrays and input/output (IO), and take a short quiz on how to get help in COS 126.  {{< project "arrays" >}} |  {{< submit "Arrays" >}}
 weight: 3
 type: "page"
 mathjax: true  
@@ -40,7 +40,9 @@ This assignment is based on the concepts and techniques described in Sections 1.
    - `EchoFilter.java`
    - `WorldMap.java`
 - Recall: To create a new Java class files,  use LIFT → New → Java Class.
-- Complete a `readme.txt`.
+- *Getting Help in COS 126 Quiz:* Take a short quiz on getting help in COS 126 (available in the Quizzes section on [Canvas](https://canvas.princeton.edu)).  You may repeat the quiz as many times as you like.  For full credit, answer **all** questions correctly.
+- Complete/submit a `readme.txt`.
+- Complete/submit a `acknowledgments.txt`.
 
 ## **Requirements**
 
@@ -370,6 +372,7 @@ Every [map projection](https://en.wikipedia.org/wiki/Map_projection) of a sphere
 ### **Submission**
 
 Submit `DiceHistogram.java`, `EchoFilter.java`,  `WorldMap.java`, `readme.txt` and `acknowledgments.txt` files to {{< tigerfile "Arrays" >}}. 
+Also, complete the quiz on getting help in COS 126 on  [Canvas](https://canvas.princeton.edu)
 
 ### **Grading**
 | Files                     | Points  |
@@ -377,8 +380,13 @@ Submit `DiceHistogram.java`, `EchoFilter.java`,  `WorldMap.java`, `readme.txt` a
 | DiceHistogram.java        |  12     |
 | EchoFilter.java           |  12     |
 | WorldMap.java             |  12     |
-| readme.txt                |  4      |
+| readme.txt                |  2      |
+| Quiz                      |  2      |
 | Total                     |  40     |
+
+- Submissions without any comments may receive style deductions.
+- Submissions with Checkstyle errors/warnings may receive deductions.
+- Code that is not properly formatted will also receive style deductions. (Hint - in IntelliJ, use *Code → Reformat Code*.)
 
 This assignment was developed by [Kevin Wayne](http://www.cs.princeton.edu/~wayne). Copyright © 2022–2025.
 

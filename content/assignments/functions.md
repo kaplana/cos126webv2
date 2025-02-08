@@ -1,7 +1,7 @@
 ---
 title: 3. Conjunction Function 
 subtitle: 
-summary:  Implement and test a collection of functions (also known as methods), which manipulate audio, and take a short quiz on how to get help in COS 126. {{< project "functions" >}} |  {{< submit "Functions" >}}
+summary:  Implement and test a collection of functions (also known as methods), which manipulate audio. {{< project "functions" >}} |  {{< submit "Functions" >}}
 weight: 4
 type: "page"
   
@@ -82,9 +82,9 @@ public class AudioCollage {
 - You may assume that the array arguments to all functions are not **`null`**.
 - All samples sent to standard audio **must be** between –1 and +1. Note that it is possible that the input samples to each method may not be between –1 and +1. The functions should operate as specified. While you should not play samples whose absolute value is greater than 1, it’s fine to manipulate such values along the way. However, to ensure that your final sample compiles with this requirement, you will need to call `clamp()` on your final sample before sending it to standard audio.  
 - You must not add `public` methods to the API; however, you may add `private` methods (which are accessible only in the class in which they are declared).
-- *Getting Help in COS 126 Quiz:* Take a short quiz on getting help in COS 126 (available in the Quizzes section on [Canvas](https://canvas.princeton.edu)).  You may repeat the quiz as many times as you like.  For full credit, answer **all** questions correctly.
-- Submit a `readme.txt`.
-- Complete the `acknowledgments.txt` file.
+- Complete/submit a `readme.txt`.
+- Complete/submit a `acknowledgments.txt`.
+
 
 
 #### `amplify()`
@@ -194,14 +194,12 @@ Edit the text file named `readme.txt` that is a narrative description of your wo
 
 - Note that, as part of this assignment, we may anonymously publish your collage. If you object, please indicate so in your `readme.txt` when asked. We also reserve the right to remove any collage, at any time, for whatever reason.  By submitting your assignment, you implicitly agree with this policy.
 
-- Also, complete the quiz on getting help in COS 126 on  [Canvas](https://canvas.princeton.edu)
 
 ### **Grading**
 | Files               | Points    |
 | ------------------  | ----------|
-| AudioCollage.java   |  34       |
+| AudioCollage.java   |  36       |
 | readme.txt          |  4        |
-| Quiz                |  2        |
 | Total               |  40       |
 
 
