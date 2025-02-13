@@ -1,7 +1,7 @@
 ---
 title: 2. Arrays and IO
 subtitle: 
-summary:   The goal of this assignment is to deepen your understanding of arrays and input/output (IO), and take a short quiz on how to get help in COS 126.  {{< project "arrays" >}} |  {{< submit "Arrays" >}}
+summary:   The goal of this assignment is to deepen your understanding of arrays and input/output (IO), and take a short quiz on how to get help in COS 126.  {{< project "arrays" >}} |  {{< submit "Arrays" >}}  {{< notreleased >}}
 weight: 3
 type: "page"
 mathjax: true  
@@ -12,7 +12,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 
 {{< project "arrays" >}} |  {{< submit "Arrays" >}}
 
@@ -40,7 +40,7 @@ This assignment is based on the concepts and techniques described in Sections 1.
    - `EchoFilter.java`
    - `WorldMap.java`
 - Recall: To create a new Java class files,  use LIFT → New → Java Class.
-- *Getting Help in COS 126 Quiz:* Take a short quiz on getting help in COS 126 (available in the Quizzes section on [Canvas](https://canvas.princeton.edu)).  You may repeat the quiz as many times as you like.  For full credit, answer **all** questions correctly.
+- *Getting Help in COS 126 Quiz:* Take a short quiz on getting help in COS 126 (available in the Quizzes section on [Canvas](https://canvas.princeton.edu)).  You may repeat the quiz as many times as you like.  For full credit, answer **all** questions correctly. 
 - Complete/submit a `readme.txt`.
 - Complete/submit a `acknowledgments.txt`.
 
@@ -53,11 +53,11 @@ This assignment is based on the concepts and techniques described in Sections 1.
 
 ### **Dice and the Gaussian Distribution**
 
-Write a program `DiceHistogram.java` that takes two command-line arguments: \\(m\\), the number of fair six-sided dice, \\(n\\), the number of times to roll them.  Assume that \\(0  \leq m \leq 100\\) and \\(n \geq 0\\).   Use an integer array to tabulate the number of times each possible total (between \\(m\\) and \\(6 \times m\\)) occurs. Then print a text histogram of the results.  
+Write a program `DiceHistogram.java` that takes two command-line arguments: \\(d\\), the number of fair six-sided dice, \\(n\\), the number of times to roll them.  Assume that \\(0  \leq d \leq 100\\) and \\(n \geq 0\\).   Use an integer array to tabulate the number of times each possible total (between \\(d\\) and \\(6 \times d\\)) occurs. Then print a text histogram of the results.  
 
-Each histogram value should right-justified in a field width of three characters; followed by a colon; followed by a single space; followed by a sequence of asterisks corresponding to the number of times that value occurred as a sum.
+Each histogram value should be right-justified in a field width of three characters; followed by a colon; followed by a single space; followed by a sequence of asterisks corresponding to the number of times that value occurred as a sum.
 
-For example, here are the results of an execution when (\\(m = 2\\) and \\(n = 500\\)):
+For example, here are the results of an execution when (\\(d = 2\\) and \\(n = 500\\)):
 
 ```plaintext
 java-introcs DiceHistogram 2 500
@@ -76,7 +76,7 @@ java-introcs DiceHistogram 2 500
 
 > Note - your results will likely be slightly different due the random rolls of the dice.
 
-Here are the results of an execution when \\(m = 10\\) and n = \\(1000\\):
+Here are the results of an execution when \\(d = 10\\) and n = \\(1000\\):
 
 
 ```plaintext
@@ -155,7 +155,7 @@ Consider what happens if you superpose a sound file with itself, but shifted ove
 Recall from lecture that a sound wave is a mechanical wave and is subject to the *principle of superposition*. This means that to combine two (or more) sound waves, you simply add the corresponding samples together. 
 {{< staticimg src="arrays/images/echo-filter.png" wid=450 alt="Sample shifted and rescaled" >}}
 
- Write a program `EchoFilter.java` that takes three command-line arguments (a string filename, an integer delay, and a floating-point decay factor) and applies an echo filter to the given sound file.   Note that the length of the resulting sound wave will be equal to the original length plus the delay.
+ Write a program `EchoFilter.java` that takes three command-line arguments (a string filename, an integer delay, and a floating-point decay factor) and applies an echo filter to the given sound file.   Note that the length of the resulting sound wave will be equal to the original length plus the delay.  For more hints, see the FAQ below.
 
 Here are some sample executions:
 ```plaintext
@@ -198,7 +198,7 @@ Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 
 {{< details "How do I test my program?" >}} To help you design/debug your approach, you may want to start with a *small example*, such as the one shown above:
 `double[] original = { 1.0, 0.0, 0.5, 0.0, -1.0, -0.5, 1.0, 0.25 };`
-<br> with `decay = 0.5` and `delay = 1`. While it would not make sense to play an echo filter applied to this example, you can print the results after applying your echo filter to make sure your calculations are correct. 
+<br> with `decay = 0.5` and `delay = 1`. While it would not make sense to play an echo filter applied to this example, you can print the results after applying your echo filter to make sure your calculations are correct.  You can also try modifying this example with other values for the `original` array, `decay` and `delay`.  Testing ande debugging with small examples will help you understand your approach.
 
 
 {{< /details >}}
@@ -211,6 +211,17 @@ Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 {{< details "Can I assume that decay is between 0 and 1?" >}}
 Yes. We will test your program only with decay values between 0 and 1.
 {{< /details >}}
+
+
+{{< details "Is it possible for the delay to be longer than the number of samples in the original array?" >}}
+It is possible. Think about an echo from a far-away mountain. The echo might not start until after the original sound has ended. Your code should not crash when that happens.
+{{< /details >}}
+
+
+{{< details "How many times should `StdAudio.play()` be called?" >}}
+Once.  Use  `StdAudio.play(double[])`.
+{{< /details >}}
+
 
 {{< details "The echo filter repeats the sound source only once. How could I get a repeating, decaying echo?" >}}
 You could superpose several copies of the original sound source, with successive copies shifted over increasing amounts and at quieter volumes. Feel free to experiment with this idea.
