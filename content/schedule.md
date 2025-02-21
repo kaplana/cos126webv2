@@ -15,12 +15,13 @@ comments: false
 
 {{< details "Click here for the precept schedule, including rooms and instructor" >}}
 
-<i class='fas fa-bell' style='font-size:48px;color:red'></i> Note - this is subject to change.
+<!-- <i class='fas fa-bell' style='font-size:48px;color:red'></i> Note - this is subject to change. -->
+
 | Section         | Days/Time                        | Room              | Instructor             |
 | --------------- | ---------------------------------| ----------------- | ---------------------- |
 |Lecture          |  Mon/Wed, 1:30pm–2:50pm          | McCosh 50         | Adam Finkelstein |
-|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        |  Max Gonzalez Saez-Diez |   
-|Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend 110        |  Donna Gabai |
+|Precept P10      |  Mon/Wed, 3:00pm-4:20pm          | Friend 110        |  Max Gonzalez Saez-Diez |   
+|Precept P10A     |  Mon/Wed, 3:00pm-4:20pm          | Friend 109        |  Donna Gabai |
 |Precept P10B     |  Mon/Wed, 3:00pm-4:20pm          | Friend 111        | Beza Desta |
 |Precept P01      |  Mon/Wed, 3:30pm-4:20pm          | Friend 009        | Abhishek Joshi |
 |Precept P12      |  Mon/Wed, 7:30pm–8:50pm          | Friend 009        | Berlin Chen |

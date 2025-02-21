@@ -1,7 +1,7 @@
 ---
 title: 3. Conjunction Function 
 subtitle: 
-summary:  Implement and test a collection of functions (also known as methods), which manipulate audio. {{< project "functions" >}} |  {{< submit "Functions" >}}
+summary:  Implement and test a collection of functions (also known as methods), which manipulate audio. {{< project "functions" >}} |  {{< submit "Functions" >}} {{< notreleased >}}
 weight: 4
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "functions" >}} |  {{< submit "Functions" >}}
  
 ### **Goals**
@@ -64,8 +64,8 @@ public class AudioCollage {
     // Returns a new array that changes the speed of a[] by a factor of alpha.
     public static double[] changeSpeed(double[] a, double alpha)
 
-    // Creates an audio collage and plays it on standard audio.
-    // See below for the requirements.
+    // Creates an audio collage and plays it on standard audio;
+    // Requirements specified in the assignment specification.
     public static void main(String[] args)
 
 }
@@ -91,7 +91,7 @@ public class AudioCollage {
 
 Creates a new sound that contains the same samples as an existing sound, but with each sample multiplied by a constant \\( \alpha \\). This increases the volume when \\( \alpha > 1 \\) and decreases it when \\( 0 < \alpha < 1\\). For example:
 
-{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/amplify.png" >}}
+{{< staticimg src="functions/images/amplify.png" alt="Amplifying a single sample array" >}}
 
 
 Note: `amplify()` may produce samples whose absolute value is larger than 1 even if all of the input samples are between –1 and +1. While you should not play samples whose absolute value is greater than 1, it’s fine to produce them as intermediate results.
@@ -99,30 +99,26 @@ Note: `amplify()` may produce samples whose absolute value is larger than 1 even
 #### `clamp()`
 Replaces all samples *greater than* +1.0 with 1.0; and all samples *less than* -1.0 with -1.0. For example:
 
-{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/clamp.png" >}}
-
+{{< staticimg src="functions/images/clamp.png" alt="Clamping a single sample array" >}}
 
 #### `reverse()`
 
 
 Creates a new sound that contains the same samples as an existing sound, but in reverse order. This can lead to unexpected and entertaining results. For example:
 
-{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/reverse.png" >}}
-
+{{< staticimg src="functions/images/reverse.png" alt="Reversing a single sample array" >}}
 
 #### `merge()`
 
 Creates a new sound that combines two existing sounds by appending the second one after the first. If the two sounds have \\(m\\) and \\(n\\) samples, then the resulting sound has \\(m + n\\) samples. This enables you to play two sounds sequentially. For example:
 
-{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/merge.png" >}}
-
+{{< staticimg src="functions/images/merge.png" alt="Merging two audio sample arrays" >}}
 
 #### `mix()`
 
 Creates a new sound that combines two existing sounds by summing the values of the corresponding samples. This enables you to play two sounds simultaneously. If, when summing, one sound is longer than the other, treat the shorter array as if 0s were appended to the end. For example:
 
-{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/mix.png" >}}
-
+{{< staticimg src="functions/images/mix.png" alt="Mixing two audio sample arrays" >}}
 
 Note: `mix()` may produce samples whose absolute value is larger than 1 even if all of the input samples are between –1 and +1. While you should not play samples whose absolute value is greater than 1, it is fine to produce them as intermediate results.
 
@@ -130,7 +126,9 @@ Note: `mix()` may produce samples whose absolute value is larger than 1 even if 
 
 Creates a new sound that changes the duration of an existing sound via resampling. If the existing sound has \\(n\\) samples, then the new sound has \\(⌊n / \alpha ⌋\\) samples for some constant \\( \alpha > 0 \\), with sample \\(i\\) of the new sound having the same amplitude as sample \\(⌊i \alpha ⌋\\) of the existing sound. Assume that \\(\alpha > 0\\).  For example:
 
-{{< imgfig "https://www.cs.princeton.edu/courses/archive/fall24/cos126/static/assignments/functions/images/changeSpeed.png" >}}
+
+{{< staticimg src="functions/images/changeSpeed.png" alt="Changing the speed of a single audio sample array" >}}
+
 
 The floor function \\(⌊x⌋\\) returns the largest integer less than or equal to \\(x\\). You can compute it in Java by either casting to an integer (resulting in an `int`) or calling `Math.floor(x)` (resulting in a `double`).
 
@@ -147,6 +145,7 @@ Note: the `changeSpeed()` function changes not only the speed of the sound, but 
   ```java
   double[] samples1 = StdAudio.read("cow.wav");
   ```
+
 - The audio collage **must** use **all** of the audio effects specified in the API (amplify, reverse, merge, mix, change speed, and clamp). Feel free to add additional audio effects (see below for some ideas).
 - All played samples **must be** valid; i.e., all samples must be between -1.0 and 1.0 before calling  `StdAudio.play()`.
 - To convert an audio file into an appropriate format for use with `StdAudio`:

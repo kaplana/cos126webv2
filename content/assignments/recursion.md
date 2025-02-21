@@ -27,8 +27,14 @@ comments: false
 - Make sure you understand the lecture materials and the precept exercises before proceeding. Refer to the lecture and precept examples while you are coding.
 
 - Download and expand the zip file, which will create the folder `recursion`. We recommend this folder be placed in a `cos126` folder.
+- Open the `recursion` folder (i.e., the project) in IntelliJ.
+- Implement these programs:
+   - `DelannoyBrute.java`
+   - `Sierpinksi.java`
+   - `Art.java`
+   - `DelannoyMemo.java`
 
-
+### **Requirements**
 
 - You may not call library functions except those in
    - `java.lang` such as `Integer.parseInt()`, etc.
@@ -315,7 +321,7 @@ A very good approach is to first choose a self-referential pattern as a target o
 1. Your drawing can be a geometric pattern, a random construction, or anything else that takes advantage of recursive functions.
 1. Optionally, you may use the `Transform2D` library you implemented in precept. You may also define additional geometric transforms in `Art.java`, such as sheer, reflect across the \\(x\\)- or \\(y\\)- axis, or rotate about an arbitrary point (as opposed to the origin).
 1. Your program must be organized into at least *three* separate functions, including `main()`. All functions except `main()` must be `private`.
-1. For full credit, `Art.java` must not be something that could be easily rewritten to use loops in place of recursion, and some aspects of the recursive function-call tree (or how parameters or overlapping are used) must be distinct from the in-class examples (`HTree`, `NestedCircles`, etc.). You must do **at least two** of the following to get full credit on `Art.java` (and doing more ***may*** yield a small amount of extra credit):
+1. For full credit, `Art.java` must not be something that could be easily rewritten to use loops in place of recursion, and some aspects of the recursive function-call tree (or how parameters or overlapping are used) must be distinct from the in-class examples (`HTree`, `NestedCircles`, etc.). You must do **at least two** of the following to get full credit on `Art.java`:
 	- call one or more `Transform2D` methods
 	- use different parameters than in examples: `f(n, x, y, size)`
 	- use different `StdDraw` methods than in examples (e.g., ellipses, arcs, text; take a look at the [`StdDraw` API](https://introcs.cs.princeton.edu/java/stdlib/javadoc/StdDraw.html))
@@ -325,7 +331,7 @@ A very good approach is to first choose a self-referential pattern as a target o
 	- use recursion that doesn't always recur from level `n` to level `n-1`
 	- draw between recursive calls, not just before or after all recursive calls
 	- use recursive level for secondary purpose (e.g., level dictates color)
-1. Contrast this with the examples `HTree`, `Sierpinski`, and `NestedCircles`, which have very similar structures to one another.
+1. Your solutions should not mearly be minor  modifictions to `HTree`, `Sierpinski`, and `NestedCircles`, which allo have very similar structures to one another.
 1. You will also lose points if your artwork can be created just as easily without recursion (such as [`Factorial.java`](https://introcs.cs.princeton.edu/java/23recursion/Factorial.java.html)). If the recursive function-call tree for your method is a straight line, it probably falls under this category.
 1. You may use GIF, JPG, or PNG files in your artistic creation. If you do, be sure to submit them along with your other files. Make it clear in your `readme.txt` what part of the design is yours and what part is borrowed from the image file.
 
@@ -337,7 +343,7 @@ A very good approach is to first choose a self-referential pattern as a target o
 
 For example, the [Quadricross](https://en.wikipedia.org/wiki/File:Quadriccross.gif) looks very different from the in-class examples, but the code to generate it looks extremely similar to `HTree`, so it is a bad choice. On the other hand, even though the [Sierpinski curve](https://www.robertdickau.com/sierpinskiarrow.html) eventually generates something that looks like the Sierpinski triangle, the code is very different (probably including an angle argument in the recursive method), and so it would earn full marks.
 
-**Here is an animation we produced  using student art:** {{< youtube P-LGv84LkEU  >}}
+**Here is an animation we produced  using student art:** {{< youtube 4R0hyHEJwJk  >}}
 
 
 ### **Delannoy numbers (dynamic programming)**

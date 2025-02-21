@@ -1,7 +1,7 @@
 ---
 title: 2. Arrays and IO
 subtitle: 
-summary:   The goal of this assignment is to deepen your understanding of arrays and input/output (IO), and take a short quiz on how to get help in COS 126.  {{< project "arrays" >}} |  {{< submit "Arrays" >}}  {{< notreleased >}}
+summary:   The goal of this assignment is to deepen your understanding of arrays and input/output (IO), and take a short quiz on how to get help in COS 126.  {{< project "arrays" >}} |  {{< submit "Arrays" >}}  <!--{{< notreleased >}}-->
 weight: 3
 type: "page"
 mathjax: true  
@@ -198,7 +198,7 @@ Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 
 {{< details "How do I test my program?" >}} To help you design/debug your approach, you may want to start with a *small example*, such as the one shown above:
 `double[] original = { 1.0, 0.0, 0.5, 0.0, -1.0, -0.5, 1.0, 0.25 };`
-<br> with `decay = 0.5` and `delay = 1`. While it would not make sense to play an echo filter applied to this example, you can print the results after applying your echo filter to make sure your calculations are correct.  You can also try modifying this example with other values for the `original` array, `decay` and `delay`.  Testing ande debugging with small examples will help you understand your approach.
+<br> with `decay = 0.5` and `delay = 3`. While it would not make sense to play an echo filter applied to this example, you can *print* the results after applying your echo filter to make sure your calculations are correct. Hint: use a `for` loop to print the array. You can also try modifying this example with other values for the `original` array, `decay` and `delay`.  Testing and debugging with small examples will help you understand your approach.
 
 
 {{< /details >}}
