@@ -178,7 +178,7 @@ These are purely suggestions for how you might make progress. You do not have to
 - Write a (non-recursive) function `height()` that takes the length of the side of an equilateral triangle as an argument and returns its height. The body of this method should be a one-liner.
 	- **Test** your `height()` function. This means try your `height()` function with various values. Does it return the correct calculation?
 - In `main()`, draw the outline of the initial equilateral triangle. Use the `height()` function to calculate the vertices of the triangle.
-- Write a (nonrecursive) function `filledTriangle()` that takes three (3) arguments `(x, y, length)` and draws a filled equilateral triangle (pointed downward) with the specified side length and the bottom vertex at \\( (x, y)\\).
+- Write a (non-recursive) function `filledTriangle()` that takes three (3) arguments `(x, y, length)` and draws a filled equilateral triangle (pointed downward) with the specified side length and the bottom vertex at \\( (x, y)\\).
 	- To **test** your function, write `main()` so that it calls `filledTriangle()` a few times with different arguments. You will be able to use this function without modification in `Sierpinski.java`.
 - Ultimately, you must write a *recursive* function `sierpinski()` that takes four (4) arguments `(n, x, y, length)` and plots a Sierpinski triangle of order `n`, whose largest triangle has the specified side length and bottom vertex \\((x, y)\\). However, to implement this function, use an *incremental* approach:
 	- Write a recursive function `sierpinski()` that takes one argument `n`, prints the value `n`, and then calls itself three times with the value `n-1`. The recursion should stop when `n` becomes 0.
@@ -331,7 +331,7 @@ A very good approach is to first choose a self-referential pattern as a target o
 	- use recursion that doesn't always recur from level `n` to level `n-1`
 	- draw between recursive calls, not just before or after all recursive calls
 	- use recursive level for secondary purpose (e.g., level dictates color)
-1. Your solutions should not mearly be minor  modifictions to `HTree`, `Sierpinski`, and `NestedCircles`, which allo have very similar structures to one another.
+1. Your solutions should not be based on minor  modifications to `HTree`, `Sierpinski`, and `NestedCircles`, which all have very similar structures to one another.
 1. You will also lose points if your artwork can be created just as easily without recursion (such as [`Factorial.java`](https://introcs.cs.princeton.edu/java/23recursion/Factorial.java.html)). If the recursive function-call tree for your method is a straight line, it probably falls under this category.
 1. You may use GIF, JPG, or PNG files in your artistic creation. If you do, be sure to submit them along with your other files. Make it clear in your `readme.txt` what part of the design is yours and what part is borrowed from the image file.
 
@@ -457,13 +457,13 @@ java-introcs -Xss10m  DelannoyMemo 24000 24000
    \\(\Theta(1)\\) - constant, \\(\Theta(\log n)\\) - logarithmic, \\(\Theta(n)\\) - linear, \\(\Theta(n\log n)\\) - linearithmic, \\(\Theta(n^2)\\) - quadratic, \\(\Theta(n^3)\\) - cubic or \\(\Theta(c^n)\\) - exponential
 
 > Notes:
-> - For your empirical analysis, you may observe the result returned by `count()` will *overflow* a `long` data type.  However, you can ignore the values returned by `count()` since they do not impact the order of growth of the implementation.
+> - For your empirical analysis, you may observe the result returned by `count()` will *overflow* a `long` data type for large values of `n`.  For example, as `n` gets very large the result may produce values that are less than previous values or even negative.  However, you can ignore the values returned by `count()` since they do not impact the order of growth of the implementation.  We will address the cause for overflow for this later in the semester.
 > - Instrument your working version `DelannoyMemo.java` similarly to how your code was instrumented in precept using `System.currentTimeMillis()`. Do not submit the instrumented version of `DelannoyMemo.java` to TigerFile.
 > - If you receive a message such as `Exception in thread "main" java.lang.OutOfMemoryError: Java heap space`, try allocating more memory to your Java process. For example:
 >
 >    `java-introcs -Xss50m -Xmx5g DelannoyMemo 24000 24000`
 >
-> The command-line option `-Xmx5g` in Java is used to specify the maximum heap size for the Java Virtual Machine (JVM). The _heap_ is the area of memory used for dynamic memory allocation in Java. This is where objects created by your application are stored.  The `-Xmx` flag sets the upper limit for the heap memory that the JVM can allocate. In this case, `5g` means that the maximum heap size is set to 5 gigabytes.
+> - The command-line option `-Xmx5g` in Java is used to specify the maximum heap size for the Java Virtual Machine (JVM). The _heap_ is the area of memory used for dynamic memory allocation in Java. This is where objects created by your application are stored.  The `-Xmx` flag sets the upper limit for the heap memory that the JVM can allocate. In this case, `5g` means that the maximum heap size is set to 5 gigabytes.
 
 ### **Submission**
 
