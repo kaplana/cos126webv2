@@ -1,7 +1,7 @@
 ---
 title: 3. Conjunction Function 
 subtitle: 
-summary:  Implement and test a collection of functions (also known as methods), which manipulate audio. {{< project "functions" >}} |  {{< submit "Functions" >}} {{< notreleased >}}
+summary:  Implement and test a collection of functions (also known as methods), which manipulate audio. {{< project "functions" >}} |  {{< submit "Functions" >}} <!--{{< notreleased >}}-->
 weight: 4
 type: "page"
   

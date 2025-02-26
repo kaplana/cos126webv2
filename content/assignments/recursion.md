@@ -1,7 +1,7 @@
 ---
 title: 4. Recursion
 subtitle: 
-summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}} 
+summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}}  {{< notreleased >}}
 weight: 5
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "recursion" >}} |  {{< submit "Recursion" >}}
 
 
@@ -30,7 +30,7 @@ comments: false
 - Open the `recursion` folder (i.e., the project) in IntelliJ.
 - Implement these programs:
    - `DelannoyBrute.java`
-   - `Sierpinksi.java`
+   - `Sierpinski.java`
    - `Art.java`
    - `DelannoyMemo.java`
 
@@ -319,7 +319,7 @@ A very good approach is to first choose a self-referential pattern as a target o
 1. Your drawing **must** stay within the drawing window when `n` is between 1 and 6 inclusive. (The autograder will not test values of `n` outside of this range.)
 1. You may not change the size of the drawing window (but you may change the scale). Do not add sound.
 1. Your drawing can be a geometric pattern, a random construction, or anything else that takes advantage of recursive functions.
-1. Optionally, you may use the `Transform2D` library you implemented in precept. You may also define additional geometric transforms in `Art.java`, such as sheer, reflect across the \\(x\\)- or \\(y\\)- axis, or rotate about an arbitrary point (as opposed to the origin).
+1. Optionally, you may use the `Transform2D` library you implemented in precept. You may also define additional geometric transforms in `Art.java`, such as sheer, reflect across the \\(x\\)- or \\(y\\)- axis, or rotate about an arbitrary point (as opposed to the origin).  You can copy `Transform2D.java` from the Ed Lesson P07 posted solution (or copy your own solution from precept if it is correct and complete) into your recursion assignment project. However, do not upload  `Transform2D.java`.  We will use the implementation provided in Ed Lessons. 
 1. Your program must be organized into at least *three* separate functions, including `main()`. All functions except `main()` must be `private`.
 1. For full credit, `Art.java` must not be something that could be easily rewritten to use loops in place of recursion, and some aspects of the recursive function-call tree (or how parameters or overlapping are used) must be distinct from the in-class examples (`HTree`, `NestedCircles`, etc.). You must do **at least two** of the following to get full credit on `Art.java`:
 	- call one or more `Transform2D` methods
