@@ -75,8 +75,8 @@ comments: false
 |      | Wed, Feb 26                  |{{< lecture "Performance" "static/lectures/41Performance.pdf" >}}<br> _Reading:_ 4.1  |     ||
 |      | Wed, Feb 26<br>Thu, Feb 27  |    {{< precept "p09-performance" "Performance" >}}                   | |
 |      | Sun, Mar 2                   |                                    | [_Assignment:_ Recursive Graphics due]({{< ref "/assignments/recursion" >}})         |
-| 5    | Mon, Mar 3                  | Lecture: TBD              | |
-|      | Mon, Mar 3 <br>Tue, Mar 4  | Precept: TBD            | |
+| 5    | Mon, Mar 3                  | Lecture: Introduction to Computer Graphics              | |
+|      | Mon, Mar 3 <br>Tue, Mar 4  | Precept: Written Exam 1 Review           | |
 |      | Wed, Mar 5                  |_Written Exam 1_                   | |
 |      | Wed, Mar 6 <br>Thu, Mar 7 | Precept: None                     | |
 |      |                            | | |
