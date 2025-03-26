@@ -1,7 +1,7 @@
 ---
 title: 5. Object-Oriented Programming
 subtitle: 
-summary:  Gain experience with using and creating data types. <br>Partner assignment   {{< project "oop" >}} |  {{< submit "OOP" >}}
+summary:  Gain experience with using and creating data types. <br>Partner assignment   {{< project "oop" >}} |  {{< submit "OOP" >}}  
 weight: 6
 type: "page"
   
@@ -12,7 +12,7 @@ profile: false
 comments: false
 
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "oop" >}} |  {{< submit "OOP" >}}
 
 ### **Goals**
@@ -258,7 +258,7 @@ Here is some more information about the required behavior:
 
 - _Corner cases._ You may assume that all of the arguments are meaningful values (e.g., MIDI numbers are between 0 and 127).
 
-- _Note names and octaves._ Musicians often use [scientific pitch notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation) to describe notes, such as A4 to describe concert A (MIDI number 69) or C4 to describe middle C (MIDI number 60). Scientific pitch notation combines two components: the note name (C, C#, D, D#, E, F, F#, G, G#, A, A#, or B), followed by the octave (an integer). Each octave consists of twelve (12) notes. The following table documents the mapping between the two notations:
+- _Note names and octaves._ Musicians often use [scientific pitch notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation) to describe notes, such as A4 to describe concert A (MIDI number 69) or C4 to describe middle C (MIDI number 60). Scientific pitch notation combines two components: the note name (C, C#, D, D#, E, F, F#, G, G#, A, A#, or B), followed by the octave (an integer). Each octave consists of twelve (12) notes. The following (partial) table documents the mapping between the two notations:
 |      |MIDI| pitch | |MIDI| pitch| |MIDI| pitch| |MIDI| pitch| |MIDI|pitch |     |
 |:----:|:--:|:----: |-|:--:|:----:|-|:--:|:----:|-|:--:|:----:|-|:--:|:----:|:---:|
 |      | 36 |  C2   | | 48 |  C3  | | 60 |  C4  | | 72 |  C5  | | 84 |  C6  |     |
@@ -318,8 +318,12 @@ Click on the &#9658;  icon to expand and the  &#9660; icon to hide each FAQ.
 Recall from the _Creating Data Types_ lecture that you can declare a constant using the `private static final` modifiers. For example: `private static final int MINUTES_PER_HOUR = 60;`
 {{< /details >}}
 
+{{< details "Which `Math` library functions should I use?" >}}
+Use whichever functions from Java’s `Math` library that you need. The function ``Math.pow()` is particularly useful for computing frequency. 
+{{< /details >}}
+
 {{< details "MIDI values go from 0 to 127, however the table provided only shows the relationship between MIDI and octaves from 36 to 95. Should we only focus on those MIDI values? Or are we expected to generalize the relationship for the other values as well?" >}}
-You need to generalize.
+You need to generalize.  See the _Table of not frequencies_ in [Scientific pitch notation](https://en.wikipedia.org/wiki/Scientific_pitch_notation).
 {{< /details >}}
 
 
@@ -333,7 +337,7 @@ You can implement `name()` and `octave()` without any `if` statements. If you a 
 
 ####  Part 2: Write a client that uses the musical note data type.
 
-Your final task is to write a client program `PlayTheseNotes.java` that reads a sequence of musical notes from standard input and plays the musical notes on standard audio and prints the notes on standard output.  The program takes three command-line arguments:
+Your final task is to write a client program `PlayTheseNotes.java` that reads a sequence of musical notes from a file and plays the musical notes, transposed by a given delta, on standard audio and prints the notes on standard output.  The program takes three command-line arguments:
 - the  name of the input file
 - the name of the instrument: piano, guitar, clarinet, or mbira
 - the value for delta for transposing notes
@@ -349,7 +353,7 @@ public class PlayTheseNotes {
     // Takes three command-line arguments (a file name, an instrument name,
     // a delta value for transpose), reads a sequence of notes from the file
     // and plays the musical notes, according to the given instrument on
-    // standard audio
+    // standard audio, and writes the played notes to standard output.
     public static void main(String[] args)
 }
 ```
@@ -363,11 +367,11 @@ Here are some details about the API:
 
 <img src = "../../static/assignments/oop/images/inputfile.png" width = 250 alt = "input file format">
 
-*Duration.*  Duration is typically used to represent eighth notes, quarter notes, half notes and whole notes.  In this programming assignment, we provide only quarter notes.  You must read the duration from standard input, but its value will not be used in creating/playing musical notes.
+*Duration.*  Duration is typically used to represent eighth notes, quarter notes, half notes and whole notes.  In this programming assignment, we provide only quarter notes.  You must read the duration, but its value will not be used in creating/playing musical notes.
 
 *The `In` API.*  The [`In`](https://introcs.cs.princeton.edu/java/11cheatsheet/#In)  data type from Section 3.1 is an object-oriented version of [`StdIn`](https://introcs.cs.princeton.edu/java/11cheatsheet/#StdIn). You will need the object-oriented version in this program since you will be reading from a file in the `read()` method.
 
-*Approach.*  The `main()` should first call `read()`, which returns an array of `Note` objects corresponding to the input file and desired instrument. Next, it should play and print all notes in order, using the provided value for transposing notes.
+*Approach.*  The `main()` should first call `read()`, which returns an array of `Note` objects corresponding to the input file and desired instrument. Next, it should play and print all notes in order, using the provided value for delta for transposing notes.
 
 *Input files.* We provide various files containing some simple songs in the specified format.   You may optionally create and upload your own song in a file named `music.txt`!  It may be an original or written by another artist.  Please provide credits at the end of your file.
 
@@ -407,6 +411,6 @@ Submit a `music.txt` file if you created your own composition.
 
 
 
-This assignment was developed by [Kevin Wayne](http://www.cs.princeton.edu/~wayne). Copyright © 2024.
+This assignment was developed by [Kevin Wayne](http://www.cs.princeton.edu/~wayne). Copyright © 2024-2025.
 
 

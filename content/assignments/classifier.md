@@ -1,7 +1,7 @@
 ---
 title: 6. Image Classifier
 subtitle: 
-summary:  Write a program to classify images using the perceptron algorithm. <br>Partner assignment   {{< project "classifier" >}} |  {{< submit "Classifier" >}}
+summary:  Write a program to classify images using the perceptron algorithm. Complete and submit the midsemester survey. <br>Partner assignment   {{< project "classifier" >}} |  {{< submit "Classifier" >}}  {{< notreleased >}}
 weight: 7
 type: "page"
   
@@ -12,7 +12,7 @@ profile: false
 comments: false
 
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "classifier" >}} |  {{< submit "Classifier" >}}
 
 ### **Goals**
@@ -26,7 +26,9 @@ comments: false
 
 ### **Getting Started**
 
-- Read/scan this entire project description before starting to code.  This will provide a _big picture_ before diving into the assignment!
+- **_Read/scan this entire project description before starting to code._**  This will provide a _big picture_ before diving into the assignment!
+
+- **_Review_** the ML lecture and precept exercises.
 
 - Download and expand the  project `zip` file for this assignment, which contains the files you will need for this assignment.
 
@@ -53,10 +55,12 @@ Moreover, ML techniques apply not only to images but also to numerical, text, au
 
 ### **Implementation Tasks**
 
+- Midsemester Survey: Complete the following brief [survey]({{< param midsemestersurveyurl >}}). 
+
 - Implement three classes:
   - `Perceptron.java`
   - `MultiPerceptron.java`
-  - `ImageClassifier.java` - a template is provided. 
+  - `ImageClassifier.java` 
 - Submit a completed `readme.txt` file.
 - Submit a completed `acknowledgments.txt` file.
 
@@ -141,6 +145,81 @@ public class Perceptron {
 
 *Corner cases.* You may assume that the arguments to the constructor and instance methods are valid. For example, you may assume that any binary label is either \\(+1\\)  or \\(-1\\), any input vector \\( x \\) is of length \\( n \\), and \\( n \ge 1 \\).
 
+#### **Possible Progress Steps for Perceptron**
+We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to write/test your `Perceptron.java` without them.  It is up to you!
+
+
+{{< details "Click here to show possible progress steps" >}}
+
+
+
+#### Implementing `Perceptron.java`
+
+1. Implement the `Perceptron()` constructor and the method `numberOfInputs()`. Initialize any instance variables. We recommend using *two* instance variables: an integer  `n` and an array of floating-point numbers `weights[]`.
+	- Test: In the `main()` method, instantiate a few `Perceptron` objects and print the number of inputs for each object.
+1. Implement the `toString()` method.
+	- Test: In the `main()` method, print the various `Perceptron` objects. What should the output be for a newly instantiated `Perceptron` object?
+1. Implement the `weightedSum()` method.
+	- Test: In the `main()` method, print the result of invoking the `weightedSum()` method on the various `Perceptron` objects (using, of course, appropriately sized arrays).
+1. Implement the `predict()` method.
+1. Implement the `train()` method.  Note: `train()` should call `predict()`.
+1. You can test your implementation by using the code in the ***Testing*** section (below) and then submitting  to TigerFile. **Do not** move onto `MultiPerceptron` until `Perceptron` is working properly.
+
+#### Testing Your `Perceptron.java` Implementation
+
+Here is Java code that trains a `Perceptron` on four input vectors (of length three) based on the example provided in the assignment specification.  After confirming that Tests #1, #2 and #3 pass, you should implement Tests #4, #5 and #6:
+
+
+```java
+// create a Perceptron with n inputs
+int n = 3;
+Perceptron perceptron = new Perceptron(n);
+StdOut.printf("Test #1 - constructor Perceptron(%d)\n", n);
+StdOut.println("  expect: (0.0, 0.0, 0.0)");
+StdOut.println("  result: " + perceptron);
+
+StdOut.println("Test #2 - numberOfInputs");
+StdOut.printf("  expect: %d\n", n);
+StdOut.println("  result: " + perceptron.numberOfInputs());
+
+double[] training1 = { 3.0, 4.0, 5.0 };  // +1 (yes)
+double[] training2 = { 2.0, 0.0, -2.0 };  // -1 (no)
+double[] training3 = { -2.0, 0.0, 2.0 };  // +1 (yes)
+double[] training4 = { 5.0, 4.0, 3.0 };  // -1 (no)
+
+// Test 3: perceptron.weightedSum(training1))
+//         perceptron.predict(training1))
+//         perceptron.train(training1, +1); // yes
+StdOut.println("Test #3a - weightedSum(3.0, 4.0, 5.0)");
+StdOut.printf("  expect: %2.1f\n", 0.0);
+StdOut.println("  result: " + perceptron.weightedSum(training1));
+
+StdOut.println("Test #3b - predict(3.0, 4.0, 5.0)");
+StdOut.printf("  expect: %d\n", -1);
+StdOut.println("  result: " + perceptron.predict(training1));
+
+StdOut.println("Test #3c - train(3.0, 4.0, 5.0, +1)");
+perceptron.train(training1, +1); // yes
+StdOut.println("  expect: (3.0, 4.0, 5.0)");
+StdOut.println("  result: " + perceptron);
+
+// Test 4: perceptron.weightedSum(training2))
+//         perceptron.predict(training2))
+//         perceptron.train(training2, -1); // no
+// Write these tests - similar to Test #3
+
+// Test 5: perceptron.weightedSum(training3))
+//         perceptron.predict(training3))
+//         perceptron.train(training3, +1); // yes
+// Write these tests - similar to Test #3
+
+// Test 6: perceptron.weightedSum(training4))
+//         perceptron.predict(training4))
+//         perceptron.train(training4, -1); // no
+// Write these tests - similar to Test #3
+```
+
+{{< /details >}}
 
 ### **Multiclass classification**
 
@@ -209,6 +288,95 @@ public class MultiPerceptron {
 
 *Corner cases*. You may assume that the arguments to the constructor and instance methods are valid. For example, you may assume that any class label is an integer between 0 and \\( m-1 \\), any input vector \\( x \\) is of length \\( n \\), and \\( m \ge 1 \\) and \\( n \ge 1 \\).
 
+#### **Possible Progress Steps for MultiPerceptron**
+We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to write/test your `MultiPerceptron.java` without them.  It is up to you!
+
+
+{{< details "Click here to show possible progress steps" >}}
+
+
+#### Implementing `MultiPerceptron.java`
+
+1. Implement the `MultiPerceptron()` constructor and the methods `numberOfClasses()` and `numberOfInputs()`. Initialize any instance variables; we recommend using three instance variables: an integer `m` (for the number of classes), an integer `n` (for the length of the input feature vector), and an array of `Perceptron` objects `perceptrons[]`.
+	- Test: In the `main()` method, instantiate a few `MultiPerceptron` objects and print the number of classes and inputs for each object.  
+1. Implement the `toString()` method.
+	- Test: In the `main()` method, print the various `MultiPerceptron` objects. What should the output be for a newly instantiated `MultiPerceptron` object?
+1. Implement the `predictMulti()` method.  
+1. Implement the `trainMulti()` method.  
+1. You can test by using the code in the ***Testing*** section (below) and then submitting to TigerFile.
+
+#### Testing Your `MultiPerceptron.java` Implementation
+
+Here is Java code that creates a  `MultiPerceptron`, trains the `MultiPerceptron` on four input vectors (of length three) and then tests the `MultiPerceptron` on two input vectors (of length three)  based on the example provided in the assignment specification:
+
+```java
+// create a MultiPerceptron with m classes, n inputs
+int m = 2;
+int n = 3;
+MultiPerceptron mp1 = new MultiPerceptron(m, n);
+
+// Constructor Test #1 - create MultiPerceptron and print
+StdOut.printf("Constructor Test #1 - constructor MultiPerceptron(%d, %d)\n", m, n);
+StdOut.println("  expect: ((0.0, 0.0, 0.0), (0.0, 0.0, 0.0))");
+StdOut.println("  result: " + mp1);
+
+// Constructor Test #2 - check number of classes
+StdOut.println("Constructor Test #2 - numberOfClasses");
+StdOut.printf("  expect: %d\n", m);
+StdOut.println("  result: " + mp1.numberOfClasses());
+
+// Constructor Test #3 - check number of inputs
+StdOut.println("Constructor Test #3 - numberOfInputs");
+StdOut.printf("  expect: %d\n", n);
+StdOut.println("  result: " + mp1.numberOfInputs());
+
+// training data
+double[] training1 = { 3.0, 4.0, 5.0 };  // class 1
+double[] training2 = { 2.0, 0.0, -2.0 };  // class 0
+double[] training3 = { -2.0, 0.0, 2.0 };  // class 1
+double[] training4 = { 5.0, 4.0, 3.0 };  // class 0
+
+// Training Test #1 - class 1
+StdOut.println("Training Test #1 class 1: trainMulti((3, 4, 5), 1)");
+mp1.trainMulti(training1, 1);
+StdOut.println("  expect: ((0.0, 0.0, 0.0), (3.0, 4.0, 5.0))");
+StdOut.println("  result: " + mp1);
+
+// Training Test #2 - class 0
+StdOut.println("Training Test #2 class 0: trainMulti((2, 0, -2), 0)");
+mp1.trainMulti(training2, 0);
+StdOut.println("  expect: ((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))");
+StdOut.println("  result: " + mp1);
+
+// Training Test #3 - class 1
+StdOut.println("Training Test #3 class 1: trainMulti((-2, 0, 2), 1)");
+mp1.trainMulti(training3, 1);
+StdOut.println("  expect: ((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))");
+StdOut.println("  result: " + mp1);
+
+// Training Test #4 - class 0
+StdOut.println("Training Test #4 class 0: trainMulti(( 5, 4, 3 ), 0)");
+mp1.trainMulti(training4, 0);
+StdOut.println("  expect: ((2.0, 0.0, -2.0), (-2.0, 0.0, 2.0))");
+StdOut.println("  result: " + mp1);
+
+// testing data
+double[] testing1 = { -1.0, -2.0, 3.0 };
+double[] testing2 = { 2.0, -5.0, 1.0 };
+
+// Testing Test #1 - expect class 1
+StdOut.println("Testing Test #1 - predictMulti(-1, 2, 3)");
+StdOut.println("  expect class: 1");
+StdOut.println("  result result: " + mp1.predictMulti(testing1));
+
+// Testing Test #2 - expect class 0
+StdOut.println("Testing Test #2 - predictMulti(2, -5, -1)");
+StdOut.println("  expect class: 0");
+StdOut.println("  result class: " + mp1.predictMulti(testing2));
+```	
+
+
+{{< /details >}}
 
 ### **ImageClassifier data type**
 
@@ -335,8 +503,6 @@ The `testClassifier()` method returns  the test error rate (the fraction of test
 
 It then creates an `ImageClassifier` object, trains the classifier,  tests the classifier and prints the error rate.
 
-A template for the `main()` test client is provided in `ImageClassifier.java` in the project folder.  
-
 Here are some sample executions you should try:
 	
 ```plaintext
@@ -368,143 +534,11 @@ jar:file:digits.jar!/testing/5/6043.png, label = five, predict = three
 test error rate = 0.1318
 ```
 
-### **Possible Progress Steps**
-We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to solve Classifier without them.  It is up to you!
+#### **Possible Progress Steps for ImageClassifier**
+We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to write/test your `Classifier.java` without them.  It is up to you!
 
 
 {{< details "Click here to show possible progress steps" >}}
-
-
-
-#### Implementing `Perceptron.java`
-
-1. Implement the `Perceptron()` constructor and the method `numberOfInputs()`. Initialize any instance variables. We recommend using *two* instance variables: an integer  `n` and an array of floating-point numbers `weights[]`.
-	- Test: In the `main()` method, instantiate a few `Perceptron` objects and print the number of inputs for each object.
-1. Implement the `toString()` method.
-	- Test: In the `main()` method, print the various `Perceptron` objects. What should the output be for a newly instantiated `Perceptron` object?
-1. Implement the `weightedSum()` method.
-	- Test: In the `main()` method, print the result of invoking the `weightedSum()` method on the various `Perceptron` objects (using, of course, appropriately sized arrays).
-1. Implement the `predict()` method.
-1. Implement the `train()` method.  Note: `train()` should call `predict()`.
-1. You can test your implementation by using the code in the ***Testing*** section (below) and then submitting  to TigerFile. **Do not** move onto `MultiPerceptron` until `Perceptron` is working properly.
-
-#### Testing Your `Perceptron.java` Implementation
-
-Here is Java code that trains a `Perceptron` on four input vectors (of length three) based on the example provided in the assignment specification:
-
-
-```java
-// create a Perceptron with n inputs
-int n = 3;
-Perceptron perceptron = new Perceptron(n);
-StdOut.printf("Test #1 - constructor Perceptron(%d)\n", n);
-StdOut.println("  expect: (0.0, 0.0, 0.0)");
-StdOut.println("  result: " + perceptron);
-
-StdOut.println("Test #2 - numberOfInputs");
-StdOut.printf("  expect: %d\n", n);
-StdOut.println("  result: " + perceptron.numberOfInputs());
-
-double[] training1 = { 3.0, 4.0, 5.0 };  // +1 (yes)
-double[] training2 = { 2.0, 0.0, -2.0 };  // -1 (no)
-double[] training3 = { -2.0, 0.0, 2.0 };  // +1 (yes)
-double[] training4 = { 5.0, 4.0, 3.0 };  // -1 (no)
-
-// Test 3: perceptron.weightedSum(training1))
-//         perceptron.predict(training1))
-//         perceptron.train(training1, +1); // yes
-StdOut.println("Test #3a - weightedSum(3.0, 4.0, 5.0)");
-StdOut.printf("  expect: %2.1f\n", 0.0);
-StdOut.println("  result: " + perceptron.weightedSum(training1));
-
-StdOut.println("Test #3b - predict(3.0, 4.0, 5.0)");
-StdOut.printf("  expect: %d\n", -1);
-StdOut.println("  result: " + perceptron.predict(training1));
-
-StdOut.println("Test #3c - train(3.0, 4.0, 5.0, +1)");
-perceptron.train(training1, +1); // yes
-StdOut.println("  expect: (3.0, 4.0, 5.0)");
-StdOut.println("  result: " + perceptron);
-
-// Test 4: perceptron.weightedSum(training2))
-//         perceptron.predict(training2))
-//         perceptron.train(training2, -1); // no
-// Write these tests - similar to Test #3
-
-// Test 5: perceptron.weightedSum(training3))
-//         perceptron.predict(training3))
-//         perceptron.train(training3, +1); // yes
-// Write these tests - similar to Test #3
-
-// Test 6: perceptron.weightedSum(training4))
-//         perceptron.predict(training4))
-//         perceptron.train(training4, -1); // no
-// Write these tests - similar to Test #3
-```
-
-
-
-
-#### Implementing `MultiPerceptron.java`
-
-1. Implement the `MultiPerceptron()` constructor and the methods `numberOfClasses()` and `numberOfInputs()`. Initialize any instance variables; we recommend using three instance variables: an integer `m` (for the number of classes), an integer `n` (for the length of the input feature vector), and an array of `Perceptron` objects `perceptrons[]`.
-	- Test: In the `main()` method, instantiate a few `MultiPerceptron` objects and print the number of classes and inputs for each object.  
-1. Implement the `toString()` method.
-	- Test: In the `main()` method, print the various `MultiPerceptron` objects. What should the output be for a newly instantiated `MultiPerceptron` object?
-1. Implement the `predictMulti()` method.  
-1. Implement the `trainMulti()` method.  
-1. You can test by using the code in the ***Testing*** section (below) and then submitting to TigerFile.
-
-#### Testing Your `MultiPerceptron.java` Implementation
-
-Here is Java code that trains a `MultiPerceptron` on four input vectors (of length three) and then tests   a `MultiPerceptron` on two input vectors (of length three)  based on the example provided in the assignment specification:
-
-```java
-// training data
-double[] training1 = { 3.0, 4.0, 5.0 };  // class 1
-double[] training2 = { 2.0, 0.0, -2.0 };  // class 0
-double[] training3 = { -2.0, 0.0, 2.0 };  // class 1
-double[] training4 = { 5.0, 4.0, 3.0 };  // class 0
-
-// Training test #1 - class 1
-StdOut.println("Training test #1 class 1: trainMulti((3, 4, 5), 1)");
-mp1.trainMulti(training1, 1);
-StdOut.println("  expect: ((0.0, 0.0, 0.0), (3.0, 4.0, 5.0))");
-StdOut.println("  result: " + mp1);
-
-// Training test #2 - class 0
-StdOut.println("Training test #2 class 0: trainMulti((2, 0, -2), 0)");
-mp1.trainMulti(training2, 0);
-StdOut.println("  expect: ((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))");
-StdOut.println("  result: " + mp1);
-
-// Training test #3 - class 1
-StdOut.println("Training test #3 class 1: trainMulti((-2, 0, 2), 1)");
-mp1.trainMulti(training3, 1);
-StdOut.println("  expect: ((2.0, 0.0, -2.0), (3.0, 4.0, 5.0))");
-StdOut.println("  result: " + mp1);
-
-// Training test #4 - class 0
-StdOut.println("Training test #4 class 0: trainMulti(( 5, 4, 3 ), 0)");
-mp1.trainMulti(training4, 0);
-StdOut.println("  expect: ((2.0, 0.0, -2.0), (-2.0, 0.0, 2.0))");
-StdOut.println("  result: " + mp1);
-
-// testing data
-double[] testing1 = { -1.0, -2.0, 3.0 };
-double[] testing2 = { 2.0, -5.0, 1.0 };
-
-// Testing test #1 - expect class 1
-StdOut.println("Testing test #1 - predictMulti(-1, 2, 3)");
-StdOut.println("  expect class: 1");
-StdOut.println("  result result: " + mp1.predictMulti(testing1));
-
-// Testing test #2 - expect class 0
-StdOut.println("Testing test #2 - predictMulti(2, -5, -1)");
-StdOut.println("  expect class: 0");
-StdOut.println("  result class: " + mp1.predictMulti(testing2));
-```	
-
 #### Implementing `ImageClassifier.java`
 
 *Part I. Constructor*.
@@ -661,6 +695,8 @@ java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing1K.
 
 Submit to {{< tigerfile "Classifier" >}}: `Perceptron.java`, `MultiPerceptron.java`, `ImageClassifier.java`, and  completed `readme.txt` and `acknowledgments.txt` files.
 
+Complete and submit the [Midsemester Survey]({{< param midsemestersurveyurl >}})
+
 ### **Grading**
 | Files                | Points    |
 | ------------------   | ----------|
@@ -673,7 +709,8 @@ Submit to {{< tigerfile "Classifier" >}}: `Perceptron.java`, `MultiPerceptron.ja
 
 ### **Enrichment**
 
-{{< details "Click each item  to expand.">}} Click again to collapse the answer.{{< /details >}}
+Click on the &#9658;  icon to show the answer and again to hide the answer.
+
 
 {{< details "When was the perceptron algorithm first discovered?" >}} It was proposed in 1958 by Frank Rosenblatt, an American psychologist. It is one of the earliest machine-learning algorithms. At the time, researchers were overly optimistic about its short-term potential and grossly underestimated the formidable challenge of building intelligent machines.{{< /details >}}
 

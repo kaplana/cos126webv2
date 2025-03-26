@@ -88,30 +88,30 @@ comments: false
 |      | Mon, Mar 17 <br>Tue, Mar 18| {{< precept "p12-using-data-types" "Using Data Types" >}} | |
 |      | Wed, Mar 19                 |{{< lecture "Creating Data Types" "static/lectures/32CreatingDataTypes.pdf" >}}<br> _Reading:_ 3.2  |   |
 |      | Wed, Mar 19 <br>Thu, Mar 20| {{< precept "p13-creating-data-types" "Creating Data Types" >}}                     | |
-|      | Sun, Mar 23                 |                                    | [_Assignment:_ Object-Oriented Programming due]()         |
+|      | Sun, Mar 23                 |                                    | [_Assignment:_ Object-Oriented Programming due]({{< ref "/assignments/oop" >}})         |
 | 7    | Mon, Mar 24                 |{{< lecture "Designing Data Types" "static/lectures/33DesigningDataTypes.pdf" >}}<br> _Reading:_ 3.3 |   |
 |      | Mon, Mar 24 <br>Tue, Mar 25|  {{< precept "p14-designing-data-types" "Designing Data Types" >}}                | |
 |      | Wed, Mar 26                 |{{< lecture "Intro to Machine Learning" "static/lectures/AIML.pdf" >}}<br> _Reading:_ [2 \| Machine Learning Paradigms](https://www.wolfram.com/language/introduction-machine-learning/machine-learning-paradigms)  |   |
 |      | Wed, Mar 26 <br>Thu, Mar 27| {{< precept "p15-aiml" "Intro to Machine Learning" >}}                       | |
-|      | Sun, Mar 30                  |                                    | [_Assignment:_ Image Classifier due]()         |
+|      | Sun, Mar 30                  |                                    | [_Assignment:_ Image Classifier due]({{< ref "/assignments/classifier" >}})         |
 | 8    | Mon, Mar 31                  |{{< lecture "Algorithms" "static/lectures/42Algorithms.pdf" >}}<br> _Reading:_ 4.2 |  {{< lecturedemo "Binary Search Demo" "static/lectures/demos/42DemoBinarySearch" >}}  <br> {{< lecturedemo "Insertion Sort Demo" "static/lectures/demos/42DemoInsertionSort" >}} <br> {{< lecturedemo "Mergesort Demo" "static/lectures/demos/42DemoMerge" >}}|
 |      | Mon, Mar 31 <br>Tue, Apr 1 |  {{< precept "p16-algorithms" "Algorithms" >}}       | |
 |      | Wed, Apr 2                  |{{< lecture "Data Structures" "static/lectures/43DataStructures.pdf" >}}<br> _Reading:_ 4.3 |  {{< lecturedemo "Dijkstra Two Stack" "static/lectures/demos/43DemoDijkstraTwoStack" >}} |
 |      | Wed, Apr 2 <br>Thu, Apr 3  | {{< precept "p17-data-structures" "Data Structures" >}}                   | |
-|      | Sun, Apr 6                  |                                    | [_Assignment:_ Guitar Hero due]()         |
+|      | Sun, Apr 6                  |                                    | [_Assignment:_ Guitar Hero due]({{< ref "/assignments/guitar" >}})         |
 | 9    | Mon, Apr 7                 | {{< lecture "Theory of Computing" "static/lectures/50TheoryOfComputing.pdf" >}}<br> _Reading:_ 5.3-5.4 |   |
 |      | Mon, Apr 7<br>Tue, Apr 8| {{<precept "p18-theory" "Theory of Computing" >}}             | |
 |      | Wed, Apr 9                 | {{< lecture "Toy I" "static/lectures/60ToyI.pdf" >}}<br> _Reading:_ 6.1-6.2  |   |
 |      | Wed, Apr 9 <br>Thu, Apr 10| Precept Toy I                    | |
-|      | Sun, Apr 13                 |                                    | [_Assignment:_ Chat126 due]()         |
+|      | Sun, Apr 13                 |                                    | [_Assignment:_ Chat126 due]({{< ref "/assignments/chat126" >}})         |
 | 10   | Mon, Apr 14                 | {{< lecture "Toy II" "static/lectures/60ToyII.pdf" >}}<br> _Reading:_ 6.3-6.4 |   |
 |      | Mon, Apr 14 <br>Tue, Apr 15| {{< precept "p20-toy2" "Toy II" >}}           | |
 |      | Wed, Apr 16                 |_Programming Exam_ <br>         |   |
 |      | Wed, Apr 16 <br>Thu, Apr 17| Precept Java Jeopardy           | |
-|      | Sun, Apr 20                 |                                   | [_Assignment:_ Hamming due]()         |
+|      | Sun, Apr 20                 |                                   | [_Assignment:_ Hamming due]({{< ref "/assignments/hamming" >}})         |
 | 11   | Mon, Apr 21 | {{< lecture "Circuits" "static/lectures/70Circuits.pdf" >}}<br> _Reading:_ 7.1, 7.3 |   |
 |      | Mon, Apr 21  <br>Tue, Apr 22| Precept Circuits            | |
 |      | Wed, Apr 23                 |_Written Exam 2_                    | |
 |      | Wed, Apr 23 <br>Thu, Apr 24| No precept                    | |
-| 12+  | Wed, May 14                      | |   _Final Project:_ Atomic due, 3:30pm|
+| 12+  | Wed, May 14                      | |   _Final Project:_ Atomic due, 3:30pm |
 

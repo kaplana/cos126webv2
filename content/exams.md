@@ -34,6 +34,7 @@ And here's the the Fall'22 Programming Exam 2 hosted on TigerFile.
 
 | Semester    | Written Exam 1   |  Programming Exam 2 | Written Exam 2    |
 |-------------| ---------------- | --------------------| ------------------|
+| Spring 2025 | {{< we s25 1 >}} |                     |   |
 | Fall 2024   | {{< we f24 1 >}} |  {{< pe f24 >}}     | {{< we f24 2 >}}  |
 | Spring 2024 | {{< we s24 1 >}} |  {{< pe s24 >}}     | {{< we s24 2 >}}  |
 | Fall   2023 | {{< we f23 1 >}} |  {{< pe f23 2 >}}   | {{< we f23 2 >}}  |

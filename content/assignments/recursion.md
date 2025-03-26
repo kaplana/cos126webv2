@@ -1,7 +1,7 @@
 ---
 title: 4. Recursion
 subtitle: 
-summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}}  {{< notreleased >}}
+summary:   Plot a Sierpinski triangle; and plot a recursive pattern of your own design; evaluate and compare the performance of a recursive program and a dynamic programming program.   {{< project "recursion" >}} |  {{< submit "Recursion" >}}
 weight: 5
 type: "page"
   
