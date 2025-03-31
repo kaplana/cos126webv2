@@ -1,7 +1,7 @@
 ---
 title: 7. Guitar Hero 
 subtitle: 
-summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}}
+summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}} {{< notreleased >}}
 weight: 8
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "guitar" >}} |  {{< submit "Guitar" >}}
 ### **Goals**
 
@@ -110,22 +110,22 @@ public class RingBuffer {
 }
 ```
 
-Since the ring buffer has a known maximum capacity, you can implement it using a double array of that length. For efficiency, use ***cyclic wrap-around***: maintain an integer instance variable `first` that stores the index of the least recently inserted item and a second integer instance variable `last` that stores the index one beyond the most recently inserted item.
+Since the ring buffer has a known maximum capacity, you can implement it using a `double` array of that length. For efficiency, use ***cyclic wrap-around***: maintain an integer instance variable `first` that stores the index of the least recently inserted item and a second integer instance variable `last` that stores the index one beyond the most recently inserted item.  For example, this is a ring buffer of size 4 with a capacity 10:
 
-To insert an item, put it at index `last` and increment `last`. To remove an item, take it from index `first` and increment `first`. When the value of either index (`last`, `first`) equals `capacity`, make it wrap-around by changing the index to `0`. To determine the current number of valid entries in the ring buffer (and whether it is full or empty), you will also need a third integer instance variable `size`.
+![a ring buffer of size 4 with a capacity 10]({{< resource url="static/assignments/guitar/images/ring-buffer.png" >}})
 
-Illustrating the `double` array as a *ring* helps understand the operation of the ring buffer.  For example, the diagram below shows a ring buffer with a capacity of four (4), containing a single value.
+To insert an item, put it at index `last` and increment `last`. To remove an item, take it from index `first` and increment `first`. When the value of either index (`last`, `first`) equals `capacity`, make it wrap-around by changing the index to `0`. To determine the current number of valid entries in the ring buffer (and whether it is full or empty), you will also need a third integer instance variable `size`.  To determine the size of the ring buffer (and whether it is full or empty), you will also need a third integer instance variable `size` that stores the number of items currently in the ring buffer. 
 
-![a ring buffer with a capacity of four, containing a single value]({{< resource url="static/assignments/guitar/images/r-b-diagram.png" >}})
+<!-- Illustrating the `double` array as a *ring* helps understand the operation of the ring buffer.  For example, the diagram below shows a ring buffer with a capacity of four (4), containing a single value.-->
+
+<!--![a ring buffer with a capacity of four, containing a single value]({{< resource url="static/assignments/guitar/images/r-b-diagram.png" >}})-->
+
 
 
 #### Requirements
 
-1. `RingBuffer` **must** throw a `IllegalStateException` with a custom message if a client
-	- calls either `dequeue()` or `peek()` when the ring buffer is *empty*, or
-	- calls `enqueue()` when the ring buffer is *full*.
-1. The constructor **must** take time at most proportional to the capacity. 
-1. Every other method **MUST** take **constant** time.
+1. _Corner cases_: `RingBuffer` **must** throw a `IllegalStateException` with a custom message if a client calls either `dequeue()` or `peek()` when the ring buffer is *empty*, or calls `enqueue()` when the ring buffer is *full*.
+1. _Performance_: The constructor **must** take time at most proportional to the capacity.  Every other method **MUST** take **constant** time.
 
 ### **`GuitarString`**
 
@@ -135,7 +135,8 @@ Create a data type to model a vibrating guitar string. Write a class named `Guit
 public class GuitarString {
 
     // Creates a guitar string of the specified frequency,
-    // using a sampling rate of 44,100.
+    // using a sampling rate of 44,100, where all samples are
+    // initially set to 0.0. 
     public GuitarString(double frequency)
 
     // Creates a guitar string whose length and initial values
@@ -159,6 +160,16 @@ public class GuitarString {
     public static void main(String[] args)
 }
 ```
+#### Requirements
+
+1. Your `GuitarString` must be implemented using the `RingBuffer` data type.  You should not use `Stack`, `Queue`, `Set` or other data types to represent a guitar string.
+2. Constructors. There are two ways to create a `GuitarString` object.
+   - The first constructor creates a `RingBuffer` of the desired capacity $n$ (the sampling rate $44,100$ divided by the frequency, rounded up to the nearest integer), and initializes it to represent a guitar string at rest by enqueuing $n$ zeros.
+   - The second constructor creates a `RingBuffer` of capacity equal to the length $n$ of the array, and initializes the contents of the ring buffer to the corresponding values in the array. In this assignment, this constructor's main purpose is to facilitate testing and debugging.
+3. `length()`. Return the number of samples $n$ in the ring buffer.
+4. `pluck()`. Replace the $n$ items in the ring buffer with $n$ random values between $−0.5$ and $+0.5$.
+5. `tic()`. Apply the Karplus–Strong update: delete the sample at the front of the ring buffer and add to the end of the ring buffer the average of the first two samples, multiplied by the energy decay factor.
+6. `sample()`. Return the value of the item at the front of the ring buffer.
 
 ### **`GuitarHero` client**
 
@@ -179,26 +190,67 @@ $$ 440 \times 2^{(i − 24) / 12} $$ Hz, so that the character `'q'` is 110 Hz, 
 
 ### **Possible Progress Steps**
 
-We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to solve Guitar without them.  It is up to you!
+We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to code/test without them.  It is up to you!
 
 
 {{< details "Click here to show possible progress steps for RingBuffer" >}}
 
 #### Implementing `RingBuffer.java`
-
-1. You will need to define the instance variables, constructors, and instance methods.
+1. Implement `RingBuffer` in an incremental and iterative manner.  Edit your initial `RingBuffer.java` so that it can compile (recall the `Data.java` exercise from precept).  Then, implement *one constructor/method at a time*, together with at least one *corresponding test* in `main()`.  We provide _some_ test cases below.  You should also include your own test cases in `main()`, such as the ones from the precept worksheet.
 2. We recommend defining the instance variables as follows:
-  ```java
+```java
     private double[] rb;   // items in the buffer
     private int first;     // index for the next dequeue or peek
     private int last;      // index for the next enqueue
     private int size;      // number of items in the buffer
-  ```
-3. Your constructor for `RingBuffer` will need to allocate and initialize an array of `doubles` using the `new` operator. Observe that you have to do this in the constructor (and not when you declare the instance variables) because you do not know the length of the array until the constructor is called.
-4. Implement `RingBuffer` in an incremental and iterative manner: implement *one method at a time*, together with a *corresponding test* in `main()`. 	
-   - In `main()`, write some tests using small examples, for example, using a `RingBuffer` of capacity four (4) based on the worksheet.
-   - You can implement a `private` helper method that prints a `RingBuffer` object, i.e., prints the current values for `first`, `last`, and `size`. This can be very useful to help you debug!
-5. After you implement all the methods for `RingBuffer`, test `RingBuffer` using the test client in the ***Testing*** section. **Do not proceed** until you have thoroughly tested your `RingBuffer` data type.
+```
+3. Implement the constructor for `RingBuffer`. You will need to allocate and initialize an array of `doubles` using the `new` operator. Observe that you have to do this in the constructor (and not when you declare the instance variables) because you do not know the length of the array until the constructor is called.
+4. Test the constructor in `main()`.  You can run this test by trying various `RingBuffer` sizes specified on the command line.
+```java
+   StdOut.printf("Test #0 - create a RingBuffer object with %d\n", n);
+   int n = Integer.parseInt(args[0]); // get the size of n from the command-line
+   RingBuffer buffer = new RingBuffer(n);
+```
+5. Implement `capacity()` and then test it:
+```java
+   StdOut.printf("Test #1 - check capacity - should be %d\n", n);
+   StdOut.printf("**** Capacity is %d\n", buffer.capacity());
+```
+6. Implement `size()` and then test it:
+```java
+   StdOut.printf("Test #2 - check size - should be %d\n", 0);
+   StdOut.printf("**** Size is %d\n", buffer.size());
+```
+7. Implement `isFull()` and `enqueue()` and then test them:
+```java
+   StdOut.printf("Test #3 - perform %d enqueues: 1.0, 2.0, ...\n", n);
+   StdOut.printf("**** isFull() should be false- is %b\n", buffer.isFull());
+   for (int i = 1; i <= n; i++) { // enqueue n values:  1.0, 2.0, ...
+       buffer.enqueue(i);
+       StdOut.printf("Test #3.%d - check size after %d enqueues- should be %d\n",
+                        i, i, i);
+       StdOut.printf("**** Size is %d\n", buffer.size());
+   }
+   StdOut.printf("**** isFull() should be true- is %b\n", buffer.isFull());
+```
+8. Implement `isEmpty() and `peek()` and then test them:
+```java
+   StdOut.printf("Test #4 - check peek value == %.1f\n", 1.0);
+   StdOut.printf("**** isEmpty() should be false- is %b\n", buffer.isEmpty());
+   double val1 = buffer.peek();
+   StdOut.printf("**** Value is %.1f\n", val1);
+```
+9. Implement `dequeue()` and then test it:
+```java
+   double val2 = buffer.dequeue();
+   StdOut.printf("Test #5 - dequeue a value, then check value == %.1f and "
+                      + "size == %d after a dequeue\n", 1.0, n - 1);
+   StdOut.printf("**** Value is %.1f\n", val2);
+   StdOut.printf("**** Size is %d\n", buffer.size());
+   for (int i = 0; i < n - 1; i++) buffer.dequeue(); // dequeue everything left
+   StdOut.printf("**** remove %d items and isEmpty() should be true- is %b\n",
+                      n - 1, buffer.isEmpty());
+```
 
 ***Is the size of a RingBuffer equal to its capacity?*** The size is the number of elements currently in it; the `capacity` is its maximum possible size. 
 
@@ -209,105 +261,40 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
 ***I get an `ArrayIndexOutOfBoundsException` or `NullPointerException`. What could cause this?*** Does your constructor correctly initialize all of the instance variables? Did you allocate memory for your array? Did you inadvertently re-declare an instance variable in a method or constructor, thereby shadowing the instance variable with the same name? 
 
 
-#### Testing Your `RingBuffer.java` Implementation
-These provided tests only test the *functionality* of your code. The final `main()` that you submit should test all the public methods of that data type’s API.
-
-You can test your `RingBuffer` abstract data type using the following `main()`. Note - this test is *not* exhaustive, but it should help you debug.  
-
-```java
-int n = Integer.parseInt(args[0]);
-RingBuffer buffer = new RingBuffer(n);
-
-StdOut.printf("Test #1 - check capacity - should be %d\n", n);
-StdOut.printf("**** Capacity is %d\n", buffer.capacity());
-
-StdOut.printf("Test #2 - check size - should be %d\n", 0);
-StdOut.printf("**** Size is %d\n", buffer.size());
-
-for (int i = 1; i <= n; i++) {
-    buffer.enqueue(i);
-    StdOut.printf("Test #3.%d - check size after %d enqueues- should be %d\n",
-                  i, i, i);
-    StdOut.printf("**** Size is %d\n", buffer.size());
-}
-
-double val1 = buffer.peek();
-StdOut.printf("Test #4 - check peek value == %.1f\n", 1.0);
-StdOut.printf("**** Value is %.1f\n", val1);
-
-double val2 = buffer.dequeue();
-StdOut.printf("Test #5 - dequeue a value, then check value == %.1f and "
-                      + "size == %d after a dequeue\n", 1.0, n - 1);
-StdOut.printf("**** Value is %.1f\n", val2);
-StdOut.printf("**** Size is %d\n", buffer.size());
-
-buffer.enqueue(val2);
-while (buffer.size() >= 2) {
-    double x = buffer.dequeue();
-    double y = buffer.dequeue();
-    buffer.enqueue(x + y);
-}
-StdOut.printf("Test #6 - enqueues + dequeues, then check size == %d and"
-                      + " peek == %.1f\n",
-              1, (double) (n + 1) * n / 2);
-StdOut.printf("**** Size is %d\n", buffer.size());
-StdOut.printf("**** Peek value is %.1f\n", buffer.peek());
-```
-
-You can run this test by trying various `RingBuffer` sizes, for example, from the command line:
-
-```plaintext
-java-introcs RingBuffer 1
-```
-```plaintext
-java-introcs RingBuffer 2
-```
-```plaintext
-java-introcs RingBuffer 3
-```
-```plaintext
-java-introcs RingBuffer 4
-```
-```plaintext
-...
-```
-
-
 {{< /details >}}
 
 {{< details "Click here to show possible progress steps for GuitarString" >}}
 
 #### Implementing `GuitarString.java`
+0. Again, employ an _incremental/iterative implementation/testing/debugging_ approach.  Edit your initial `GuitarString.java` so that it can compile (recall the `Data.java` exercise from precept).  Then, implement *one constructor/method at a time*, together with at least one *corresponding test* in `main()`.
+1. Implement and test the `GuitarString(double frequency)` constructor, which creates a `RingBuffer` of the desired capacity `n` (the sampling rate 44,100 divided by the frequency, rounded up to the nearest integer), and initializes it to represent a guitar string at rest by enqueuing `n` zeros. (Use [`Math.ceil`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double)) and cast the result to an integer.)
+2. Implement the `length()` method, which returns the number of samples in the ring buffer.
+3. Implement the `sample()` method, which returns the value of the item at the front of the ring buffer. Use `peek()`.
 
-1. You will need to define the instance variables, constructors, and instance methods.
-2. Implement the `GuitarString(double frequency)` constructor, which creates a `RingBuffer` of the desired capacity `n` (the sampling rate 44,100 divided by the frequency, rounded up to the nearest integer), and initializes it to represent a guitar string at rest by enqueuing `n` zeros. (Use [`Math.ceil`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html#ceil(double)) and cast the result to an integer.)
-3. Implement the `length()` method, which returns the number of samples in the ring buffer.
-4. Implement the `sample()` method, which returns the value of the item at the front of the ring buffer. Use `peek()`.
-
-***How can I test the constructor and these methods?***
+***How can I test the `GuitarString(double frequency)` constructor and these methods?***
 - In `main()`, instantiate a few different `GuitarString` objects using the `GuitarString(double frequency)` constructor.
 - Invoke `length()` on each `GuitarString` object. Is the value returned by `length()` what you expect?
 - Invoke `sample()` on each `GuitarString` object. Is the value returned by `sample()` what you expect? 
 
-5. Implement the `GuitarString(double[])` constructor, which creates a `RingBuffer` of capacity equal to the length `n` of the array, and initializes the contents of the ring buffer to the corresponding values in the array. In this assignment, this constructor's primary purpose is to facilitate testing and debugging.
+4. Implement and test the `GuitarString(double[])` constructor, which creates a `RingBuffer` of capacity equal to the length `n` of the array, and initializes the contents of the ring buffer to the corresponding values in the array. In this assignment, this constructor's primary purpose is to facilitate testing and debugging.
 
-***How can I test the constructor and these methods?***
+***How can I test the  `GuitarString(double[])` constructor and these methods?***
 - Instantiate a few different `GuitarString` objects using the `GuitarString(double frequency)` constructor.
 - Invoke `length()` on each `GuitarString` object. Is the value returned by `length()` what you expect?
 - Invoke `sample()` on each `GuitarString` object. Is the value returned by `sample()` what you expect? 
 
-6. Implement `pluck()`, which replaces the `n` items in the ring buffer with `n` _random_ values between −0.5 and +0.5. Use a combination of `RingBuffer` methods including `dequeue()` and `enqueue()` to replace the buffer with values between −0.5 and 0.5. Hint: [StdRandom](https://introcs.cs.princeton.edu/java/11cheatsheet/#StdRandom)
+5. Implement `pluck()`, which replaces the `n` items in the ring buffer with `n` _random_ values between −0.5 and +0.5. Use a combination of `RingBuffer` methods including `dequeue()` and `enqueue()` to replace the buffer with values between −0.5 and 0.5. Hint: [StdRandom](https://introcs.cs.princeton.edu/java/11cheatsheet/#StdRandom)
 
-***When generating random values between −0.5 and +0.5, should I include the two endpoints?*** The assignment specification does not specify, so you are free to choose whichever convention you find most convenient. In Java, we typically include the left endpoint of an interval and exclude the right endpoint. For example, `StdRandom.uniformDouble(-0.5, 0.5)` generates a uniformly random value in the interval [−0.5, 0.5) and `s.substring(i, j)` returns the substring of the `String s` beginning at index `i` and ending at index `j - 1`.
+***When generating random values between −0.5 and +0.5, should I include the two endpoints?*** The assignment specification does not specify, so you are free to choose whichever convention you find most convenient. In Java, we typically include the left endpoint of an interval and exclude the right endpoint. For example, `StdRandom.uniformDouble(-0.5, 0.5)` generates a uniformly random value in the interval $[−0.5, 0.5)$ and `s.substring(i, j)` returns the substring of the `String s` beginning at index `i` and ending at index `j - 1`.
 
 ***How can I test the constructor and these methods?***
 - Instantiate a `GuitarString` object.
 - Invoke `length()` and `sample()` on this object.
 - Next invoke `pluck()` on this object.
-Next invoke `length()` and `sample()` again on each object. Are the values returned what you expect?
-Try this with a few `GuitarString` objects.
+- Next invoke `length()` and `sample()` again on each object. Are the values returned what you expect?
+- Try this with a few `GuitarString` objects.
 
-7. Implement `tic()`. Use the `enqueue()`, `dequeue()`, and `peek()` methods. This method applies the Karplus–Strong update: delete the first sample from the ring buffer and adds to the end of the ring buffer the average of the deleted sample and the first sample, scaled by an energy decay factor. 
+6. Implement `tic()`. Use the `enqueue()`, `dequeue()`, and `peek()` methods. This method applies the Karplus–Strong update: delete the first sample from the ring buffer and adds to the end of the ring buffer the average of the deleted sample and the first sample, scaled by an energy decay factor. 
 
 ***How can I test the constructor and these methods?***
 - Instantiate a `GuitarString` object.
@@ -315,14 +302,16 @@ Try this with a few `GuitarString` objects.
 - Next invoke `tic()` on this object.
 - Next invoke `length()` and `sample()` again on each object. Are the values returned what you expect?
 - Try this with a few `GuitarString` objects.
-8. _After_ you have implemented and tested each of the methods for `GuitarString`, run `GuitarString` using the test client in the ***Testing*** section.
+7. _After_ you have implemented and tested each of the methods for `GuitarString`, run `GuitarString` using the test client in the ***Testing*** section.
 
 #### Testing Your `GuitarString.java` Implementation
-You can test your `GuitarString` abstract data type using the following `main()`. Note - this test is *not* exhaustive, but it should help you debug.  
+You can test your `GuitarString`  data type using the following `main()`. Note - this test is *not* exhaustive, but it should help you debug.  
 
-```plaintext
+```java
 int n = Integer.parseInt(args[0]);
+StdOut.printf("Test #0 - create a Guitar String object with %d\n", n);
 GuitarString gs1 = new GuitarString(n);
+
 StdOut.printf("Test #1 - check length based on given n == %d\n", n);
 StdOut.printf("**** Length is %d\n", gs1.length());
 
@@ -477,11 +466,9 @@ Submit to {{< tigerfile "Guitar" >}}: `RingBuffer.java`, `GuitarString.java`, `G
 | readme.txt           |   4       |
 | Total                |  40       |
 
-### **Enrichment**
+### **Challenge**
 
-{{< details "Click each item  to expand.">}} Click again to collapse the answer.{{< /details >}}
-
-{{< details "**Challenge 1**: Write a program `AutoGuitar.java` that will automatically play music using `GuitarString` objects.">}}
+Write a program `AutoGuitar.java` that will automatically play music using `GuitarString` objects.
 
 #### Requirements
 
@@ -489,8 +476,12 @@ Submit to {{< tigerfile "Guitar" >}}: `RingBuffer.java`, `GuitarString.java`, `G
 1. The duration of your composition **must** be between 10 and 120 seconds. Since the sampling rate is 44,100 Hz, this translates to between 441,000 and 5,292,000 calls to `StdAudio.play()`. 
 1. You **may** create chords, repetition, and phrase structure using loops, conditionals, arrays, and functions. Also, feel free to incorporate randomness. 
 1. You **may** also create a new music instrument by modifying the Karplus–Strong algorithm; consider changing the excitation of the string (from white noise to something more structured) or changing the averaging formula (from the average of the first two samples to a more complicated rule) or anything else you might imagine. See below for some ideas.
-{{< /details >}}
 
+### **Enrichment**
+
+{{< details "Click each item  to expand.">}} Click again to collapse the answer.{{< /details >}}
+
+<!-- Need to update
 {{< details "**Challenge 2**: Write a program MidiGuitarHero that is similar to GuitarHero, but works with a MIDI keyboard controller keyboard or a MIDI Controller app running on your smartphone. The MIDI standard - Musical Instrument Digital Interface - is used by many electronic musical instruments.">}}
 
 #### Background
@@ -597,7 +588,7 @@ public class MidiSource {
     ```
 4. Press the keys on the keyboard to see the MIDI messages (numbers) generated by each key.![MIDI messages]({{< resource url="static/assignments/guitar/images/java-introcs_MidiSource.png" >}})
 
-#### iPhone with iOS 11, Mac OS and USB 
+#### iPhone with iOS, Mac OS and USB 
 1. Download/install the [MIDI controller app](https://apps.apple.com/us/app/midi-wrench/id589243566) from the Apple App Store.
 2. Connect your iPhone/iPad to your Mac laptop using the USB connector.
 3. On your Mac:
@@ -628,6 +619,7 @@ public class MidiSource {
 
 
 {{< /details >}}
+-->
 
 
 
@@ -649,5 +641,5 @@ public class MidiSource {
 
 *This assignment was developed by Andrew Appel, Jeff Bernstein, Alan Kaplan, Maia Ginsburg, Ken Steiglitz, Ge Wang, and Kevin Wayne.*
 
-*Copyright © 2005–2024*
+*Copyright © 2005–2025*
 

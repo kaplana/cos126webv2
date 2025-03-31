@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-
+{{<construction>}}
 {{< project "chat126" >}} |  {{< submit "Chat126" >}}
 
 ### **Goals**
@@ -259,23 +259,7 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
    String text2 = "gagggagaggcgagaaa";
    MarkovLM model2 = new MarkovLM(text2, 2);
    ```
-5. Write the `toString()` method. Use the enhanced for loop to access each key–value pair in your symbol table - see the `FrequencyTable.java` from precept as another example:
-   ```java
-   // st2 is the second symbol table (corresponding to the two-argument freq() method)
-   StringBuilder result = new StringBuilder();
-   for (String key : st2.keys()) {
-      result.append(key + ": ");
-   
-      // get the character frequency array
-      int[] frequency = st2.get(key);
-   
-      // for each non-zero entry, append the character and the frequency
-      // trailing space is allowed
-      ...
-      // append a newline character
-      result.append("\n");
-   }
-   ```
+5. Write the `toString()` method. Use the enhanced for loop to access each key–value pair in your symbol table - see the `FrequencyTable.java` from precept as another example.
 6. Test the constructor and `toString() method`: This can help you debug small test cases. In the `main()`, print some `MarkovLM` objects. For example:
    ```java
    String text1 = "banana";

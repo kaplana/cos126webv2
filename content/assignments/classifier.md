@@ -1,7 +1,7 @@
 ---
 title: 6. Image Classifier
 subtitle: 
-summary:  Write a program to classify images using the perceptron algorithm. Complete and submit the midsemester survey. <br>Partner assignment   {{< project "classifier" >}} |  {{< submit "Classifier" >}}  {{< notreleased >}}
+summary:  Write a program to classify images using the perceptron algorithm. Complete and submit the midsemester survey. <br>Partner assignment   {{< project "classifier" >}} |  {{< submit "Classifier" >}}  <!--{{< notreleased >}}-->
 weight: 7
 type: "page"
   
@@ -520,19 +520,6 @@ digits/testing/9/58.png, label = nine, predict = four
 test error rate = 0.8
 ```
 
-```plaintext
-java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing10K.txt
-```
-```plaintext
-jar:file:digits.jar!/testing/6/4814.png, label = six, predict = zero
-jar:file:digits.jar!/testing/5/4915.png, label = five, predict = eight
-jar:file:digits.jar!/testing/6/2754.png, label = six, predict = zero
-...
-jar:file:digits.jar!/testing/4/1751.png, label = four, predict = three
-jar:file:digits.jar!/testing/3/9614.png, label = three, predict = five
-jar:file:digits.jar!/testing/5/6043.png, label = five, predict = three
-test error rate = 0.1318
-```
 
 #### **Possible Progress Steps for ImageClassifier**
 We provide some additional instructions below.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to write/test your `Classifier.java` without them.  It is up to you!
@@ -588,13 +575,13 @@ Now, the fun part. Use large training and testing input files. Be prepared to wa
 java-introcs ImageClassifier digits.txt digits-training60K.txt digits-testing10K.txt
 ```
 ```plaintext
-jar:file:digits.jar!/testing/5/9428.png, label = 5, predict = 3
-jar:file:digits.jar!/testing/6/4814.png, label = 6, predict = 0
-jar:file:digits.jar!/testing/5/4915.png, label = 5, predict = 8
+jar:file:digits.jar!/testing/6/4814.png, label = six, predict = zero
+jar:file:digits.jar!/testing/5/4915.png, label = five, predict = eight
+jar:file:digits.jar!/testing/6/2754.png, label = six, predict = zero
 ...
-jar:file:digits.jar!/testing/5/7870.png, label = 5, predict = 4
-jar:file:digits.jar!/testing/4/1751.png, label = 4, predict = 3
-jar:file:digits.jar!/testing/5/6043.png, label = 5, predict = 3
+jar:file:digits.jar!/testing/4/1751.png, label = four, predict = three
+jar:file:digits.jar!/testing/3/9614.png, label = three, predict = five
+jar:file:digits.jar!/testing/5/6043.png, label = five, predict = three
 test error rate = 0.1318
 ```
 
