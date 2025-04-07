@@ -1,7 +1,7 @@
 ---
 title: 8. Chat126
 subtitle: 
-summary:  Use a Markov chain to create a statistical model of a piece of English text. Simulate the Markov chain to generate stylized pseudo-random text. <br>Partner assignment   {{< project "chat126" >}} |  {{< submit "Chat126" >}}<!--<br>{{<notreleased>}}-->
+summary:  Use a Markov chain to create a statistical model of a piece of English text. Simulate the Markov chain to generate stylized pseudo-random text. <br>Partner assignment   {{< project "chat126" >}} |  {{< submit "Chat126" >}}<br>{{<notreleased>}}
 weight: 9
 type: "page"
   
@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!--{{<construction>}}-->
 {{< project "chat126" >}} |  {{< submit "Chat126" >}}
 
 ### **Goals**
@@ -96,7 +96,7 @@ Your task is to write a Java program to automate this laborious task, in an effi
 
 ### **`MarkovLM`**
 
-Create an _immutable data type_  - _a markov language model_ - to represent a Markov model of order \\(k\\), based on a given input text. Implement the following API:
+Create an _immutable data type_  - _a Markov language model_ - to represent a Markov model of order \\(k\\), based on a given input text. Implement the following API:
 
 ```java
 public class MarkovLM {
@@ -245,7 +245,7 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
 2. Create one or more instance variables to support the two `freq()` methods. _One_ strategy is to maintain two symbol tables—one for the one-argument `freq()` method and one for the two-argument `freq()` method.
 - For each \\(k\\)-gram (a string), the first symbol table tells you how many times it appears in the text (an integer).
 - For each \\(k\\)-gram (a string), the second symbol table tells you how many times each ASCII character succeeds the \\(k\\)-gram in the text (an array of 128 integers).
-- Character (i.e., `char` values) can be used as an index into an array.  In Java, characters are 16-bit (unsigned) integers; they are promoted to ints in any context that expects one. For example, `array['c']` is equivalent to `array[99]` because the ASCII code for `'c'` is 99. 
+- Character (i.e., `char` values) can be used as an index into an array.  In Java, characters are 16-bit (unsigned) integers; they are promoted to `int` valuess in any context that expects one. For example, `array['c']` is equivalent to `array[99]` because the ASCII code for `'c'` is 99. 
 - You can avoid hardwiring the constant 128 by using a static instance variable: `private static final int ASCII = 128;`
 - This code should appear inside the class block, but before any instance variables or methods. By convention, constant variable names should be ALL_UPPERCASE. The `static` modifier means that every instance method will refer to the same variable (as opposed to instance variables, for which there is one variable per object); the `final` modifier means that you can't change its value, once initialized. 
 3. Write the constructor to create the circular version of the input text. Then initialize and populate your symbol tables, using the symbol table methods `contains()`, `get()`, and `put()`. This will be a substantial amount of code, relative to the other methods in this class.
@@ -259,7 +259,7 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
    String text2 = "gagggagaggcgagaaa";
    MarkovLM model2 = new MarkovLM(text2, 2);
    ```
-5. Write the `toString()` method. Use the enhanced for loop to access each key–value pair in your symbol table - see the `FrequencyTable.java` from precept as another example.
+5. Write the `toString()` method. Use an enhanced for loop to access each key–value pair in your symbol table and a `StringBuilder` to generate the required `String` value. See the `FrequencyTable.java` from precept for an example.  
 6. Test the constructor and `toString() method`: This can help you debug small test cases. In the `main()`, print some `MarkovLM` objects. For example:
    ```java
    String text1 = "banana";
@@ -519,17 +519,12 @@ it was the best of times, it was the worst of times.
 {{< details "Click each item  to expand.">}} Click again to collapse the answer.{{< /details >}}
 
 
-{{< details "What is the relationship between markov models and LLMs for generating text?">}}
-
-We actually asked ChatGPT this question, and here's its response (slightly editted):
-
-Markov models and Large Language Models (LLMs) are both used for generating text but operate on different principles.
-
-Markov Models: These are based on the Markov property, which states that the future state of a system depends only on its present state, not on the sequence of events that preceded it. In the context of text generation, a Markov model predicts the next word in a sequence based current k-gram. 
-
-Large Language Models (LLMs): These are more sophisticated models based on neural networks, particularly variants like GPT (Generative Pre-trained Transformer) models. LLMs leverage deep learning techniques to capture complex patterns and dependencies in text data. They are trained on large corpora of text and can generate coherent and contextually relevant sequences of text. Unlike Markov models, LLMs do not rely solely on fixed-length context windows but instead learn contextual representations of words and phrases based on their entire input sequence.
-
-While both Markov models and LLMs can generate text, LLMs generally produce more fluent and contextually appropriate text due to their ability to capture long-range dependencies and contextual nuances. However, Markov models are simpler and more interpretable, making them suitable for certain text generation tasks, especially when computational resources are limited.
+{{< details "What is the relationship between Markov models and LLMs for generating text?">}}
+- We actually asked ChatGPT this question, and here's its response (slightly edited):
+- Markov models and Large Language Models (LLMs) are both used for generating text but operate on different principles.
+  - Markov Models: These are based on the Markov property, which states that the future state of a system depends only on its present state, not on the sequence of events that preceded it. In the context of text generation, a Markov model predicts the next word in a sequence based current k-gram. 
+  - Large Language Models (LLMs): These are more sophisticated models based on neural networks, particularly variants like GPT (Generative Pre-trained Transformer) models. LLMs leverage deep learning techniques to capture complex patterns and dependencies in text data. They are trained on large corpora of text and can generate coherent and contextually relevant sequences of text. Unlike Markov models, LLMs do not rely solely on fixed-length context windows but instead learn contextual representations of words and phrases based on their entire input sequence.
+- While both Markov models and LLMs can generate text, LLMs generally produce more fluent and contextually appropriate text due to their ability to capture long-range dependencies and contextual nuances. However, Markov models are simpler and more interpretable, making them suitable for certain text generation tasks, especially when computational resources are limited.
 {{< /details >}}
 
 {{< details "What is the origin of the Markov text generator?">}}
@@ -544,13 +539,9 @@ One former COS 126 student recited its output during the [Frist filibuster](http
 {{< /details >}}
 
 {{< details "Some other interesting topics.">}}
-
 - We are implementing the model Shannon described in his landmark paper. But the _one reads until this letter is encountered_ method in his quote on the assignment page is, ironically, not a statistically accurate example of his model. If we run your program with input `wawawaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaawy` then `w` should be followed by `a` 75% of the time, while the _read until_ model will follow `w` with `a` only 15% of the time. What would be involved in simulating this other model? Which one do you think gives more realistic text?
-
 -  Here's a website that generates [pseudo-random computer science papers](https://pdos.csail.mit.edu/archive/scigen/). It uses something called a _context-free grammar_ instead of a Markov chain, but otherwise is similar in spirit to what you are doing on this assignment.
-
 - Here are [Garfield comics](http://joshmillard.com/garkov) generated by a Markov chain.
-
 {{< /details >}}
 
-*Copyright © 2005–2024 Robert Sedgewick and Kevin Wayne, All Rights Reserved*
+*Copyright © 2005–2025 Robert Sedgewick and Kevin Wayne, All Rights Reserved*

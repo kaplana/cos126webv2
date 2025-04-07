@@ -1,7 +1,7 @@
 ---
 title: 7. Guitar Hero 
 subtitle: 
-summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}} {{< notreleased >}}
+summary:  Simulate the plucking of a guitar string using the Karplus–Strong algorithm, transforming your computer into a musical instrument. <br>Partner assignment  {{< project "guitar" >}} |  {{< submit "Guitar" >}} <!--{{< notreleased >}}-->
 weight: 8
 type: "page"
   
@@ -207,8 +207,8 @@ We provide some additional instructions below.  Click on the &#9658;  icon to ex
 3. Implement the constructor for `RingBuffer`. You will need to allocate and initialize an array of `doubles` using the `new` operator. Observe that you have to do this in the constructor (and not when you declare the instance variables) because you do not know the length of the array until the constructor is called.
 4. Test the constructor in `main()`.  You can run this test by trying various `RingBuffer` sizes specified on the command line.
 ```java
-   StdOut.printf("Test #0 - create a RingBuffer object with %d\n", n);
    int n = Integer.parseInt(args[0]); // get the size of n from the command-line
+   StdOut.printf("Test #0 - create a RingBuffer object with %d\n", n);
    RingBuffer buffer = new RingBuffer(n);
 ```
 5. Implement `capacity()` and then test it:
