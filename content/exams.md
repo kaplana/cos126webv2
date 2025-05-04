@@ -23,9 +23,9 @@ And here's the the Fall'22 Programming Exam 2 hosted on TigerFile.
 {{< download-project "Binary_Polynomial" >}} |  {{< submit "Binary_Polynomial" >}}
 
 -->
-
-<!-- **Fall 2024 Programming Exam: Do not access the programming exam download/submit links (below) until instructed to do so.<br>{{< download-project "Programming_Exam" >}} |  {{< submit "Programming_Exam" >}}**  -->
-
+<!--
+**Spring 2025 Programming Exam: Do not access the programming exam download/submit links (below) until instructed to do so.<br>{{< download-project "Programming_Exam" >}} |  {{< submit "Programming_Exam" >}}**  
+-->
 <br><br>Note that the course changes from semester to semester, so some topics from previous exams may not be relevant. You are responsible only for the material covered in this semester's lectures, precepts, and programming assignments.
 
 #### Past exams.
@@ -34,7 +34,7 @@ And here's the the Fall'22 Programming Exam 2 hosted on TigerFile.
 
 | Semester    | Written Exam 1   |  Programming Exam 2 | Written Exam 2    |
 |-------------| ---------------- | --------------------| ------------------|
-| Spring 2025 | {{< we s25 1 >}} |                     |   |
+| Spring 2025 | {{< we s25 1 >}} |  {{< pe s25 >}}     | {{< we s25 2 >}}  |
 | Fall 2024   | {{< we f24 1 >}} |  {{< pe f24 >}}     | {{< we f24 2 >}}  |
 | Spring 2024 | {{< we s24 1 >}} |  {{< pe s24 >}}     | {{< we s24 2 >}}  |
 | Fall   2023 | {{< we f23 1 >}} |  {{< pe f23 2 >}}   | {{< we f23 2 >}}  |

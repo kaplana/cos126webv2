@@ -12,6 +12,7 @@ params:
   iclickerSem: "COS 126 Spring'25"
   surveyurl: "https://forms.cs50.io/7065a46c-1c70-44e1-ad8b-883628d98a4f"
   midsemestersurveyurl: "https://forms.cs50.io/69655318-223d-4b71-8518-37f5ae69b12c"
+  atomicurl: "https://forms.cs50.io/6f05bd2f-b790-4164-91df-75020b89e0d7"
   semester: "SPRING"
 
 ############################

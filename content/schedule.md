@@ -80,8 +80,6 @@ comments: false
 |      | Wed, Mar 5                  |_Written Exam 1_                   | |
 |      | Wed, Mar 6 <br>Thu, Mar 7 | Precept: None                     | |
 |      |                            | | |
-|      |                            | | |
-|      |                            | | |
 |      | Mon, Mar 10 -<br> Fri, Mar 14| **BREAK** |
 |      |                            | | |
 | 6    | Mon, Mar 17                 |{{< lecture "Using Data Types" "static/lectures/31UsingDataTypes.pdf" >}}<br> _Reading:_ 3.1 |   |

@@ -11,7 +11,7 @@ share: false
 profile: false
 comments: false
 ---
-{{<construction>}}
+<!-- {{<construction>}} -->
 
 {{< project "hamming" >}} |  {{< submit "Hamming" >}}
 ### **Goals**
@@ -97,7 +97,7 @@ Write a TOY program `encode.toy` to encode a binary message using the scheme des
 - \\(p_2 = m_1 \wedge m_3 \wedge m_4\\)
 - \\(p_3 = m_2 \wedge m_3 \wedge m_4\\)
 
-Recall that ^ is the *exclusive or* operator in Java and TOY. This captures the parity concept described above.
+Recall from lecture that `^` is the *exclusive or* operator in Java and TOY. This captures the parity concept described above. Use `jshell` to review the  *exclusive or* `^`, *or* `|` and *and* `&` bitwise operations. 
 
 #### TOY Program: `decode.toy`
 

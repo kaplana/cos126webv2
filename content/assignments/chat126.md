@@ -1,7 +1,7 @@
 ---
 title: 8. Chat126
 subtitle: 
-summary:  Use a Markov chain to create a statistical model of a piece of English text. Simulate the Markov chain to generate stylized pseudo-random text. <br>Partner assignment   {{< project "chat126" >}} |  {{< submit "Chat126" >}}<br>{{<notreleased>}}
+summary:  Use a Markov chain to create a statistical model of a piece of English text. Simulate the Markov chain to generate stylized pseudo-random text. <br>Partner assignment   {{< project "chat126" >}} |  {{< submit "Chat126" >}}<br><!--{{<notreleased>}}-->
 weight: 9
 type: "page"
   

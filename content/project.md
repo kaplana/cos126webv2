@@ -25,6 +25,8 @@ For the final project, there is a limit of twenty (20)  times that you may click
 
 ### **Getting Started**
 
+- The course collaboration policies for the final project are the same as those for a programming assignment.
+
 - Download and expand the  project `zip` file for this assignment, which contains the files you will need for this assignment.
 
 - Review Section 2.4 in the textbook, especially the part on depth-first search. Finding all the pixels in a blob is similar to finding a percolating path.
@@ -35,6 +37,9 @@ For the final project, there is a limit of twenty (20)  times that you may click
   - Choose a partner whose skill level is close to your own - only two partners per group.
   - Your partner does not have to be in your precept.
   - The rules for partnering are specified on the [course syllabus]({{< ref "syllabus.md#partners" >}}).  Make sure you read and understand these rules, and please post on Ed if you have questions. In your `acknowledgments.txt` file, you must indicate that you adhered to the COS 126 partnering rules.
+
+- Possible progress steps. We provide some additional instructions below description of the problem.  Click on the &#9658;  icon to expand *some possible progress steps* or you may try to solve Atomic without them.  It is up to you!
+
 
 ### **Historical perspective**
 
@@ -71,7 +76,7 @@ The first challenge is to identify the beads amidst the noisy data. Each provide
 Whiter pixels correspond to beads (foreground) and blacker pixels to water (background). We break the problem into three pieces: (i) read an image, (ii) classify the pixels as foreground or background, and (iii) find the disc-shaped clumps of foreground pixels that constitute each bead.
 
 - *Reading the image.* Use the [Picture](http://introcs.cs.princeton.edu/java/stdlib/javadoc/Picture.html) data type from Section 3.1 to read the image. By convention, pixels are measured from left-to-right (\\(x\\)-coordinate) and top-to-bottom (\\(y\\)-coordinate).
-- *Classifying the pixels as foreground or background.* We use a simple, but effective, technique known as *thresholding* to separate the pixels into foreground and background components: all pixels with monochrome luminance values strictly below some threshold *tau* are considered background; all others are considered foreground. The two pictures above illustrates the original frame (above left) and the same frame after thresholding (above right), using *tau* = 180.0. An approach for computing luminance is demonstrated in [Luminance.java](https://introcs.cs.princeton.edu/31datatype/Luminance.java.html).
+- *Classifying the pixels as foreground or background.* We use a simple, but effective, technique known as *thresholding* to separate the pixels into foreground and background components: all pixels with monochrome luminance values strictly below some threshold *tau* are considered background; all others are considered foreground. The two pictures above illustrates the original frame (above left) and the same frame after thresholding (above right), using *tau* = 180.0. An API for computing luminance is provided in [Luminance.java](https://introcs.cs.princeton.edu/31datatype/Luminance.java.html).  Use the `intensity()` method defined in this class. 
 - *Finding the blobs.* A polystyrene bead is represented by a disc-like shape of at least some minimum number *min* (typically 25) of connected foreground pixels. A *blob* or *connected component* is a maximal set of connected foreground pixels, regardless of its shape or size. We will refer to any blob containing at least *min* pixels as a *bead*. The *center of mass* of a blob (or bead) is the average of the \\(x\\)- and \\(y\\)-coordinates of its constituent pixels.
 
 Create a helper data type `Blob` that has the following API.
@@ -98,7 +103,7 @@ Create a helper data type `Blob` that has the following API.
 	}
 
 
-*String representation.* The `toString()` method returns a string containing the blob's mass; followed by whitespace; followed by the \\(x\\)- and \\(y\\)-coordinates of the blob's center of mass, enclosed in parentheses, separated with a comma, and using four digits of precision after the decimal point.
+*String representation.* The `toString()` method returns a string containing the blob's mass; followed by whitespace; followed by the \\(x\\)- and \\(y\\)-coordinates of the blob's center of mass, enclosed in parentheses, separated with a comma, and using **four digits of precision after the decimal point**.
 
 *Performance requirement.* The constructor and each instance method must take constant time.
 
@@ -185,7 +190,7 @@ java-introcs BeadTracker 25 180.0 25.0 run_1/*.jpg
 
 Einstein's theory of Brownian motion connects microscopic properties (e.g., radius, diffusivity) of the beads to macroscopic properties (e.g., temperature, viscosity) of the fluid in which the beads are immersed. This amazing theory enables us to estimate Avogadro's number with an ordinary microscope by observing the collective effect of millions of water molecules on the beads.
 
-- *Estimating the self-diffusion constant.* The *self-diffusion constant D* characterizes the stochastic movement of a molecule (bead) through a homogeneous medium (the water molecules) as a result of random thermal energy. The Einstein–Smoluchowski equation states that the random displacement of a bead in one dimension has a Gaussian distribution with mean zero and variance \\(σ^2 = 2 D Δt\\), where \\(Δt\\) is the time interval between position measurements. That is, a molecule's mean displacement is zero and its mean square displacement is proportional to the elapsed time between measurements, with the constant of proportionality \\(2*D\\). We estimate \\(σ^2\\) by computing the variance of all observed bead displacements in the \\(x\\)- and \\(y\\)-directions. Let \\((Δx_1, Δy_1), \ldots, (Δx_n, Δy_n)\\) be the \\(n\\) bead displacements, and let \\(r_1, \ldots, r_n\\) denote the radial displacements. Then
+- *Estimating the self-diffusion constant.* The *self-diffusion constant D* characterizes the stochastic movement of a molecule (bead) through a homogeneous medium (the water molecules) as a result of random thermal energy. The Einstein–Smoluchowski equation states that the random displacement of a bead in one dimension has a Gaussian distribution with mean zero and variance \\(σ^2 = 2 D Δt\\), where \\(Δt\\) is the time interval between position measurements. That is, a molecule's mean displacement is zero and its mean square displacement is proportional to the elapsed time between measurements, with the constant of proportionality \\(2*D\\). We estimate \\(σ^2\\) by computing the variance of all observed bead displacements in the \\(x\\)- and \\(y\\)-directions. Let \\((Δx_1, Δy_1), \ldots, (Δx_n, Δy_n)\\) be the \\(n\\) bead displacements, and let \\(r_1, \ldots, r_n\\) denote the radial displacements. Then:
 $$ σ^2 = \frac{(Δx^2_1+…+Δx^2_n)+(Δy^2_1+\ldots+Δy^2_n)}{2n}  = \frac{r^2_1+\ldots+r^2_n}{2n} $$
 
 	For our data, \\(Δt = 0.5\\), so \\(σ^2\\) is an estimate for \\(D\\) as well.
@@ -207,7 +212,7 @@ All parameters are given in [SI units](https://en.wikipedia.org/wiki/Internation
 
 - *Estimating Avogadro's number.* *Avogadro's number* \\(N_A\\) is defined to be the number of particles in a mole. By definition, \\(k = R / N_A\\), where the universal gas constant \\(R\\) is approximately \\(8.31446\\). Use \\(R / k\\) as an estimate of Avogadro's number.
 
-For the final part, write `Avogadro.java` with a `main()` that reads the radial displacements \\(r_1, r_2, r_3, \ldots\\) from standard input and estimates Boltzmann's constant and Avogadro's number using the formulas described above.
+For the final part, write `Avogadro.java` with a `main()` that reads the radial displacements \\(r_1, r_2, r_3, \ldots\\) from standard input and estimates Boltzmann's constant and Avogadro's number using the formulas described above. Print using scientific notation with four (4) digits after the decimal place, as shown below:
 
 ```plaintext
 more displacements-run_1.txt
@@ -419,6 +424,7 @@ java-introcs BeadFinder 0 180.0 run_6/frame00010.jpg
     3.0060
     4.6087
     1.3282
+    ...
 ```
 {{< /details >}}
 
@@ -484,7 +490,12 @@ java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg | java-introcs Avogadro
 
 ### **Performance Analysis - `readme.txt`.**
 
-- Formulate a hypothesis for the running time (in seconds) of `BeadTracker` as a function of the input size \\(n\\) (total number of pixels read in across all frames being processed). Using the doubling hypothesis, justify your results in your `readme.txt` file with empirical data.
+- Formulate a hypothesis for the running time (in seconds) of `BeadTracker` as a function of the input size \\(n\\), where $n$ is the *total number of pixels read in across all frames being processed*:
+$$ T(n) = aN^b$$
+
+- Use the doubling hypothesis.  Justify your results in this [form]({{< param atomicurl >}}) with empirical data. You must provide data from three (3) experiments.
+
+- Provide only numeric values for $a$ and $b$.
 
 - Review the lecture and precept exercises for applying the doubling method. 
 
@@ -530,18 +541,20 @@ java-introcs BeadTracker 25 180.0 25.0 run_6/*.jpg | java-introcs Avogadro
 
 Reminder: For the final project, there is a limit of twenty (20)  times that you may click the _Check Submitted Files_ to receive feedback from the TigerFile auto-grader. If you are working with a partner, this limit applies to the group.
 
-Submit to {{<tigerfile "Atomic" >}}: `Blob.java`, `BeadFinder.java`, `BeadTracker.java` and `Avogadro.java`. (Do not submit:  `stdlib.jar`, `Luminance.java`, `Stack.java`, `Queue.java`, and/or `ST.java`.) Finally, submit a `readme.txt`, including the running-time analysis and a completed `acknowledgments.txt` file.
+Also: Your final project should have no Checkstyle, SpotBugs and similar messages. 
+
+Submit to {{<tigerfile "Atomic" >}}: `Blob.java`, `BeadFinder.java`, `BeadTracker.java` and `Avogadro.java`. (Do not submit:  `stdlib.jar`, `Luminance.java`, `Stack.java`, `Queue.java`, and/or `ST.java`.) Submit your running-time analysis using this [form]({{< param atomicurl >}}). Finally, submit a `readme.txt` and completed `acknowledgments.txt` file.
 
 ### **Grading**
-| Files                | Points    |
-| ------------------   | ----------|
-| Style                |  10       |
-| Blob.java            |  14       |
-| BeadFinder.java      |  32       |
-| BeadTracker.java     |  22       |
-| Avogadro.java        |  14       |
-| readme.txt           |   8       |
-| Total                |  100      |
+| Files                    | Points    |
+| ----------------------   | ----------|
+| Style                    |  10       |
+| Blob.java                |  14       |
+| BeadFinder.java          |  32       |
+| BeadTracker.java         |  22       |
+| Avogadro.java            |  14       |
+| Analysis and readme.txt  |   8       |
+| Total                    |  100      |
 
 ### **Enrichment.**
 
@@ -556,5 +569,5 @@ Submit to {{<tigerfile "Atomic" >}}: `Blob.java`, `BeadFinder.java`, `BeadTracke
 This assignment was created by David Botstein, Tamara Broderick, Ed Davisson, Daniel Marlow, William Ryu, and Kevin Wayne.
 
 
-Copyright © 2005-2024, [Kevin Wayne](https://www.cs.princeton.edu/~wayne)
+Copyright © 2005-2025, [Kevin Wayne](https://www.cs.princeton.edu/~wayne)
 
